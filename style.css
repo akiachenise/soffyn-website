@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   --mist: #e6f3f1;
   --blush: #fce7ef;
@@ -20,10 +26,144 @@
 
 body {
   font-family: "DM Sans", sans-serif;
+  background: radial-gradient(
+    ellipse at top right,
+    var(--blush) 0%,
+    var(--sand) 55%,
+    var(--mist) 100%
+  );
+  color: var(--text-primary);
+  line-height: 1.7;
+  min-height: 100vh;
 }
 
 h1,
 h2,
 h3 {
   font-family: "Cormorant Garamond", serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 40px;
+}
+
+.nav-logo {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.5rem;
+  color: var(--teal);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-cta {
+  background-color: var(--teal);
+  color: var(--white);
+  padding: 10px 22px;
+  border-radius: 100px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.nav-cta:hover {
+  background-color: var(--teal-dark);
+  transform: translateY(-1px);
+}
+
+#hero {
+  text-align: center;
+  padding: 80px 24px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  background: var(--blush);
+  color: var(--plum);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 100px;
+  margin-bottom: 28px;
+}
+
+#hero h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+#hero h1 em {
+  font-style: normal;
+  color: var(--teal);
+}
+
+#hero .hero-sub {
+  font-size: 1.05rem;
+  color: var(--ink-light);
+  max-width: 520px;
+  margin: 0 auto 40px;
+  font-weight: 300;
+}
+
+.signup-wrapper {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 32px;
+  max-width: 480px;
+  margin: 0 auto;
+  box-shadow: 0 4px 32px rgba(31, 41, 55, 0.06);
+}
+
+.signup-wrapper p {
+  font-size: 0.9rem;
+  color: var(--ink-light);
+  margin-bottom: 16px;
+}
+
+.signup-wrapper input[type="email"] {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 12px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1rem;
+  color: var(--ink);
+  background: var(--sand);
+  outline: none;
+  margin-bottom: 12px;
+}
+
+.signup-wrapper input[type="email"]:focus {
+  border-color: var(--teal);
+}
+
+.signup-wrapper button {
+  width: 100%;
+  background: var(--teal);
+  color: var(--white);
+  border: none;
+  padding: 14px 24px;
+  border-radius: 12px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease;
+}
+
+.signup-wrapper button:hover {
+  background: var(--teal-dark);
+  transform: translateY(-1px);
 }
