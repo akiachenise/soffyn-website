@@ -167,3 +167,65 @@ nav {
   background: var(--teal-dark);
   transform: translateY(-1px);
 }
+
+#problem {
+  padding: 80px 24px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#problem .section-label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 12px;
+}
+
+#problem h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-style: italic;
+  margin-bottom: 48px;
+}
+
+.quotes-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-bottom: 48px;
+  text-align: left;
+}
+
+.survey-quote {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 40px 36px;
+  border-left: 3px solid var(--blush);
+  box-shadow: 0 2px 16px rgba(31, 41, 55, 0.05);
+  margin-bottom: 16px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.survey-quote:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(31, 41, 55, 0.1);
+}
+
+.survey-quote p {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.3rem;
+  font-style: italic;
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+.problem-response {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.6rem;
+  font-style: italic;
+  color: var(--teal);
+}
