@@ -1,0 +1,12 @@
+:root {
+  --mist: #e6f3f1;
+}
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Cormorant Garamond", serif;
+}

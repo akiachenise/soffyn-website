@@ -1,0 +1,29 @@
+:root {
+  --mist: #e6f3f1;
+  --blush: #fce7ef;
+  --lilac: #efe8fa;
+  --butter: #fff4cc;
+  --sand: #f6f1ea;
+  --sky: #eaf3ff;
+  --ink: #1f2937;
+  --ink-light: #4b5563;
+  --teal: #085e57;
+  --teal-dark: #074f49;
+  --plum: #6d28d9;
+  --white: #ffffff;
+
+  --text-primary: var(--ink);
+  --text-secondary: var(--ink-light);
+  --bg-page: var(--sand);
+  --bg-card: var(--white);
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Cormorant Garamond", serif;
+}
