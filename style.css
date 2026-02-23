@@ -229,3 +229,63 @@ nav {
   font-style: italic;
   color: var(--teal);
 }
+
+#features {
+  padding: 100px 24px;
+}
+
+.features-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#features .section-label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 12px;
+}
+
+#features h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-style: italic;
+  margin-bottom: 48px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  text-align: left;
+}
+
+.feature-card {
+  border-radius: 20px;
+  padding: 36px 32px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(31, 41, 55, 0.1);
+}
+
+.feature-card h3 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  font-size: 0.9rem;
+  color: var(--ink-light);
+  font-weight: 300;
+  line-height: 1.6;
+}
