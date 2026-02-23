@@ -26,11 +26,14 @@
 
 body {
   font-family: "DM Sans", sans-serif;
-  background: radial-gradient(
-    ellipse at top right,
+  background: linear-gradient(
+    180deg,
     var(--blush) 0%,
-    var(--sand) 55%,
-    var(--mist) 100%
+    var(--sand) 20%,
+    var(--mist) 40%,
+    var(--lilac) 60%,
+    var(--butter) 80%,
+    var(--sky) 100%
   );
   color: var(--text-primary);
   line-height: 1.7;
@@ -190,6 +193,11 @@ nav {
   margin-bottom: 48px;
 }
 
+#problem h2 em {
+  font-style: normal;
+  color: var(--teal) !important;
+}
+
 .quotes-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -255,6 +263,11 @@ nav {
   margin-bottom: 48px;
 }
 
+#features h2 em {
+  font-style: normal;
+  color: var(--teal) !important;
+}
+
 .features-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -288,4 +301,58 @@ nav {
   color: var(--ink-light);
   font-weight: 300;
   line-height: 1.6;
+}
+
+#about {
+  padding: 100px 24px;
+}
+
+.about-inner {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+#about .section-label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 12px;
+}
+
+#about h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-style: italic;
+  color: var(--ink);
+  margin-bottom: 32px;
+}
+
+#about h2 em {
+  font-style: normal;
+  color: var(--teal) !important;
+}
+
+#about p {
+  font-size: 1rem;
+  color: var(--ink-light);
+  font-weight: 300;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.about-highlight {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.6rem;
+  font-style: italic;
+  color: var(--teal);
+  line-height: 1.4;
+  margin: 32px 0;
+}
+
+.about-community {
+  margin-top: 40px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(31, 41, 55, 0.1);
+  font-style: italic;
 }
