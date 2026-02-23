@@ -530,3 +530,20 @@ footer p {
   color: var(--teal) !important;
   margin-top: 24px !important;
 }
+
+.gdpr-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.8rem;
+  color: var(--ink-light);
+  text-align: left;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+.gdpr-label input {
+  width: auto;
+  margin-top: 3px;
+  accent-color: var(--teal);
+}
