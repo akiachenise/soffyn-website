@@ -133,6 +133,7 @@ nav {
   margin-bottom: 16px;
 }
 
+.signup-wrapper input[type="text"],
 .signup-wrapper input[type="email"] {
   width: 100%;
   padding: 14px 18px;
@@ -146,6 +147,7 @@ nav {
   margin-bottom: 12px;
 }
 
+.signup-wrapper input[type="text"]:focus,
 .signup-wrapper input[type="email"]:focus {
   border-color: var(--teal);
 }
