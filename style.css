@@ -453,3 +453,13 @@ footer p {
     padding: 60px 24px;
   }
 }
+
+.footer-link {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.footer-link:hover {
+  color: var(--white);
+}
