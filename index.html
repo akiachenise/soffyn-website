@@ -3,7 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>soffyn — Your safe space to just be.</title>
+    <title>soffyn | Wellness App for Neurodivergent Black Women</title>
+    <meta name="description" content="Your safe space to just be. soffyn is a wellness app for neurodivergent Black women — with affirmations, journaling, goal tracking &amp; focus tools. Launching Q2 2026." />
+    <meta name="keywords" content="neurodivergent wellness app, ADHD wellness app, wellness app for Black women, affirmation app, ADHD journal app, mental health app Black women, neurodivergent self care, soffyn" />
+    <meta name="author" content="Developed By Akia, LLC" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://soffyn.com/" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://soffyn.com/" />
+    <meta property="og:site_name" content="soffyn" />
+    <meta property="og:title" content="soffyn | Your Safe Space to Just Be" />
+    <meta property="og:description" content="A wellness app for neurodivergent Black women — no shame, no streaks, no pressure. Affirmations, journaling &amp; focus tools built for how your brain actually works. Launching Q2 2026." />
+    <meta property="og:image" content="https://soffyn.com/assets/soffyn-og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="soffyn — Your safe space to just be. A wellness app for neurodivergent Black women." />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="soffyn | Your Safe Space to Just Be" />
+    <meta name="twitter:description" content="A wellness app for neurodivergent Black women — no shame, no streaks, no pressure. Launching Q2 2026." />
+    <meta name="twitter:image" content="https://soffyn.com/assets/soffyn-og-image.png" />
+    <meta name="twitter:image:alt" content="soffyn — Your safe space to just be." />
+
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -12,6 +38,64 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://soffyn.com/#organization",
+      "name": "soffyn",
+      "alternateName": "soffyn",
+      "url": "https://soffyn.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://soffyn.com/assets/soffyn-logo.png"
+      },
+      "description": "soffyn is a wellness app for neurodivergent Black women, offering affirmations, journaling, goal tracking, and focus tools.",
+      "foundingDate": "2026",
+      "founder": {
+        "@type": "Person",
+        "name": "Akia",
+        "jobTitle": "Founder & Developer"
+      },
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "Developed By Akia, LLC"
+      }
+    },
+    {
+      "@type": "MobileApplication",
+      "@id": "https://soffyn.com/#app",
+      "name": "soffyn",
+      "description": "A wellness app for neurodivergent Black women with affirmations, journaling, goal tracking, privacy controls, focus timer, and quick capture. No shame. No streaks. Your safe space to just be.",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "iOS, Android",
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/PreOrder",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Developed By Akia, LLC"
+      },
+      "url": "https://soffyn.com"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://soffyn.com/#webpage",
+      "url": "https://soffyn.com",
+      "name": "soffyn | Wellness App for Neurodivergent Black Women",
+      "description": "Your safe space to just be. A wellness app for neurodivergent Black women — with affirmations, journaling, goal tracking & focus tools. Launching Q2 2026.",
+      "isPartOf": { "@id": "https://soffyn.com/#organization" },
+      "inLanguage": "en-US"
+    }
+  ]
+}
+    </script>
   </head>
   <body>
     <nav>
@@ -31,11 +115,17 @@
     <input type="text" name="FNAME" placeholder="your first name" />
     <input type="email" name="EMAIL" placeholder="your@email.com" required />
     <label class="gdpr-label">
-      <input type="checkbox" name="consent" value="yes" required />
-      I agree to receive launch updates and beta access info from soffyn.
+      <input type="checkbox" name="consent" id="consent" value="yes" required />
+      <label for="consent">
+        I'd like to receive launch updates and early access info from soffyn
+        (operated by Developed By Akia, LLC). We'll only contact you about soffyn.
+        You can unsubscribe at any time. By signing up, you agree to our
+        <a href="/terms" style="color: #006964;">Terms of Use</a> and
+        <a href="/privacy" style="color: #006964;">Privacy Policy</a>.
+      </label>
     </label>
     <p class="gdpr-note">No pressure, no spam.</p>
-    <button type="submit" class="btn-primary">Join the waitlist</button>
+    <button type="submit" class="btn-primary">Get early access</button>
     <input type="hidden" name="form-name" value="waitlist" />
   </div>
 </form>
@@ -130,7 +220,7 @@
     <p>© 2026 soffyn. All rights reserved.</p>
     <p>Built with love for busy brains. Your safe space to just be.</p>
     <p>A Developed By Akia, LLC product</p>
-    <p><a href="/privacy.html" class="footer-link">Privacy Policy</a></p>
+    <p><a href="/privacy" class="footer-link">Privacy Policy</a> &nbsp;|&nbsp; <a href="/terms" class="footer-link">Terms of Use</a> &nbsp;|&nbsp; <a href="/disclaimer" class="footer-link">Wellness Disclaimer</a></p>
   </div>
 </footer>
   </body>
