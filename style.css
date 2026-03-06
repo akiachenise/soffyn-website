@@ -1,3 +1,24 @@
+/* ── Skip to main content (accessibility) ─────────── */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background: #006964;
+  color: #ffffff;
+  padding: 12px 24px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 0 0 8px 0;
+  z-index: 9999;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -13,9 +34,9 @@
   --sky: #eaf3ff;
   --ink: #1f2937;
   --ink-light: #4b5563;
-  --teal: #085e57;
-  --teal-dark: #074f49;
-  --plum: #6d28d9;
+  --teal: #006964;
+  --teal-dark: #004d48;
+  --plum: #6b5b8e;
   --white: #ffffff;
 
   --text-primary: var(--ink);
@@ -107,7 +128,7 @@ nav {
 
 #hero h1 em {
   font-style: normal;
-  color: var(--teal);
+  color: #006964;
 }
 
 #hero .hero-sub {
@@ -197,7 +218,7 @@ nav {
 
 #problem h2 em {
   font-style: normal;
-  color: var(--teal) !important;
+  color: #006964 !important;
 }
 
 .quotes-grid {
@@ -267,7 +288,7 @@ nav {
 
 #features h2 em {
   font-style: normal;
-  color: var(--teal) !important;
+  color: #006964 !important;
 }
 
 .features-grid {
@@ -340,7 +361,7 @@ nav {
 
 #about h2 em {
   font-style: normal;
-  color: var(--teal) !important;
+  color: #006964 !important;
 }
 
 #about p {
@@ -385,7 +406,7 @@ nav {
 
 #footer-cta h2 em {
   font-style: normal;
-  color: var(--teal) !important;
+  color: #006964 !important;
 }
 
 #footer-cta p {
@@ -521,7 +542,7 @@ footer p {
 
 .thankyou-wrapper h1 em {
   font-style: normal;
-  color: var(--teal);
+  color: #006964;
 }
 
 .thankyou-wrapper p {
