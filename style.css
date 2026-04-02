@@ -643,3 +643,226 @@ footer p {
   margin: 12px auto 28px;
   line-height: 1.7;
 }
+
+/* ── Founding member bar + countdown ───────────────────── */
+.founding-bar {
+  max-width: 480px;
+  margin: 20px auto 0;
+  text-align: center;
+  padding: 20px 24px;
+  background: var(--mist);
+  border-radius: 16px;
+  border: 1px solid rgba(0, 105, 100, 0.12);
+}
+
+.founding-note {
+  font-size: 0.85rem;
+  color: var(--teal);
+  font-weight: 500;
+  margin-bottom: 16px !important;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.countdown-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 48px;
+}
+
+.countdown-number {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--teal);
+  line-height: 1;
+}
+
+.countdown-label {
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+  margin-top: 2px;
+}
+
+.countdown-sep {
+  font-size: 1.4rem;
+  color: var(--ink-light);
+  opacity: 0.4;
+  align-self: flex-start;
+  margin-top: 4px;
+}
+
+.countdown-caption {
+  font-size: 0.75rem;
+  color: var(--ink-light);
+  opacity: 0.7;
+  margin-top: 4px;
+  margin-bottom: 0 !important;
+}
+
+/* ── Photo representation section ─────────────────────── */
+#representation {
+  padding: 80px 24px;
+  text-align: center;
+}
+
+.representation-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#representation .section-label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 12px;
+}
+
+#representation h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-style: italic;
+  margin-bottom: 16px;
+}
+
+#representation h2 em {
+  font-style: normal;
+  color: #006964;
+}
+
+.representation-sub {
+  font-size: 1rem;
+  color: var(--ink-light);
+  font-weight: 300;
+  max-width: 560px;
+  margin: 0 auto 48px;
+  line-height: 1.7;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  grid-template-rows: 320px;
+  gap: 16px;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.photo-frame {
+  background: linear-gradient(135deg, #0D2B27 0%, #006964 50%, #5ea9a6 100%);
+  border-radius: 20px;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* Subtle shimmer overlay to suggest human presence */
+.photo-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 40% 30%, rgba(255,255,255,0.06) 0%, transparent 70%);
+  border-radius: inherit;
+}
+
+.photo-frame--large {
+  grid-row: 1;
+}
+
+.photo-frame--small {
+  grid-row: 1;
+}
+
+/* When real photos are added: img inside .photo-frame */
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+/* ── Neurodivergent definition ─────────────────────────── */
+#definition {
+  padding: 60px 24px;
+}
+
+.definition-inner {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.definition-card {
+  background: var(--white);
+  border-radius: 24px;
+  padding: 48px 52px;
+  border-left: 4px solid var(--teal);
+  box-shadow: 0 4px 32px rgba(31, 41, 55, 0.06);
+}
+
+.definition-eyebrow {
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 16px;
+}
+
+.definition-card h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-style: italic;
+  color: var(--ink);
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.definition-card h3 em {
+  font-style: normal;
+  color: var(--teal);
+}
+
+.definition-card p {
+  font-size: 1rem;
+  color: var(--ink-light);
+  font-weight: 300;
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+.definition-card p:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Responsive additions ──────────────────────────────── */
+@media (max-width: 768px) {
+  .photo-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 220px 180px 180px;
+  }
+
+  .definition-card {
+    padding: 32px 28px;
+  }
+
+  .countdown-number {
+    font-size: 1.8rem;
+  }
+
+  .founding-bar {
+    margin-top: 16px;
+  }
+}
