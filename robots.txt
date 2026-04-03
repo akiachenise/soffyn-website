@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Block thank-you page and history folder from indexing
+Disallow: /thank-you.html
+Disallow: /.history/
+
+Sitemap: https://soffyn.com/sitemap.xml

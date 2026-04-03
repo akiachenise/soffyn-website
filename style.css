@@ -522,6 +522,20 @@ nav {
   color: var(--teal);
 }
 
+/* ── Feature row background colors (class-based) ─── */
+.feature-row--mist   .feature-visual { background: var(--mist); }
+.feature-row--blush  .feature-visual { background: var(--blush); }
+.feature-row--lilac  .feature-visual { background: var(--lilac); }
+.feature-row--butter .feature-visual { background: var(--butter); }
+.feature-row--sky    .feature-visual { background: var(--sky); }
+
+/* Founding members hero inner (alias for .hero-inner) */
+.fm-hero-inner {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+}
+
 /* Each feature: 2 columns, alternating which side the copy sits on */
 .feature-row {
   display: grid;
