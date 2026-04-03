@@ -279,82 +279,41 @@
       footer {
         background: var(--forest);
         color: white;
-        padding: 48px 24px;
+        padding: 48px;
         margin-top: 80px;
-        border-top: 4px solid var(--teal);
       }
 
-      footer .footer-content {
-        max-width: 1200px;
+      .footer-inner {
+        max-width: 900px;
         margin: 0 auto;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 48px;
-      }
-
-      footer h3 {
-        font-family: "Cormorant Garamond", serif;
-        font-size: 1.3rem;
-        margin-bottom: 16px;
-        color: var(--teal);
-      }
-
-      footer a {
-        color: rgba(255, 255, 255, 0.8);
-        text-decoration: none;
-        transition: color 0.2s ease;
-        display: block;
-        margin-bottom: 12px;
-      }
-
-      footer a:hover {
-        color: var(--teal);
-      }
-
-      .footer-branding {
-        display: flex;
-        flex-direction: column;
+        text-align: center;
       }
 
       .footer-logo {
         font-family: "Cormorant Garamond", serif;
         font-size: 1.5rem;
-        color: var(--teal);
         font-weight: 600;
+        margin-bottom: 16px;
+      }
+
+      .footer-inner p {
         margin-bottom: 12px;
+        font-size: 0.95rem;
+        color: rgba(255, 255, 255, 0.85);
       }
 
-      .footer-copy {
-        font-size: 0.9rem;
-        color: rgba(255, 255, 255, 0.6);
-        line-height: 1.6;
+      .footer-inner p:last-child {
+        margin-bottom: 0;
       }
 
-      .footer-bottom {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding-top: 32px;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 24px;
+      .footer-link {
+        color: rgba(255, 255, 255, 0.85);
+        text-decoration: none;
+        transition: color 0.3s ease;
       }
 
-      .footer-copyright {
-        font-size: 0.85rem;
-        color: rgba(255, 255, 255, 0.6);
-      }
-
-      .footer-links {
-        display: flex;
-        gap: 24px;
-      }
-
-      .footer-links a {
-        font-size: 0.9rem;
-        margin: 0;
+      .footer-link:hover {
+        color: var(--teal);
       }
 
       @media (max-width: 768px) {
@@ -547,40 +506,20 @@
       </section>
     </main>
 
-    <!-- ── Footer ──────────────────────────────────────── -->
+    <!-- Footer -->
     <footer>
-      <div class="footer-content">
-        <div class="footer-branding">
-          <div class="footer-logo">soffyn™</div>
-          <p class="footer-copy">Your safe space to just be. A wellness app for neurodivergent Black women—designed without shame, streaks, or pressure.</p>
-        </div>
-        <div>
-          <h3>Product</h3>
-          <a href="/#hero">Join the Waitlist</a>
-          <a href="/founding-members.html">Founding Members</a>
-          <a href="/">About soffyn</a>
-        </div>
-        <div>
-          <h3>Resources</h3>
-          <a href="/faq">FAQ</a>
-          <a href="/blog/">Blog</a>
-          <a href="/accessibility">Accessibility</a>
-        </div>
-        <div>
-          <h3>Legal</h3>
-          <a href="/terms">Terms of Use</a>
-          <a href="/privacy">Privacy Policy</a>
-          <a href="/disclaimer">Disclaimer</a>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p class="footer-copyright">&copy; 2026 Developed By Akia, LLC. All rights reserved. soffyn™ is a registered trademark.</p>
-        <div class="footer-links">
-          <a href="https://twitter.com/soffynapp" rel="noopener noreferrer">Twitter</a>
-          <a href="https://instagram.com/soffynapp" rel="noopener noreferrer">Instagram</a>
-          <a href="mailto:hello@soffyn.com">Contact</a>
-        </div>
+      <div class="footer-inner">
+        <p class="footer-logo">soffyn™</p>
+        <p>© 2026 soffyn. All rights reserved.</p>
+        <p>Built with love for busy brains. Your safe space to just be.</p>
+        <p>A Developed By Akia, LLC product</p>
+        <p>
+          <a href="/privacy" class="footer-link">Privacy Policy</a> &nbsp;|&nbsp;
+          <a href="/terms" class="footer-link">Terms of Use</a> &nbsp;|&nbsp;
+          <a href="/disclaimer" class="footer-link">Wellness Disclaimer</a> &nbsp;|&nbsp;
+          <a href="/accessibility" class="footer-link">Accessibility</a> &nbsp;|&nbsp;
+          <a href="/faq" class="footer-link">FAQ</a>
+        </p>
       </div>
     </footer>
   </body>
