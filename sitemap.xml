@@ -39,6 +39,12 @@
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://soffyn.com/contact</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
   <!-- Legal / support -->
   <url>
     <loc>https://soffyn.com/privacy</loc>
