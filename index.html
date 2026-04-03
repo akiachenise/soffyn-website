@@ -113,7 +113,7 @@
     <main id="main">
 
       <!-- ── Hero ──────────────────────────────────────────── -->
-      <section id="hero">
+      <section id="hero" class="hero-split">
         <div class="hero-inner">
           <span class="hero-eyebrow">Waitlist now open &mdash; launching September 2026.</span>
           <h1>The wellness app that <em>gets</em> how your brain works.</h1>
@@ -169,6 +169,14 @@
             <p class="countdown-caption">until soffyn launches</p>
           </div>
         </div>
+        <!-- lifestyle photo — right column on desktop, hidden on mobile -->
+        <div class="hero-visual" aria-hidden="true">
+          <img
+            src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=840&h=1100&fit=crop&q=80"
+            alt=""
+            loading="eager"
+          />
+        </div>
       </section>
 
       <!-- ── Representation ────────────────────────────────── -->
@@ -180,10 +188,27 @@
             <p class="representation-sub">A space that sees you fully. No performing, no explaining, no shrinking. Just you.</p>
           </div>
           <div class="photo-grid">
-            <!-- Replace src values with photos from nappy.co or createherstock.com -->
-            <div class="photo-frame photo-frame--large" role="img" aria-label="A Black woman resting, at peace"></div>
-            <div class="photo-frame photo-frame--small" role="img" aria-label="A Black woman writing in her journal"></div>
-            <div class="photo-frame photo-frame--small" role="img" aria-label="A Black woman smiling, relaxed at home"></div>
+            <div class="photo-frame photo-frame--large">
+              <img
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=700&h=900&fit=crop&q=80"
+                alt="A Black woman at peace, resting"
+                loading="lazy"
+              />
+            </div>
+            <div class="photo-frame photo-frame--small">
+              <img
+                src="https://images.unsplash.com/photo-1598532162426-cf4700d7a9c0?w=500&h=450&fit=crop&q=80"
+                alt="A Black woman writing in her journal"
+                loading="lazy"
+              />
+            </div>
+            <div class="photo-frame photo-frame--small">
+              <img
+                src="https://images.unsplash.com/photo-1622396481800-4f84fb5d01e7?w=500&h=450&fit=crop&q=80"
+                alt="A Black woman smiling, relaxed at home"
+                loading="lazy"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -219,6 +244,7 @@
 
           <div class="feature-row feature-row--mist">
             <div class="feature-visual">
+              <img class="feature-visual-img" src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=600&h=480&fit=crop&q=75" alt="" loading="lazy" aria-hidden="true" />
               <span class="feature-num">01</span>
               <h3 class="feature-visual-label">Daily affirmations</h3>
             </div>
@@ -230,6 +256,7 @@
 
           <div class="feature-row feature-row--flip feature-row--blush">
             <div class="feature-visual">
+              <img class="feature-visual-img" src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=600&h=480&fit=crop&q=75" alt="" loading="lazy" aria-hidden="true" />
               <span class="feature-num">02</span>
               <h3 class="feature-visual-label">Flexible journaling</h3>
             </div>
@@ -241,6 +268,7 @@
 
           <div class="feature-row feature-row--lilac">
             <div class="feature-visual">
+              <img class="feature-visual-img" src="https://images.unsplash.com/photo-1590650046871-30bb46b69e2d?w=600&h=480&fit=crop&q=75" alt="" loading="lazy" aria-hidden="true" />
               <span class="feature-num">03</span>
               <h3 class="feature-visual-label">Goal tracking</h3>
             </div>
@@ -252,6 +280,7 @@
 
           <div class="feature-row feature-row--flip feature-row--butter">
             <div class="feature-visual">
+              <img class="feature-visual-img" src="https://images.unsplash.com/photo-1554151228-14d9def656e4?w=600&h=480&fit=crop&q=75" alt="" loading="lazy" aria-hidden="true" />
               <span class="feature-num">04</span>
               <h3 class="feature-visual-label">Privacy, your way</h3>
             </div>
@@ -263,6 +292,7 @@
 
           <div class="feature-row feature-row--sky">
             <div class="feature-visual">
+              <img class="feature-visual-img" src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=600&h=480&fit=crop&q=75" alt="" loading="lazy" aria-hidden="true" />
               <span class="feature-num">05</span>
               <h3 class="feature-visual-label">Built for busy brains</h3>
             </div>
@@ -274,6 +304,7 @@
 
           <div class="feature-row feature-row--flip feature-row--mist">
             <div class="feature-visual">
+              <img class="feature-visual-img" src="https://images.unsplash.com/photo-1607748851687-ba9a10438621?w=600&h=480&fit=crop&q=75" alt="" loading="lazy" aria-hidden="true" />
               <span class="feature-num">06</span>
               <h3 class="feature-visual-label">Mood check-in</h3>
             </div>
@@ -329,15 +360,24 @@
       <!-- ── About ─────────────────────────────────────────── -->
       <section id="about">
         <div class="about-inner">
-          <p class="section-label">About soffyn</p>
-          <h2>I built the app I <em>couldn't</em> find.</h2>
-          <p>Hi, I'm Akia — a neurodivergent Black woman, software engineer, and accessibility specialist who got tired of wellness apps that weren't built for brains like mine.</p>
-          <p>I've tried almost every wellness app on the market. They were either too cookie cutter, too demanding, or just too much for my brain. I'm a forgetful girl. Out of sight, out of mind. Streaks don't work for me. My hopes and dreams have a habit of becoming hoarded thoughts in the notes app.</p>
-          <p>And no app understood the specific exhaustion of spending all day masking — at work, in every room — and then coming home to a wellness app that asked me to perform even more.</p>
-          <p>I needed something that meets me in the middle. A place to be myself that's gentle, rewarding, and completely okay if I don't show up every single day.</p>
-          <p class="about-highlight">Always there when you need it. Never mad when you don't.</p>
-          <p>That's soffyn. I built it for me. And I built it for you.</p>
-          <p class="about-community">The people who asked for soffyn before it existed also asked for a place to find each other. That's next. Join the waitlist and be first in the room when it opens.</p>
+          <div class="about-text">
+            <p class="section-label">About soffyn</p>
+            <h2>I built the app I <em>couldn't</em> find.</h2>
+            <p>Hi, I'm Akia — a neurodivergent Black woman, software engineer, and accessibility specialist who got tired of wellness apps that weren't built for brains like mine.</p>
+            <p>I've tried almost every wellness app on the market. They were either too cookie cutter, too demanding, or just too much for my brain. I'm a forgetful girl. Out of sight, out of mind. Streaks don't work for me. My hopes and dreams have a habit of becoming hoarded thoughts in the notes app.</p>
+            <p>And no app understood the specific exhaustion of spending all day masking — at work, in every room — and then coming home to a wellness app that asked me to perform even more.</p>
+            <p>I needed something that meets me in the middle. A place to be myself that's gentle, rewarding, and completely okay if I don't show up every single day.</p>
+            <p class="about-highlight">Always there when you need it. Never mad when you don't.</p>
+            <p>That's soffyn. I built it for me. And I built it for you.</p>
+            <p class="about-community">The people who asked for soffyn before it existed also asked for a place to find each other. That's next. Join the waitlist and be first in the room when it opens.</p>
+          </div>
+          <div class="about-photo" aria-hidden="true">
+            <img
+              src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=720&h=900&fit=crop&q=80"
+              alt=""
+              loading="lazy"
+            />
+          </div>
         </div>
       </section>
 
