@@ -86,9 +86,20 @@
     <style>
       /* Blog-specific styles */
       .blog-hero {
-        padding: 80px 48px 60px;
+        padding: 72px 48px 0;
         max-width: 900px;
         margin: 0 auto;
+      }
+
+      .blog-hero-tag {
+        display: inline-block;
+        font-family: "DM Sans", sans-serif;
+        font-size: 0.72rem;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--teal);
+        margin-bottom: 20px;
       }
 
       .blog-hero h1 {
@@ -98,6 +109,21 @@
         color: var(--ink);
         margin-bottom: 16px;
         line-height: 1.2;
+      }
+
+      .blog-hero-cover {
+        margin-top: 48px;
+        width: 100%;
+        height: 460px;
+        overflow: hidden;
+        border-radius: 16px;
+      }
+
+      .blog-hero-cover img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
       }
 
       .blog-meta {
@@ -395,12 +421,19 @@
       <article class="blog-post">
         <!-- Blog Hero -->
         <header class="blog-hero">
+          <span class="blog-hero-tag">ADHD &amp; Identity</span>
           <h1>The Burnout Cycle Nobody Talks About: Being a Black Woman with Undiagnosed ADHD</h1>
           <div class="blog-meta">
             <span>February 2026</span>
             <span>6 min read</span>
             <span>By Akia</span>
           </div>
+          <figure class="blog-hero-cover">
+            <img
+              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1200&h=600&fit=crop&q=85"
+              alt="A Black woman, thoughtful and composed"
+            />
+          </figure>
         </header>
 
         <!-- Blog Content -->

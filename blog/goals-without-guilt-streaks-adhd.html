@@ -51,9 +51,19 @@
       }
 
       .blog-hero {
-        padding: 64px 0 48px 0;
-        border-bottom: 1px solid rgba(0, 107, 100, 0.15);
-        margin-bottom: 48px;
+        padding: 72px 0 0;
+        margin-bottom: 0;
+      }
+
+      .blog-hero-tag {
+        display: inline-block;
+        font-family: "DM Sans", sans-serif;
+        font-size: 0.72rem;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--teal);
+        margin-bottom: 20px;
       }
 
       .blog-hero h1 {
@@ -62,6 +72,21 @@
         color: var(--forest);
         margin-bottom: 20px;
         font-weight: 600;
+      }
+
+      .blog-hero-cover {
+        margin-top: 48px;
+        width: 100%;
+        height: 460px;
+        overflow: hidden;
+        border-radius: 16px;
+      }
+
+      .blog-hero-cover img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
       }
 
       .blog-meta {
@@ -389,6 +414,7 @@
     <main id="main" class="blog-post">
       <!-- ── Hero ────────────────────────────────────────── -->
       <section class="blog-hero">
+        <span class="blog-hero-tag">Wellness Design</span>
         <h1>Goals Without Guilt: Why Streaks Fail ADHD Brains (And What Actually Works)</h1>
         <div class="blog-meta">
           <span>March 2026</span>
@@ -397,6 +423,12 @@
           <div class="blog-meta-divider"></div>
           <span>By Akia</span>
         </div>
+        <figure class="blog-hero-cover">
+          <img
+            src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=1200&h=600&fit=crop&q=85"
+            alt="A Black woman, grounded and reflective"
+          />
+        </figure>
       </section>
 
       <!-- ── Article Content ────────────────────────────── -->

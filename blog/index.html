@@ -89,8 +89,20 @@
         box-shadow: 0 16px 40px rgba(31,41,55,0.1);
       }
       .blog-card-thumb {
-        height: 180px;
+        height: 220px;
         display: block;
+        overflow: hidden;
+        position: relative;
+      }
+      .blog-card-thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.4s ease;
+      }
+      .blog-card:hover .blog-card-thumb img {
+        transform: scale(1.04);
       }
       .blog-card-thumb--mist    { background: linear-gradient(135deg, var(--mist) 0%, #b8e0dc 100%); }
       .blog-card-thumb--blush   { background: linear-gradient(135deg, var(--blush) 0%, #f7c2d4 100%); }
