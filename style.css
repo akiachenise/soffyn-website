@@ -336,7 +336,6 @@ nav {
 /* ── Representation — editorial side-by-side ───────── */
 #representation {
   padding: 80px 48px;
-  background-color: #F5F0E8;
 }
 
 .representation-inner {
@@ -429,7 +428,6 @@ nav {
 #problem {
   padding: 80px 48px;
   text-align: center;
-  background-color: #ffffff;
 }
 
 .problem-inner {
@@ -510,7 +508,6 @@ nav {
 /* ── Features — editorial alternating rows ─────────── */
 #features {
   padding: 80px 48px;
-  background-color: #F5F0E8;
 }
 
 .features-inner {
@@ -656,7 +653,6 @@ nav {
 /* ── Neurodivergent definition ─────────────────────── */
 #definition {
   padding: 80px 48px;
-  background-color: #ffffff;
 }
 
 .definition-inner {
@@ -711,7 +707,6 @@ nav {
 /* ── About ─────────────────────────────────────────── */
 #about {
   padding: 80px 48px;
-  background-color: #F5F0E8;
 }
 
 .about-inner {
@@ -796,7 +791,6 @@ nav {
 #footer-cta {
   padding: 80px 24px;
   text-align: center;
-  background-color: #ffffff;
 }
 
 .footer-cta-inner {
