@@ -77,12 +77,13 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 24px 48px;
+  background-color: #006964;
 }
 
 .nav-logo {
   font-family: "Cormorant Garamond", serif;
   font-size: 1.5rem;
-  color: var(--teal);
+  color: #ffffff;
   text-decoration: none;
   font-weight: 600;
 }
@@ -97,19 +98,19 @@ nav {
   font-family: "DM Sans", sans-serif;
   font-size: 0.875rem;
   font-weight: 400;
-  color: var(--ink-light);
+  color: #ffffff;
   text-decoration: none;
   letter-spacing: 0.01em;
   transition: color 0.2s ease;
 }
 
 .nav-link:hover {
-  color: var(--teal);
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .nav-cta {
-  background-color: var(--teal);
-  color: var(--white);
+  background-color: #0d2b27;
+  color: #ffffff;
   padding: 10px 22px;
   border-radius: 100px;
   text-decoration: none;
@@ -121,14 +122,14 @@ nav {
 }
 
 .nav-cta:hover {
-  background-color: var(--teal-dark);
+  background-color: #08201c;
   transform: translateY(-1px);
 }
 
 /* ── Hero ──────────────────────────────────────────── */
 #hero {
   text-align: center;
-  padding: 80px 24px 100px;
+  padding: 80px 24px;
 }
 
 .hero-inner {
@@ -334,7 +335,8 @@ nav {
 
 /* ── Representation — editorial side-by-side ───────── */
 #representation {
-  padding: 100px 48px;
+  padding: 80px 48px;
+  background-color: #F5F0E8;
 }
 
 .representation-inner {
@@ -425,8 +427,9 @@ nav {
 
 /* ── Problem / Quotes ──────────────────────────────── */
 #problem {
-  padding: 100px 48px;
+  padding: 80px 48px;
   text-align: center;
+  background-color: #ffffff;
 }
 
 .problem-inner {
@@ -498,9 +501,16 @@ nav {
   color: var(--teal);
 }
 
+.quote-card {
+  border-left: 4px solid #006964;
+  padding-left: 20px;
+  margin-bottom: 24px;
+}
+
 /* ── Features — editorial alternating rows ─────────── */
 #features {
-  padding: 100px 48px;
+  padding: 80px 48px;
+  background-color: #F5F0E8;
 }
 
 .features-inner {
@@ -645,7 +655,8 @@ nav {
 
 /* ── Neurodivergent definition ─────────────────────── */
 #definition {
-  padding: 60px 48px;
+  padding: 80px 48px;
+  background-color: #ffffff;
 }
 
 .definition-inner {
@@ -699,7 +710,8 @@ nav {
 
 /* ── About ─────────────────────────────────────────── */
 #about {
-  padding: 100px 48px;
+  padding: 80px 48px;
+  background-color: #F5F0E8;
 }
 
 .about-inner {
@@ -782,8 +794,9 @@ nav {
 
 /* ── Footer CTA ────────────────────────────────────── */
 #footer-cta {
-  padding: 120px 24px;
+  padding: 80px 24px;
   text-align: center;
+  background-color: #ffffff;
 }
 
 .footer-cta-inner {
