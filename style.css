@@ -28,52 +28,26 @@
 
 /* ── Design tokens ─────────────────────────────────── */
 :root {
-  /* ── Warm neutral backgrounds ───────────────────────
-     All share a pink/yellow undertone. Think warm paper,
-     a journal on a Sunday, soft candlelight.            */
-  --cream:  #fdf8f4;   /* Warmest white — primary page bg            */
-  --mist:   #f5ece6;   /* Soft peach-taupe — card / section bg       */
-  --blush:  #faeae4;   /* Warm peach-blush — section accent          */
-  --lilac:  #f5e8e8;   /* Dusty rose tint — replaces cool lilac      */
-  --butter: #fdf4e3;   /* Warm butter — sunlit golden warmth         */
-  --sand:   #f7ede5;   /* Warm rose-linen — general section bg       */
-  --sky:    #f5ece8;   /* Warm blush-neutral — replaces cool sky     */
+  --mist:      #E6F3F1;
+  --blush:     #FCE7EF;
+  --lilac:     #EFE8FA;
+  --butter:    #FFF4CC;
+  --sand:      #F6F1EA;
+  --sky:       #EAF3FF;
+  --ink:       #1F2937;
+  --ink-light: #4B5563;
+  --teal:      #0F766E;
+  --teal-dark: #0C6059;
+  --forest:    #0D2B27;
+  --plum:      #6D28D9;
+  --white:     #FFFFFF;
 
-  /* ── Primary text ──────────────────────────────────*/
-  --ink:       #2a1f1a;   /* Deep warm brown — primary body text    */
-  --ink-light: #5c4a40;   /* Warm mid-brown  — secondary / captions */
+  /* light teal — used for em/highlights on dark backgrounds */
+  --gold: #5CD9D3;
 
-  /* ── Primary accent: dusty rose ────────────────────
-     Soft, warm, wellness-forward. Reads as a cozy rose,
-     not a bold red. 4.75:1 (white on it) — AA ✓       */
-  --teal:      #9a5f6d;   /* Dusty rose — primary accent            */
-  --teal-dark: #7d4d59;   /* Deeper rose — hover / active           */
-
-  /* ── Text accent: warm honey amber ─────────────────
-     Body em, pull quotes, soft inline highlights.
-     6.5:1 on --cream, 5.0:1 on --sand — AA ✓          */
-  --amber: #7a5519;
-
-  /* ── Warm gold — on dark backgrounds ───────────────
-     Em / highlights inside nav, footer, dark heroes.
-     9.2:1 on --forest — AA ✓                           */
-  --gold: #e8c07d;
-
-  /* ── Dark anchor: deep warm plum ───────────────────
-     Nav, footer, dark CTAs. Feels like a rich velvet,
-     a candle in a dim room — not corporate dark.
-     18.75:1 (white on it) — AAA ✓                     */
-  --forest: #2d1520;
-
-  /* ── Warm dusty plum ───────────────────────────────*/
-  --plum: #7a5c62;
-
-  --white: #ffffff;
-
-  /* ── Semantic mappings ──────────────────────────── */
   --text-primary:   var(--ink);
   --text-secondary: var(--ink-light);
-  --bg-page:        var(--cream);
+  --bg-page:        var(--sand);
   --bg-card:        var(--white);
 }
 
@@ -82,12 +56,20 @@ body {
   font-family: "DM Sans", sans-serif;
   background: linear-gradient(
     180deg,
-    var(--cream)  0%,
-    var(--sand)   25%,
-    var(--blush)  50%,
-    var(--butter) 75%,
-    var(--cream)  100%
+    #0F766E  0%,
+    #5EA89F  8%,
+    #E6F3F1  18%,
+    #F4EAF1  30%,
+    #FCE7EF  38%,
+    #F5EEF9  50%,
+    #EFE8FA  58%,
+    #F7F3E4  68%,
+    #FFF4CC  76%,
+    #FAF3EE  85%,
+    #F6F1EA  91%,
+    #EAF3FF  100%
   );
+  background-attachment: fixed;
   color: var(--text-primary);
   line-height: 1.7;
   min-height: 100vh;
@@ -310,7 +292,7 @@ nav {
   padding: 20px 24px;
   background: var(--mist);
   border-radius: 16px;
-  border: 1px solid rgba(154, 95, 109, 0.15);
+  border: 1px solid rgba(15, 118, 110, 0.12);
 }
 
 .founding-note {
@@ -427,7 +409,7 @@ nav {
 }
 
 .photo-frame {
-  background: linear-gradient(155deg, #2d1520 0%, #9a5f6d 60%, #d4a0aa 100%);
+  background: linear-gradient(155deg, #0D2B27 0%, #0F766E 60%, #5EA9A6 100%);
   border-radius: 20px;
   overflow: hidden;
   width: 100%;
@@ -533,7 +515,7 @@ nav {
   font-size: 1.8rem;
   font-style: italic;
   font-weight: 400;
-  color: var(--amber);
+  color: var(--teal);
 }
 
 .quote-card {
@@ -827,7 +809,7 @@ nav {
   font-size: 1.8rem;
   font-style: italic;
   font-weight: 400;
-  color: var(--amber);
+  color: var(--teal);
   line-height: 1.35;
   margin: 36px 0;
 }
@@ -1113,7 +1095,7 @@ footer p {
   border-left-color: var(--plum);
 }
 .faq-item:nth-child(3n) {
-  border-left-color: var(--amber);
+  border-left-color: #e8a87c;
 }
 
 .faq-footer-note {
@@ -1333,7 +1315,7 @@ footer p {
 
 .pricing-card--featured {
   background: var(--forest);
-  box-shadow: 0 16px 64px rgba(45, 21, 32, 0.2);
+  box-shadow: 0 16px 64px rgba(13, 43, 39, 0.2);
 }
 
 .pricing-badge {
@@ -1558,7 +1540,7 @@ footer p {
 
 .fm-quote footer {
   font-size: 0.9rem;
-  color: var(--amber);
+  color: var(--teal);
   font-weight: 500;
   font-style: normal;
   background: none;
@@ -1620,8 +1602,8 @@ footer p {
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(45, 21, 32, 0.78) 0%,
-    rgba(45, 21, 32, 0.32) 55%,
+    rgba(13, 43, 39, 0.78) 0%,
+    rgba(13, 43, 39, 0.32) 55%,
     transparent 100%
   );
   z-index: 1;
@@ -1672,8 +1654,8 @@ footer p {
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(45, 21, 32, 0.82) 0%,
-    rgba(45, 21, 32, 0.2) 55%,
+    rgba(13, 43, 39, 0.82) 0%,
+    rgba(13, 43, 39, 0.2) 55%,
     transparent 100%
   );
   display: flex;
