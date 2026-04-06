@@ -336,6 +336,7 @@ nav {
 /* ── Representation — editorial side-by-side ───────── */
 #representation {
   padding: 80px 48px;
+  background: var(--sand);
 }
 
 .representation-inner {
@@ -508,6 +509,7 @@ nav {
 /* ── Features — editorial alternating rows ─────────── */
 #features {
   padding: 80px 48px;
+  background: var(--sand);
 }
 
 .features-inner {
@@ -539,6 +541,18 @@ nav {
 .features-inner > h2 em {
   font-style: normal;
   color: var(--teal);
+}
+
+/* ── Feature row full-bleed warm backgrounds ─────── */
+.feature-row--blush {
+  background: var(--blush);
+  border-radius: 24px;
+  padding: 32px;
+}
+.feature-row--butter {
+  background: var(--butter);
+  border-radius: 24px;
+  padding: 32px;
 }
 
 /* ── Feature row background colors (class-based) ─── */
