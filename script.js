@@ -46,6 +46,8 @@
     }
 
     tick();
+    var cd = document.getElementById("countdown");
+    if (cd) cd.style.opacity = "1";
     setInterval(tick, 1000);
   });
 })();

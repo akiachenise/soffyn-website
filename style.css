@@ -902,6 +902,13 @@ footer p {
   color: rgba(255, 255, 255, 0.45);
 }
 
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
 .footer-link {
   color: rgba(255, 255, 255, 0.45);
   text-decoration: none;
@@ -1257,7 +1264,7 @@ footer p {
 
 .pricing-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 24px;
   margin-bottom: 32px;
   text-align: left;
@@ -1710,6 +1717,10 @@ footer p {
 
   .pricing-grid {
     grid-template-columns: 1fr;
+  }
+
+  .pricing-card--featured {
+    order: -1;
   }
 
   .fm-who-grid {
