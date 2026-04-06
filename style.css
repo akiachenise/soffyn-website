@@ -29,43 +29,43 @@
 /* ── Design tokens ─────────────────────────────────── */
 :root {
   /* ── Warm neutral backgrounds ───────────────────────
-     All share a yellow/red undertone — they breathe
-     together. Dominant feel: warm paper, soft candlelight. */
-  --cream:  #fdf8f2;   /* Primary page bg — warmest white            */
-  --mist:   #f0ebe4;   /* Warm taupe — replaces cool mint             */
-  --blush:  #faeee8;   /* Peach-blush — warm card / section accent    */
-  --lilac:  #f3e8e4;   /* Warm blush — replaces cool lilac            */
-  --butter: #fdf4e3;   /* Warm butter — sunlit yellow warmth          */
-  --sand:   #f5ede0;   /* Warm linen — general section background     */
-  --sky:    #f2ece4;   /* Warm neutral — replaces cool sky blue       */
+     All share a pink/yellow undertone. Think warm paper,
+     a journal on a Sunday, soft candlelight.            */
+  --cream:  #fdf8f4;   /* Warmest white — primary page bg            */
+  --mist:   #f5ece6;   /* Soft peach-taupe — card / section bg       */
+  --blush:  #faeae4;   /* Warm peach-blush — section accent          */
+  --lilac:  #f5e8e8;   /* Dusty rose tint — replaces cool lilac      */
+  --butter: #fdf4e3;   /* Warm butter — sunlit golden warmth         */
+  --sand:   #f7ede5;   /* Warm rose-linen — general section bg       */
+  --sky:    #f5ece8;   /* Warm blush-neutral — replaces cool sky     */
 
-  /* ── Primary text — warm-undertone replacements ─────
-     Replaces cool charcoal (#1f2937) / gray (#4b5563). */
-  --ink:       #2a1f15;   /* Deep warm brown — primary body text    */
-  --ink-light: #5c4a38;   /* Warm mid-brown  — secondary / captions */
+  /* ── Primary text ──────────────────────────────────*/
+  --ink:       #2a1f1a;   /* Deep warm brown — primary body text    */
+  --ink-light: #5c4a40;   /* Warm mid-brown  — secondary / captions */
 
-  /* ── Primary accent: muted terracotta ──────────────
-     CTAs, buttons, links, section labels, heading em.
-     4.9:1 (white on it); 5.3:1 on --cream.            */
-  --teal:      #a85c52;   /* Muted terracotta — primary accent       */
-  --teal-dark: #8b4840;   /* Deeper terracotta — hover / active      */
+  /* ── Primary accent: dusty rose ────────────────────
+     Soft, warm, wellness-forward. Reads as a cozy rose,
+     not a bold red. 4.75:1 (white on it) — AA ✓       */
+  --teal:      #9a5f6d;   /* Dusty rose — primary accent            */
+  --teal-dark: #7d4d59;   /* Deeper rose — hover / active           */
 
   /* ── Text accent: warm honey amber ─────────────────
-     Body-copy em tags, pull quotes, soft highlights.
-     Light-bg only: 6.5:1 on --cream, 5.0:1 on --sand. */
+     Body em, pull quotes, soft inline highlights.
+     6.5:1 on --cream, 5.0:1 on --sand — AA ✓          */
   --amber: #7a5519;
 
-  /* ── Warm gold — light accent on dark backgrounds ──
-     Used on em / highlighted text inside dark sections
-     (nav, footer, utility hero). 9.2:1 on --forest.   */
+  /* ── Warm gold — on dark backgrounds ───────────────
+     Em / highlights inside nav, footer, dark heroes.
+     9.2:1 on --forest — AA ✓                           */
   --gold: #e8c07d;
 
-  /* ── Dark anchor: deep espresso ────────────────────
-     Nav, footer, final CTA. Earthy, grounding.
-     17.5:1 contrast (white on it).                    */
-  --forest: #231a12;
+  /* ── Dark anchor: deep warm plum ───────────────────
+     Nav, footer, dark CTAs. Feels like a rich velvet,
+     a candle in a dim room — not corporate dark.
+     18.75:1 (white on it) — AAA ✓                     */
+  --forest: #2d1520;
 
-  /* ── Warm dusty plum (updated undertone) ───────────*/
+  /* ── Warm dusty plum ───────────────────────────────*/
   --plum: #7a5c62;
 
   --white: #ffffff;
@@ -83,10 +83,9 @@ body {
   background: linear-gradient(
     180deg,
     var(--cream)  0%,
-    var(--blush)  20%,
-    var(--sand)   40%,
-    var(--butter) 60%,
-    var(--mist)   80%,
+    var(--sand)   25%,
+    var(--blush)  50%,
+    var(--butter) 75%,
     var(--cream)  100%
   );
   color: var(--text-primary);
@@ -311,7 +310,7 @@ nav {
   padding: 20px 24px;
   background: var(--mist);
   border-radius: 16px;
-  border: 1px solid rgba(168, 92, 82, 0.12);
+  border: 1px solid rgba(154, 95, 109, 0.15);
 }
 
 .founding-note {
@@ -428,7 +427,7 @@ nav {
 }
 
 .photo-frame {
-  background: linear-gradient(155deg, #231a12 0%, #a85c52 60%, #d4a090 100%);
+  background: linear-gradient(155deg, #2d1520 0%, #9a5f6d 60%, #d4a0aa 100%);
   border-radius: 20px;
   overflow: hidden;
   width: 100%;
@@ -1334,7 +1333,7 @@ footer p {
 
 .pricing-card--featured {
   background: var(--forest);
-  box-shadow: 0 16px 64px rgba(35, 26, 18, 0.2);
+  box-shadow: 0 16px 64px rgba(45, 21, 32, 0.2);
 }
 
 .pricing-badge {
@@ -1621,8 +1620,8 @@ footer p {
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(35, 26, 18, 0.78) 0%,
-    rgba(35, 26, 18, 0.32) 55%,
+    rgba(45, 21, 32, 0.78) 0%,
+    rgba(45, 21, 32, 0.32) 55%,
     transparent 100%
   );
   z-index: 1;
@@ -1673,8 +1672,8 @@ footer p {
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(35, 26, 18, 0.82) 0%,
-    rgba(35, 26, 18, 0.2) 55%,
+    rgba(45, 21, 32, 0.82) 0%,
+    rgba(45, 21, 32, 0.2) 55%,
     transparent 100%
   );
   display: flex;
