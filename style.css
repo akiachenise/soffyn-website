@@ -28,27 +28,22 @@
 
 /* ── Design tokens ─────────────────────────────────── */
 :root {
+  --teal:      #0F766E;
+  --teal-dark: #085E57;
+  --plum:      #6D28D9;
+  --ink:       #1F2937;
+  --ink-light: #4B5563;
   --mist:      #E6F3F1;
   --blush:     #FCE7EF;
   --lilac:     #EFE8FA;
   --butter:    #FFF4CC;
   --sand:      #F6F1EA;
   --sky:       #EAF3FF;
-  --ink:       #1F2937;
-  --ink-light: #4B5563;
-  --teal:      #0F766E;
-  --teal-dark: #0C6059;
-  --forest:    #0D2B27;
-  --plum:      #6D28D9;
   --white:     #FFFFFF;
-
-  /* light teal — used for em/highlights on dark backgrounds */
-  --gold: #5CD9D3;
-
   --text-primary:   var(--ink);
   --text-secondary: var(--ink-light);
-  --bg-page:        var(--sand);
-  --bg-card:        var(--white);
+  --bg-page:   var(--sand);
+  --bg-card:   var(--white);
 }
 
 /* ── Base ──────────────────────────────────────────── */
@@ -56,28 +51,13 @@ body {
   font-family: "DM Sans", sans-serif;
   background: linear-gradient(
     180deg,
-    #0F766E  0%,
-    #2A8C85  4%,
-    #4EA8A1  8%,
-    #82C4BF  12%,
-    #C0E2DF  16%,
-    #E6F3F1  22%,
-    #ECE9F3  28%,
-    #F0E8F2  33%,
-    #F4EAF1  38%,
-    #FAE6EE  44%,
-    #FCE7EF  50%,
-    #F6EBF8  54%,
-    #EFE8FA  60%,
-    #F3EFE3  66%,
-    #F9F1D6  71%,
-    #FFF4CC  76%,
-    #F9F1E6  81%,
-    #F6F1EA  87%,
-    #EEF4FB  94%,
-    #EAF3FF  100%
+    var(--blush) 0%,
+    var(--sand) 20%,
+    var(--mist) 40%,
+    var(--lilac) 60%,
+    var(--butter) 80%,
+    var(--sky) 100%
   );
-  background-attachment: fixed;
   color: var(--text-primary);
   line-height: 1.7;
   min-height: 100vh;
