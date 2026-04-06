@@ -429,6 +429,7 @@ nav {
 #problem {
   padding: 80px 48px;
   text-align: center;
+  background: var(--sand);
 }
 
 .problem-inner {
@@ -667,6 +668,7 @@ nav {
 /* ── Neurodivergent definition ─────────────────────── */
 #definition {
   padding: 80px 48px;
+  background: var(--sand);
 }
 
 .definition-inner {
@@ -721,6 +723,7 @@ nav {
 /* ── About ─────────────────────────────────────────── */
 #about {
   padding: 80px 48px;
+  background: var(--sand);
 }
 
 .about-inner {
