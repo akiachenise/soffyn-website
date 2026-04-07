@@ -132,75 +132,53 @@
         <a href="/founding-members.html" class="nav-link">Founding Members</a>
         <a href="/blog/" class="nav-link">Blog</a>
       </div>
-      <a href="#hero" class="nav-cta">Join the waitlist</a>
+      <a href="#waitlist" class="nav-cta">Join the waitlist</a>
     </nav>
 
     <main id="main">
       <!-- ── Hero ──────────────────────────────────────────── -->
-      <section id="hero" class="hero-split">
+      <section id="hero">
+        <div class="hero-bg" aria-hidden="true">
+          <img
+            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1400&h=900&fit=crop&q=80"
+            alt=""
+            loading="eager"
+          />
+        </div>
         <div class="hero-inner">
-          <span class="hero-eyebrow"
-            >Waitlist now open &mdash; launching September 2026.</span
-          >
+          <span class="hero-eyebrow">Waitlist now open &mdash; launching September 2026.</span>
           <h1>You spend all day masking, performing, and holding it together.</h1>
-          <p class="hero-subheadline">
-            soffyn is where you don't have to.
-          </p>
-          <p class="hero-sub">
-            A wellness app built for neurodivergent Black women — and everyone who needed something like this to exist.
-          </p>
+          <p class="hero-sub">soffyn is where you don't have to. Built for neurodivergent Black women — and everyone who needed something like this to exist.</p>
+          <a href="#waitlist" class="hero-cta-btn">Claim my free spot</a>
+          <p class="hero-founding-note">Free to start — always. Founding members get full access free, forever.</p>
+        </div>
+      </section>
 
-          <form
-            name="waitlist"
-            method="POST"
-            data-netlify="true"
-            action="thank-you.html"
-          >
+      <!-- ── Waitlist form ─────────────────────────────────── -->
+      <section id="waitlist">
+        <div class="waitlist-inner">
+          <p class="section-label">Join the waitlist</p>
+          <h2>Your safe space to <em>just be.</em></h2>
+          <form name="waitlist" method="POST" data-netlify="true" action="thank-you.html">
             <div class="signup-wrapper">
               <p>Join free — while the waitlist is open.</p>
               <input type="text" name="FNAME" placeholder="your first name" />
-              <input
-                type="email"
-                name="EMAIL"
-                placeholder="your@email.com"
-                required
-              />
+              <input type="email" name="EMAIL" placeholder="your@email.com" required />
               <label class="gdpr-label" for="consent">
-                <input
-                  type="checkbox"
-                  name="consent"
-                  id="consent"
-                  value="yes"
-                  required
-                />
+                <input type="checkbox" name="consent" id="consent" value="yes" required />
                 <span>
-                  I'd like to receive launch updates and early access info from
-                  soffyn. We'll only contact you about soffyn. You can unsubscribe at any time. By
-                  signing up, you agree to our
+                  I'd like to receive launch updates and early access info from soffyn. We'll only contact you about soffyn. You can unsubscribe at any time. By signing up, you agree to our
                   <a href="/terms" style="color: #0F766E">Terms of Use</a> and
                   <a href="/privacy" style="color: #0F766E">Privacy Policy</a>.
                 </span>
               </label>
               <p class="gdpr-note">No pressure, no spam.</p>
               <p class="gdpr-note" style="margin-top: 8px;">You'll get a welcome email from me — then updates as I get closer to launch. When the doors open, you're in first.</p>
-              <p class="founding-note">
-                soffyn is free to start — always. Founding members get full access free, forever. soffyn Set launches at $8.99/month.
-              </p>
-              <button type="submit" class="btn-primary">
-                Claim my free spot
-              </button>
+              <p class="founding-note">soffyn is free to start — always. Founding members get full access free, forever. soffyn Set launches at $8.99/month.</p>
+              <button type="submit">Claim my free spot</button>
               <input type="hidden" name="form-name" value="waitlist" />
             </div>
           </form>
-
-        </div>
-        <!-- lifestyle photo — right column on desktop, hidden on mobile -->
-        <div class="hero-visual" aria-hidden="true">
-          <img
-            src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=840&h=1100&fit=crop&q=80"
-            alt="A Black woman portrait"
-            loading="eager"
-          />
         </div>
       </section>
 

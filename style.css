@@ -128,61 +128,155 @@ nav {
 
 /* ── Hero ──────────────────────────────────────────── */
 #hero {
+  position: relative;
+  min-height: 88vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 80px 24px;
+  padding: 120px 24px;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.hero-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(7, 79, 73, 0.35) 0%,
+    rgba(7, 79, 73, 0.68) 100%
+  );
 }
 
 .hero-inner {
-  max-width: 700px;
+  position: relative;
+  z-index: 1;
+  max-width: 680px;
   margin: 0 auto;
 }
 
 .hero-eyebrow {
   display: inline-block;
-  background: var(--blush);
-  color: var(--plum);
-  font-size: 0.82rem;
+  background: rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.75rem;
   font-weight: 500;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  padding: 6px 16px;
+  padding: 6px 18px;
   border-radius: 100px;
-  margin-bottom: 32px;
+  margin-bottom: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-family: "DM Sans", sans-serif;
 }
 
 #hero h1 {
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(3rem, 6vw, 5rem);
+  font-size: clamp(2.8rem, 5.5vw, 4.8rem);
   font-style: italic;
   font-weight: 400;
   line-height: 1.1;
   margin-bottom: 24px;
   letter-spacing: -0.01em;
-}
-
-#hero h1 em {
-  font-style: normal;
-  color: var(--teal);
+  color: #ffffff;
 }
 
 .hero-subheadline {
   font-size: clamp(0.95rem, 1.8vw, 1.1rem);
-  color: var(--ink-light);
+  color: rgba(255, 255, 255, 0.75);
   font-weight: 300;
-  max-width: 560px;
+  max-width: 520px;
   margin: 0 auto 16px;
   line-height: 1.7;
 }
 
 .hero-sub {
   font-family: "Cormorant Garamond", serif;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-style: italic;
   font-weight: 400;
-  color: var(--ink-light);
+  color: rgba(255, 255, 255, 0.7);
   max-width: 480px;
-  margin: 0 auto 48px;
+  margin: 0 auto 40px;
   line-height: 1.5;
+}
+
+.hero-cta-btn {
+  display: inline-block;
+  background: #ffffff;
+  color: var(--forest);
+  padding: 16px 40px;
+  border-radius: 100px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  margin-bottom: 16px;
+}
+
+.hero-cta-btn:hover {
+  opacity: 0.92;
+  transform: translateY(-2px);
+}
+
+.hero-founding-note {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.45);
+  margin-top: 8px;
+}
+
+/* ── Waitlist form section ──────────────────────────── */
+#waitlist {
+  padding: 100px 24px;
+  text-align: center;
+}
+
+.waitlist-inner {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+#waitlist .section-label {
+  margin-bottom: 12px;
+}
+
+#waitlist h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--ink);
+  margin-bottom: 32px;
+  line-height: 1.2;
+}
+
+#waitlist h2 em {
+  font-style: normal;
+  color: var(--teal);
+}
+
+@media (max-width: 768px) {
+  #hero {
+    min-height: 100vh;
+    padding: 100px 24px 80px;
+  }
 }
 
 /* ── Signup form ───────────────────────────────────── */
@@ -1876,39 +1970,6 @@ footer p {
   text-align: left;
 }
 
-/* ── Hero split layout (homepage) ──────────────────── */
-#hero.hero-split {
-  text-align: left;
-  padding: 0;
-  display: grid;
-  grid-template-columns: 1fr 420px;
-  align-items: stretch;
-  overflow: hidden;
-  min-height: 88vh;
-}
-
-#hero.hero-split .hero-inner {
-  padding: 100px 60px;
-  max-width: none;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.hero-visual {
-  overflow: hidden;
-  position: relative;
-}
-
-.hero-visual img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
-}
 
 /* ── Feature visual lifestyle imagery ───────────────── */
 .feature-visual-img {
@@ -2152,24 +2213,6 @@ footer p {
 
   .photo-frame--large {
     grid-row: auto;
-  }
-
-  #hero.hero-split {
-    grid-template-columns: 1fr;
-    text-align: center;
-    padding: 80px 24px 100px;
-    min-height: auto;
-  }
-
-  #hero.hero-split .hero-inner {
-    padding: 0;
-    max-width: 700px;
-    margin: 0 auto;
-    display: block;
-  }
-
-  .hero-visual {
-    display: none;
   }
 
   .about-inner {
