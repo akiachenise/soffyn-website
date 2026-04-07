@@ -1662,6 +1662,10 @@ footer p {
   margin: 0 auto;
 }
 
+.fm-hero-inner p {
+  color: var(--ink);
+}
+
 .fm-meaning {
   padding: 100px 48px;
 }
@@ -1688,7 +1692,7 @@ footer p {
 
 .fm-meaning-inner p {
   font-size: 1.05rem;
-  color: var(--ink-light);
+  color: var(--ink);
   font-weight: 300;
   line-height: 1.85;
 }
@@ -1931,7 +1935,7 @@ footer p {
 
 .fm-who-card p {
   font-size: 1rem;
-  color: var(--ink-light);
+  color: var(--ink);
   font-weight: 300;
   line-height: 1.75;
 }
