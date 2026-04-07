@@ -1666,7 +1666,7 @@ footer p {
   color: var(--ink);
 }
 
-.fm-hero h1 {
+#hero.fm-hero h1 {
   color: var(--ink);
 }
 
