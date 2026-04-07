@@ -1666,6 +1666,20 @@ footer p {
   color: var(--ink);
 }
 
+.fm-hero h1 {
+  color: var(--ink);
+}
+
+.fm-hero .hero-subheadline {
+  color: var(--ink-light);
+}
+
+.fm-hero .hero-eyebrow {
+  background: var(--blush);
+  color: var(--plum);
+  border: none;
+}
+
 .fm-meaning {
   padding: 100px 48px;
 }
