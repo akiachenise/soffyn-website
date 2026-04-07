@@ -500,7 +500,7 @@ nav {
 }
 
 .quotes-grid .quote-card:nth-child(4) .survey-quote {
-  border-left-color: var(--lilac);
+  border-left-color: #E879A0;
 }
 
 .problem-response {
