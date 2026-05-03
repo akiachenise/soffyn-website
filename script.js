@@ -142,10 +142,70 @@ function initFaqScrollSpy() {
   sections.forEach(s => observer.observe(s));
 }
 
+/* ── Testimonial carousel ──────────────────────────────────
+   Drives the #problem survey-quote carousel.
+   Shows 2 cards on desktop, 1 on mobile.
+   Prev / Next buttons update transform on .testimonial-track.
+   ───────────────────────────────────────────────────────── */
+function initTestimonialCarousel() {
+  const carousel = document.querySelector('.testimonial-carousel');
+  if (!carousel) return;
+
+  const track   = carousel.querySelector('.testimonial-track');
+  const cards   = Array.from(carousel.querySelectorAll('.testimonial-card'));
+  const prevBtn = carousel.closest('#problem').querySelector('.carousel-btn--prev');
+  const nextBtn = carousel.closest('#problem').querySelector('.carousel-btn--next');
+
+  if (!track || !cards.length) return;
+
+  let idx = 0;
+  const GAP = 24; // matches CSS gap
+
+  function getVisible() {
+    return window.innerWidth >= 768 ? 2 : 1;
+  }
+
+  function maxIdx() {
+    return Math.max(0, cards.length - getVisible());
+  }
+
+  function update() {
+    const cardW = cards[0].getBoundingClientRect().width;
+    track.style.transform = `translateX(-${idx * (cardW + GAP)}px)`;
+    if (prevBtn) prevBtn.disabled = (idx === 0);
+    if (nextBtn) nextBtn.disabled = (idx >= maxIdx());
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      if (idx > 0) { idx--; update(); }
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      if (idx < maxIdx()) { idx++; update(); }
+    });
+  }
+
+  // Re-clamp on resize (e.g. desktop ↔ mobile switch)
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      idx = Math.min(idx, maxIdx());
+      update();
+    }, 100);
+  });
+
+  update();
+}
+
 /* ── Init ───────────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
   initAccordions();
   initCategoryFilter();
   initFaqNav();
   initFaqScrollSpy();
+  initTestimonialCarousel();
 });
