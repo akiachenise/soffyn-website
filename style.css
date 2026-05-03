@@ -2057,6 +2057,207 @@ footer p { font-size: 0.82rem; color: rgba(255, 255, 255, 0.45); }
 }
 .feature-visual-label { position: relative; z-index: 2; color: var(--white); }
 
+/* ── Announcement bar (founding-members page) ─────────── */
+.announcement-bar {
+  background: var(--butter);
+  color: var(--forest);
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 10px 20px;
+  line-height: 1.5;
+}
+
+/* ── Active nav link ───────────────────────────────────── */
+.nav-link--active {
+  color: var(--teal) !important;
+  font-weight: 500;
+}
+
+/* ── Utility hero — dark variant (blog) ────────────────── */
+.blog-index-hero .hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 105, 100, 0.08);
+  color: var(--teal);
+  border: 1px solid rgba(0, 105, 100, 0.2);
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 6px 18px;
+  border-radius: 100px;
+  margin-bottom: 28px;
+}
+
+/* ── Blog email CTA inner wrapper ──────────────────────── */
+.blog-email-cta-inner {
+  max-width: 560px;
+  margin: 0 auto;
+}
+.blog-email-cta form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin: 0 auto 16px;
+  max-width: 420px;
+}
+.blog-email-cta form input[type="email"] {
+  width: 100%;
+  padding: 14px 20px;
+  border-radius: 100px;
+  border: 1.5px solid rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.1);
+  color: var(--white);
+  font-family: "DM Sans", sans-serif;
+  font-size: 1rem;
+  outline: none;
+}
+.blog-email-cta form input[type="email"]::placeholder {
+  color: rgba(255,255,255,0.5);
+}
+.blog-email-cta .footer-cta-note {
+  color: rgba(255,255,255,0.45);
+}
+
+/* ── FAQ layout wrapper ────────────────────────────────── */
+.faq-layout {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
+}
+.faq-sections {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── FAQ support cards (also used on contact page) ─────── */
+.faq-support {
+  padding: var(--section-pad-v) 48px;
+}
+.faq-support-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  text-align: center;
+}
+.faq-support-inner h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--ink);
+  margin-bottom: 48px;
+  line-height: 1.2;
+}
+.faq-support-inner h2 em { font-style: normal; color: var(--teal); }
+.faq-support-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  text-align: left;
+}
+.faq-support-card {
+  background: var(--white);
+  border-radius: var(--radius-card);
+  padding: 36px 32px;
+  box-shadow: 0 2px 16px rgba(31, 41, 55, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.faq-support-card-label {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--teal);
+}
+.faq-support-card p {
+  font-size: 0.95rem;
+  color: var(--ink-light);
+  font-weight: 300;
+  line-height: 1.7;
+  flex: 1;
+}
+
+/* ── Legal wrapper (privacy, terms, disclaimer, accessibility) */
+.legal-wrapper {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 72px 24px 80px;
+}
+.legal-updated {
+  font-size: 0.85rem;
+  color: var(--ink-light);
+  margin-bottom: 40px;
+}
+.legal-wrapper h2 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+.legal-wrapper p,
+.legal-wrapper li {
+  font-size: 0.97rem;
+  color: var(--ink-light);
+  font-weight: 300;
+  line-height: 1.85;
+  margin-bottom: 14px;
+}
+.legal-wrapper ul,
+.legal-wrapper ol {
+  margin-left: 24px;
+  margin-bottom: 16px;
+}
+.legal-wrapper a {
+  color: var(--teal);
+  text-decoration: underline;
+}
+.legal-wrapper a:hover { opacity: 0.75; }
+
+/* ── Footer CTA italic line ────────────────────────────── */
+.footer-cta-italic {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.35rem;
+  font-style: italic;
+  color: var(--teal);
+  margin-bottom: 32px;
+}
+
+/* ── Contact page ──────────────────────────────────────── */
+.contact-email-inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.contact-email-address {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  font-style: italic;
+  color: var(--teal);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 12px;
+  transition: opacity 0.2s ease;
+}
+.contact-email-address:hover { opacity: 0.75; }
+.contact-email-note {
+  font-size: 0.9rem;
+  color: var(--ink-light);
+  font-weight: 300;
+}
+.contact-cards-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
 /* ── Thank-you page ────────────────────────────────────── */
 .thankyou-page {
   min-height: calc(100vh - 80px);
@@ -2136,6 +2337,9 @@ footer p { font-size: 0.82rem; color: rgba(255, 255, 255, 0.45); }
   .photo-row { grid-template-columns: 1fr; gap: 16px; }
   .representation-copy { grid-template-columns: 1fr; gap: 32px; }
   .support-cards { grid-template-columns: 1fr; padding: 0 24px; }
+  .faq-support-cards { grid-template-columns: 1fr; }
+  .faq-support { padding: var(--section-pad-v-sm) 24px; }
+  .contact-cards { padding: 0 24px var(--section-pad-v-sm); }
   .fm-photo-trio { grid-template-columns: 1fr 1fr; max-height: 300px; }
   .fm-photo-trio-item:last-child { display: none; }
   .fm-community-overlay { padding: 32px 24px; }
@@ -2231,4 +2435,6 @@ footer p { font-size: 0.82rem; color: rgba(255, 255, 255, 0.45); }
   .hero-cta-group { flex-direction: column; align-items: center; }
   .support-cards { grid-template-columns: 1fr; }
   .faq-category-nav { flex-direction: column; align-items: center; }
+  .faq-support-cards { grid-template-columns: 1fr; }
+  .blog-email-cta form { padding: 0 24px; }
 }

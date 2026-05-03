@@ -39,93 +39,87 @@
     <main id="main">
 
       <!-- ── Hero — no image ────────────────────────────────── -->
-      <section class="utility-hero utility-hero--dark">
-        <span class="utility-hero-eyebrow">Written by Akia, founder of soffyn</span>
+      <section class="blog-index-hero">
+        <span class="hero-eyebrow">Written by Akia, founder of soffyn</span>
         <h1>Real talk on <em>neurodivergent</em> wellness.</h1>
       </section>
 
       <!-- ── Category filter pills ──────────────────────────── -->
-      <div class="blog-filter-bar">
-        <div class="blog-filter-inner">
-          <button class="category-pill is-active" data-category="all">All posts</button>
-          <button class="category-pill" data-category="adhd-identity">ADHD &amp; Identity</button>
-          <button class="category-pill" data-category="wellness-design">Wellness Design</button>
-          <button class="category-pill" data-category="self-care">Self-Care</button>
-        </div>
+      <div class="category-pills">
+        <button class="category-pill is-active" data-category="all">All posts</button>
+        <button class="category-pill" data-category="adhd-identity">ADHD &amp; Identity</button>
+        <button class="category-pill" data-category="wellness-design">Wellness Design</button>
+        <button class="category-pill" data-category="self-care">Self-Care</button>
       </div>
 
       <!-- ── Blog grid ───────────────────────────────────────── -->
-      <section class="blog-grid-section">
-        <div class="blog-grid-inner">
-          <div class="blog-grid">
+      <div class="blog-grid">
 
-            <article class="blog-card" data-category="adhd-identity">
-              <div class="blog-card-thumb blog-card-thumb--mist">
-                <img
-                  src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&h=360&fit=crop&q=80"
-                  alt="A Black woman, thoughtful and tired"
-                  loading="lazy"
-                />
-              </div>
-              <div class="blog-card-body">
-                <p class="blog-card-tag">ADHD &amp; Identity</p>
-                <h2>The Burnout Cycle Nobody Talks About: Being a Black Woman with Undiagnosed ADHD</h2>
-                <p>You've been holding it together for so long you forgot it was even heavy. This one is for the version of you that got diagnosed late — or still hasn't been.</p>
-                <p class="blog-card-meta">April 2026 &nbsp;&middot;&nbsp; 6 min read</p>
-                <a href="/blog/adhd-burnout-black-women.html" class="blog-card-link">Read post &rarr;</a>
-              </div>
-            </article>
-
-            <article class="blog-card" data-category="wellness-design">
-              <div class="blog-card-thumb blog-card-thumb--blush">
-                <img
-                  src="https://images.unsplash.com/photo-1488751045188-435980b4a18b?w=600&h=360&fit=crop&q=80"
-                  alt="A Black woman writing in a notebook, focused"
-                  loading="lazy"
-                />
-              </div>
-              <div class="blog-card-body">
-                <p class="blog-card-tag">Wellness Design</p>
-                <h2>Goals Without Guilt: Why Streaks Fail ADHD Brains (And What Actually Works)</h2>
-                <p>You've restarted on a Monday more times than you can count. The app didn't fail you. It was built for a different brain.</p>
-                <p class="blog-card-meta">April 2026 &nbsp;&middot;&nbsp; 5 min read</p>
-                <a href="/blog/goals-without-guilt-streaks-adhd.html" class="blog-card-link">Read post &rarr;</a>
-              </div>
-            </article>
-
-            <article class="blog-card" data-category="self-care">
-              <div class="blog-card-thumb blog-card-thumb--lilac">
-                <img
-                  src="https://images.unsplash.com/photo-1543269865-cbf427effbad?w=600&h=360&fit=crop&q=80"
-                  alt="A Black woman resting, eyes closed, at peace"
-                  loading="lazy"
-                />
-              </div>
-              <div class="blog-card-body">
-                <p class="blog-card-tag">Self-Care</p>
-                <h2>Real Self-Care for Neurodivergent Women: What My Therapist Said That Changed How I Rest</h2>
-                <p>Self-care that doesn't stick isn't a discipline problem. It's a design problem. Here's what actually helps.</p>
-                <p class="blog-card-meta">April 2026 &nbsp;&middot;&nbsp; 7 min read</p>
-                <a href="/blog/neurodivergent-self-care-guide.html" class="blog-card-link">Read post &rarr;</a>
-              </div>
-            </article>
-
+        <article class="blog-card" data-category="adhd-identity">
+          <div class="blog-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&h=360&fit=crop&q=80"
+              alt="A Black woman, thoughtful and tired"
+              loading="lazy"
+            />
           </div>
-        </div>
-      </section>
+          <div class="blog-card-body">
+            <p class="blog-card-tag">ADHD &amp; Identity</p>
+            <h2 class="blog-card-title">The Burnout Cycle Nobody Talks About: Being a Black Woman with Undiagnosed ADHD</h2>
+            <p class="blog-card-excerpt">You've been holding it together for so long you forgot it was even heavy. This one is for the version of you that got diagnosed late — or still hasn't been.</p>
+            <p class="blog-card-meta">April 2026 &nbsp;&middot;&nbsp; 6 min read</p>
+            <a href="/blog/adhd-burnout-black-women.html" class="blog-card-link">Read post &rarr;</a>
+          </div>
+        </article>
+
+        <article class="blog-card" data-category="wellness-design">
+          <div class="blog-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1488751045188-435980b4a18b?w=600&h=360&fit=crop&q=80"
+              alt="A Black woman writing in a notebook, focused"
+              loading="lazy"
+            />
+          </div>
+          <div class="blog-card-body">
+            <p class="blog-card-tag">Wellness Design</p>
+            <h2 class="blog-card-title">Goals Without Guilt: Why Streaks Fail ADHD Brains (And What Actually Works)</h2>
+            <p class="blog-card-excerpt">You've restarted on a Monday more times than you can count. The app didn't fail you. It was built for a different brain.</p>
+            <p class="blog-card-meta">April 2026 &nbsp;&middot;&nbsp; 5 min read</p>
+            <a href="/blog/goals-without-guilt-streaks-adhd.html" class="blog-card-link">Read post &rarr;</a>
+          </div>
+        </article>
+
+        <article class="blog-card" data-category="self-care">
+          <div class="blog-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1543269865-cbf427effbad?w=600&h=360&fit=crop&q=80"
+              alt="A Black woman resting, eyes closed, at peace"
+              loading="lazy"
+            />
+          </div>
+          <div class="blog-card-body">
+            <p class="blog-card-tag">Self-Care</p>
+            <h2 class="blog-card-title">Real Self-Care for Neurodivergent Women: What My Therapist Said That Changed How I Rest</h2>
+            <p class="blog-card-excerpt">Self-care that doesn't stick isn't a discipline problem. It's a design problem. Here's what actually helps.</p>
+            <p class="blog-card-meta">April 2026 &nbsp;&middot;&nbsp; 7 min read</p>
+            <a href="/blog/neurodivergent-self-care-guide.html" class="blog-card-link">Read post &rarr;</a>
+          </div>
+        </article>
+
+      </div>
 
       <!-- ── Email CTA — dark bg ─────────────────────────────── -->
-      <section class="blog-newsletter">
-        <div class="blog-newsletter-inner">
-          <p class="section-label blog-newsletter-label">Stay in the loop</p>
+      <section class="blog-email-cta">
+        <div class="blog-email-cta-inner">
+          <p class="section-label">Stay in the loop</p>
           <h2>Get posts like this <em>in your inbox.</em></h2>
           <p>Join the soffyn waitlist and we'll send you new writing when it drops — plus early access when the app launches.</p>
-          <form name="waitlist-blog" method="POST" data-netlify="true" action="/thank-you.html" class="blog-newsletter-form">
+          <form name="waitlist-blog" method="POST" data-netlify="true" action="/thank-you.html">
             <input type="hidden" name="form-name" value="waitlist-blog" />
             <input type="email" name="EMAIL" placeholder="your@email.com" required aria-label="Email address" />
             <button type="submit" class="btn-primary">Subscribe — and get early access</button>
           </form>
-          <p class="blog-newsletter-note">Founding members join soffyn free — forever.</p>
+          <p class="footer-cta-note">Founding members join soffyn free — forever.</p>
         </div>
       </section>
 
