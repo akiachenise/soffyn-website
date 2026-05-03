@@ -142,6 +142,44 @@ function initFaqScrollSpy() {
   sections.forEach(s => observer.observe(s));
 }
 
+/* ── Feature carousel / tabs ───────────────────────────────
+   Drives the #feature-carousel on the homepage.
+   Tab clicks show the matching .fc-panel.
+   Prev/Next arrows cycle through panels.
+   Counter shows "N / total".
+   ───────────────────────────────────────────────────────── */
+function initFeatureCarousel() {
+  const tabs    = document.querySelectorAll('.fc-tab');
+  const panels  = document.querySelectorAll('.fc-panel');
+  const prevBtn = document.querySelector('.fc-btn--prev');
+  const nextBtn = document.querySelector('.fc-btn--next');
+  const counter = document.querySelector('.fc-counter');
+
+  if (!tabs.length || !panels.length) return;
+
+  let idx = 0;
+  const total = tabs.length;
+
+  function show(n) {
+    idx = Math.max(0, Math.min(n, total - 1));
+
+    tabs.forEach((t, i) => {
+      t.classList.toggle('is-active', i === idx);
+      t.setAttribute('aria-selected', i === idx ? 'true' : 'false');
+    });
+    panels.forEach((p, i) => p.classList.toggle('is-active', i === idx));
+    if (counter) counter.textContent = `${idx + 1} / ${total}`;
+    if (prevBtn) prevBtn.disabled = (idx === 0);
+    if (nextBtn) nextBtn.disabled = (idx === total - 1);
+  }
+
+  tabs.forEach((tab, i) => tab.addEventListener('click', () => show(i)));
+  prevBtn?.addEventListener('click', () => show(idx - 1));
+  nextBtn?.addEventListener('click', () => show(idx + 1));
+
+  show(0);
+}
+
 /* ── Testimonial carousel ──────────────────────────────────
    Drives the #problem survey-quote carousel.
    Shows 2 cards on desktop, 1 on mobile.
@@ -207,5 +245,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initCategoryFilter();
   initFaqNav();
   initFaqScrollSpy();
+  initFeatureCarousel();
   initTestimonialCarousel();
 });

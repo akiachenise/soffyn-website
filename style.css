@@ -165,12 +165,14 @@ nav {
   top: 0;
   z-index: 100;
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  padding: 20px 48px;
-  background: rgba(255, 255, 255, 0.97);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  gap: 48px;
+  padding: 0 48px;
+  height: 72px;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(31, 41, 55, 0.06);
 }
 
@@ -180,13 +182,13 @@ nav {
   color: var(--ink);
   text-decoration: none;
   font-weight: 600;
-  justify-self: start;
 }
 
 .nav-links {
   display: flex;
-  gap: 36px;
+  gap: 4px;
   align-items: center;
+  justify-content: center;
 }
 
 .nav-link {
@@ -195,22 +197,53 @@ nav {
   font-weight: 400;
   color: var(--ink-light);
   text-decoration: none;
-  letter-spacing: 0.01em;
-  transition: color 0.2s ease;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: color 0.2s ease, background 0.2s ease;
 }
-.nav-link:hover { color: var(--teal); }
+.nav-link:hover {
+  color: var(--ink);
+  background: rgba(31, 41, 55, 0.05);
+}
 
+/* Right side: ghost button + filled pill (mirrors Tiimo) */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Ghost / secondary nav CTA */
+.nav-cta-secondary {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--ink);
+  text-decoration: none;
+  padding: 9px 20px;
+  border-radius: 100px;
+  border: 1.5px solid rgba(31, 41, 55, 0.18);
+  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+  white-space: nowrap;
+}
+.nav-cta-secondary:hover {
+  border-color: var(--teal);
+  color: var(--teal);
+  background: rgba(0, 105, 100, 0.04);
+}
+
+/* Primary nav CTA — filled pill */
 .nav-cta {
-  justify-self: end;
   background: var(--teal);
   color: var(--white);
-  padding: 11px 24px;
+  padding: 10px 22px;
   border-radius: 100px;
   text-decoration: none;
   font-family: "DM Sans", sans-serif;
   font-size: 0.9rem;
   font-weight: 500;
   transition: background 0.2s ease, transform 0.15s ease;
+  white-space: nowrap;
 }
 .nav-cta:hover {
   background: var(--teal-dark);
@@ -1547,6 +1580,163 @@ footer p { font-size: 0.82rem; color: rgba(255, 255, 255, 0.45); }
 }
 .support-card a:hover { text-decoration: underline; }
 
+/* ── Feature carousel / tabs ───────────────────────────── */
+#feature-carousel {
+  padding: var(--section-pad-v) 48px;
+}
+
+.fc-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.fc-inner > .section-label { margin-bottom: 12px; }
+
+.fc-inner > h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+.fc-inner > h2 em { font-style: normal; color: var(--teal); }
+
+/* Tab navigation — matches Tiimo's carousel tab strip */
+.fc-nav {
+  display: flex;
+  gap: 0;
+  margin: 40px 0 0;
+  border-bottom: 1px solid rgba(31, 41, 55, 0.1);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.fc-nav::-webkit-scrollbar { display: none; }
+
+.fc-tab {
+  padding: 14px 28px;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  background: none;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--ink-light);
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.fc-tab.is-active {
+  color: var(--teal);
+  border-bottom-color: var(--teal);
+}
+.fc-tab:hover:not(.is-active) { color: var(--ink); }
+
+/* Panels */
+.fc-panels { margin-top: 48px; }
+
+.fc-panel {
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.fc-panel.is-active { display: grid; }
+
+/* Alternate: odd panels image-right, even panels image-left */
+.fc-panel:nth-child(even) { direction: rtl; }
+.fc-panel:nth-child(even) > * { direction: ltr; }
+
+.fc-panel-image {
+  border-radius: var(--radius-img);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: var(--mist);
+}
+.fc-panel-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+.fc-panel-text .section-label { margin-bottom: 12px; }
+
+.fc-panel-text h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+.fc-panel-text h3 em { font-style: normal; color: var(--teal); }
+
+.fc-panel-text p {
+  font-size: 1rem;
+  color: var(--ink-light);
+  font-weight: 300;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+.fc-panel-text p:last-child { margin-bottom: 0; }
+
+/* Controls: prev counter next */
+.fc-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 48px;
+}
+
+.fc-counter {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.88rem;
+  color: var(--ink-light);
+  font-weight: 400;
+  min-width: 40px;
+  text-align: center;
+}
+
+/* ── Homepage FAQ — full-width (Tiimo style) ────────────── */
+#homepage-faq {
+  padding: var(--section-pad-v) 48px;
+}
+
+.homepage-faq-inner {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.homepage-faq-inner > .section-label { margin-bottom: 12px; }
+
+.homepage-faq-inner > h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.2;
+  margin-bottom: 48px;
+}
+.homepage-faq-inner > h2 em { font-style: normal; color: var(--teal); }
+
+.homepage-faq-more {
+  margin-top: 32px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.9rem;
+}
+.homepage-faq-more a {
+  color: var(--teal);
+  text-decoration: none;
+  font-weight: 500;
+}
+.homepage-faq-more a:hover { text-decoration: underline; }
+
 /* ── Blog index page ───────────────────────────────────── */
 .blog-index-hero {
   padding: var(--section-pad-v) 48px 48px;
@@ -1879,6 +2069,14 @@ footer p { font-size: 0.82rem; color: rgba(255, 255, 255, 0.45); }
 
 .contact-cards {
   padding: 0 48px var(--section-pad-v);
+}
+
+/* ── Founding Members — feature showcase section ─────────
+   Reuses .feature-alt-row / .features-header from homepage.
+   #fm-features just needs the same section padding.
+   ───────────────────────────────────────────────────────── */
+#fm-features {
+  padding-top: 0;
 }
 
 /* ── Founding Members page ─────────────────────────────── */
@@ -2365,17 +2563,26 @@ footer p { font-size: 0.82rem; color: rgba(255, 255, 255, 0.45); }
 
 @media (max-width: 900px) {
   nav {
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
-    gap: 12px;
-    padding: 16px 24px;
+    gap: 0;
+    padding: 14px 24px;
+    height: auto;
   }
   .nav-links {
     grid-column: 1 / -1;
     justify-content: center;
-    gap: 24px;
+    gap: 0;
+    padding: 10px 0 4px;
+    border-top: 1px solid rgba(31,41,55,0.06);
   }
-  .nav-cta { grid-row: 1; }
+  .nav-right {
+    grid-row: 1;
+    grid-column: 2;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+  .nav-cta-secondary { display: none; }
 
   .feature-alt-row {
     grid-template-columns: 1fr;
@@ -2412,6 +2619,12 @@ footer p { font-size: 0.82rem; color: rgba(255, 255, 255, 0.45); }
   #hero { padding: 56px 20px 48px; gap: 36px; }
   .hero-image-wrap { aspect-ratio: 16 / 10; }
   .testimonial-card { flex: 0 0 100%; }
+  #feature-carousel { padding: var(--section-pad-v-sm) 24px; }
+  .fc-panel { grid-template-columns: 1fr; gap: 32px; }
+  .fc-panel:nth-child(even) { direction: ltr; }
+  #homepage-faq { padding: var(--section-pad-v-sm) 24px; }
+  nav { padding: 12px 20px; }
+  .nav-link { padding: 7px 10px; font-size: 0.85rem; }
 
   #representation { padding: var(--section-pad-v-sm) 24px; }
   #problem { padding: var(--section-pad-v-sm) 24px; }
