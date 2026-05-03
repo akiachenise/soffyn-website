@@ -8,217 +8,58 @@
     <meta name="description" content="Real talk about ADHD, neurodivergence, burnout, and what wellness actually looks like for Black women. From the founder of soffyn." />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://soffyn.com/blog/" />
+
     <meta property="og:title" content="soffyn Blog — Real Talk on Neurodivergent Wellness" />
     <meta property="og:description" content="Honest writing about ADHD, masking, burnout, and building a wellness practice that actually fits your brain." />
     <meta property="og:url" content="https://soffyn.com/blog/" />
     <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://soffyn.com/assets/soffyn-og-image.png" />
+    <meta property="og:locale" content="en_US" />
+
+    <script src="../script.js" defer></script>
     <link rel="stylesheet" href="../style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-    <style>
-      .blog-index-hero {
-        background: var(--forest);
-        padding: 80px 24px 100px;
-        text-align: center;
-      }
-      .blog-index-hero .hero-eyebrow {
-        display: inline-block;
-        background: rgba(255,255,255,0.1);
-        color: rgba(255,255,255,0.8);
-        font-size: 0.78rem;
-        font-weight: 500;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        padding: 6px 18px;
-        border-radius: 100px;
-        margin-bottom: 28px;
-        border: 1px solid rgba(255,255,255,0.15);
-      }
-      .blog-index-hero h1 {
-        font-family: "Cormorant Garamond", serif;
-        font-size: clamp(2.8rem, 6vw, 5rem);
-        font-weight: 400;
-        font-style: italic;
-        color: var(--white);
-        line-height: 1.1;
-        margin-bottom: 20px;
-      }
-      .blog-index-hero h1 em {
-        font-style: normal;
-        color: var(--teal);
-      }
-      .blog-index-hero p {
-        font-size: 1.05rem;
-        color: rgba(255,255,255,0.65);
-        font-weight: 300;
-        max-width: 520px;
-        margin: 0 auto;
-        line-height: 1.7;
-      }
-      .blog-grid-section {
-        background: var(--sand);
-        padding: 100px 24px 120px;
-      }
-      .blog-grid-inner {
-        max-width: 960px;
-        margin: 0 auto;
-      }
-      .blog-grid-inner > .section-label {
-        font-size: 0.78rem;
-        font-weight: 500;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        color: var(--teal);
-        margin-bottom: 40px;
-      }
-      .blog-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 28px;
-      }
-      .blog-card {
-        background: var(--white);
-        border-radius: 20px;
-        overflow: hidden;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-        display: flex;
-        flex-direction: column;
-      }
-      .blog-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 16px 40px rgba(31,41,55,0.1);
-      }
-      .blog-card-thumb {
-        height: 220px;
-        display: block;
-        overflow: hidden;
-        position: relative;
-      }
-      .blog-card-thumb img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-        transition: transform 0.4s ease;
-      }
-      .blog-card:hover .blog-card-thumb img {
-        transform: scale(1.04);
-      }
-      .blog-card-thumb--mist    { background: linear-gradient(135deg, var(--mist) 0%, #d4c8bc 100%); }
-      .blog-card-thumb--blush   { background: linear-gradient(135deg, var(--blush) 0%, #e8c4b8 100%); }
-      .blog-card-thumb--lilac   { background: linear-gradient(135deg, var(--lilac) 0%, #d9c4bc 100%); }
-      .blog-card-body {
-        padding: 28px 28px 32px;
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-      }
-      .blog-card-tag {
-        font-size: 0.72rem;
-        font-weight: 500;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: var(--teal);
-        margin-bottom: 12px;
-      }
-      .blog-card-body h2 {
-        font-family: "Cormorant Garamond", serif;
-        font-size: 1.45rem;
-        font-style: italic;
-        font-weight: 400;
-        color: var(--ink);
-        line-height: 1.3;
-        margin-bottom: 12px;
-      }
-      .blog-card-body p {
-        font-size: 0.88rem;
-        color: var(--ink-light);
-        font-weight: 300;
-        line-height: 1.65;
-        margin-bottom: 20px;
-        flex: 1;
-      }
-      .blog-card-meta {
-        font-size: 0.75rem;
-        color: var(--ink-light);
-        opacity: 0.6;
-        margin-bottom: 16px;
-      }
-      .blog-card-link {
-        font-size: 0.85rem;
-        font-weight: 500;
-        color: var(--teal);
-        text-decoration: none;
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        transition: gap 0.2s ease;
-      }
-      .blog-card-link:hover { gap: 10px; }
-      /* Newsletter CTA strip */
-      .blog-newsletter {
-        background: var(--forest);
-        padding: 100px 24px;
-        text-align: center;
-      }
-      .blog-newsletter-inner {
-        max-width: 560px;
-        margin: 0 auto;
-      }
-      .blog-newsletter h2 {
-        font-family: "Cormorant Garamond", serif;
-        font-size: clamp(2rem, 4vw, 3rem);
-        font-style: italic;
-        font-weight: 400;
-        color: var(--white);
-        margin-bottom: 16px;
-      }
-      .blog-newsletter h2 em { font-style: normal; color: var(--gold); }
-      .blog-newsletter p {
-        color: rgba(255,255,255,0.6);
-        font-weight: 300;
-        margin-bottom: 36px;
-        line-height: 1.7;
-      }
-      .blog-newsletter .footer-form { max-width: 420px; }
-      .blog-newsletter .footer-cta-note {
-        font-size: 0.78rem;
-        color: rgba(255,255,255,0.35);
-        margin-top: 12px;
-      }
-      @media (max-width: 768px) {
-        .blog-grid { grid-template-columns: 1fr; }
-        .blog-card-thumb { height: 140px; }
-      }
-    </style>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to main content</a>
 
+    <!-- ── Global nav ──────────────────────────────────────── -->
     <nav>
       <a href="/" class="nav-logo">soffyn™</a>
       <div class="nav-links">
         <a href="/#about" class="nav-link">About</a>
         <a href="/founding-members.html" class="nav-link">Founding Members</a>
-        <a href="/blog/" class="nav-link" style="color: var(--gold);">Blog</a>
+        <a href="/blog/" class="nav-link nav-link--active" aria-current="page">Blog</a>
       </div>
       <a href="/#hero" class="nav-cta">Join the waitlist</a>
     </nav>
 
     <main id="main">
 
-      <section class="blog-index-hero">
-        <span class="hero-eyebrow">Written by Akia, founder of soffyn</span>
+      <!-- ── Hero — no image ────────────────────────────────── -->
+      <section class="utility-hero utility-hero--dark">
+        <span class="utility-hero-eyebrow">Written by Akia, founder of soffyn</span>
         <h1>Real talk on <em>neurodivergent</em> wellness.</h1>
       </section>
 
+      <!-- ── Category filter pills ──────────────────────────── -->
+      <div class="blog-filter-bar">
+        <div class="blog-filter-inner">
+          <button class="category-pill is-active" data-category="all">All posts</button>
+          <button class="category-pill" data-category="adhd-identity">ADHD &amp; Identity</button>
+          <button class="category-pill" data-category="wellness-design">Wellness Design</button>
+          <button class="category-pill" data-category="self-care">Self-Care</button>
+        </div>
+      </div>
+
+      <!-- ── Blog grid ───────────────────────────────────────── -->
       <section class="blog-grid-section">
         <div class="blog-grid-inner">
-          <p class="section-label">All posts</p>
           <div class="blog-grid">
 
-            <article class="blog-card">
+            <article class="blog-card" data-category="adhd-identity">
               <div class="blog-card-thumb blog-card-thumb--mist">
                 <img
                   src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&h=360&fit=crop&q=80"
@@ -230,12 +71,12 @@
                 <p class="blog-card-tag">ADHD &amp; Identity</p>
                 <h2>The Burnout Cycle Nobody Talks About: Being a Black Woman with Undiagnosed ADHD</h2>
                 <p>You've been holding it together for so long you forgot it was even heavy. This one is for the version of you that got diagnosed late — or still hasn't been.</p>
-                <p class="blog-card-meta">April 2026 &nbsp;·&nbsp; 6 min read</p>
-                <a href="/blog/adhd-burnout-black-women.html" class="blog-card-link">Read post →</a>
+                <p class="blog-card-meta">April 2026 &nbsp;&middot;&nbsp; 6 min read</p>
+                <a href="/blog/adhd-burnout-black-women.html" class="blog-card-link">Read post &rarr;</a>
               </div>
             </article>
 
-            <article class="blog-card">
+            <article class="blog-card" data-category="wellness-design">
               <div class="blog-card-thumb blog-card-thumb--blush">
                 <img
                   src="https://images.unsplash.com/photo-1488751045188-435980b4a18b?w=600&h=360&fit=crop&q=80"
@@ -247,12 +88,12 @@
                 <p class="blog-card-tag">Wellness Design</p>
                 <h2>Goals Without Guilt: Why Streaks Fail ADHD Brains (And What Actually Works)</h2>
                 <p>You've restarted on a Monday more times than you can count. The app didn't fail you. It was built for a different brain.</p>
-                <p class="blog-card-meta">April 2026 &nbsp;·&nbsp; 5 min read</p>
-                <a href="/blog/goals-without-guilt-streaks-adhd.html" class="blog-card-link">Read post →</a>
+                <p class="blog-card-meta">April 2026 &nbsp;&middot;&nbsp; 5 min read</p>
+                <a href="/blog/goals-without-guilt-streaks-adhd.html" class="blog-card-link">Read post &rarr;</a>
               </div>
             </article>
 
-            <article class="blog-card">
+            <article class="blog-card" data-category="self-care">
               <div class="blog-card-thumb blog-card-thumb--lilac">
                 <img
                   src="https://images.unsplash.com/photo-1543269865-cbf427effbad?w=600&h=360&fit=crop&q=80"
@@ -264,8 +105,8 @@
                 <p class="blog-card-tag">Self-Care</p>
                 <h2>Real Self-Care for Neurodivergent Women: What My Therapist Said That Changed How I Rest</h2>
                 <p>Self-care that doesn't stick isn't a discipline problem. It's a design problem. Here's what actually helps.</p>
-                <p class="blog-card-meta">April 2026 &nbsp;·&nbsp; 7 min read</p>
-                <a href="/blog/neurodivergent-self-care-guide.html" class="blog-card-link">Read post →</a>
+                <p class="blog-card-meta">April 2026 &nbsp;&middot;&nbsp; 7 min read</p>
+                <a href="/blog/neurodivergent-self-care-guide.html" class="blog-card-link">Read post &rarr;</a>
               </div>
             </article>
 
@@ -273,37 +114,61 @@
         </div>
       </section>
 
-      <!-- Newsletter CTA -->
+      <!-- ── Email CTA — dark bg ─────────────────────────────── -->
       <section class="blog-newsletter">
         <div class="blog-newsletter-inner">
+          <p class="section-label blog-newsletter-label">Stay in the loop</p>
           <h2>Get posts like this <em>in your inbox.</em></h2>
           <p>Join the soffyn waitlist and we'll send you new writing when it drops — plus early access when the app launches.</p>
-          <form name="waitlist-blog" method="POST" data-netlify="true" action="/thank-you.html" class="footer-form">
-            <input type="email" name="EMAIL" placeholder="your@email.com" required aria-label="Email address" />
-            <button type="submit">Subscribe — and get early access</button>
+          <form name="waitlist-blog" method="POST" data-netlify="true" action="/thank-you.html" class="blog-newsletter-form">
             <input type="hidden" name="form-name" value="waitlist-blog" />
+            <input type="email" name="EMAIL" placeholder="your@email.com" required aria-label="Email address" />
+            <button type="submit" class="btn-primary">Subscribe — and get early access</button>
           </form>
-          <p class="footer-cta-note">Founding members join soffyn free — forever.</p>
+          <p class="blog-newsletter-note">Founding members join soffyn free — forever.</p>
         </div>
       </section>
 
     </main>
 
+    <!-- ── Global footer — 4-column ───────────────────────── -->
     <footer>
       <div class="footer-inner">
-        <p class="footer-logo">soffyn™</p>
-        <p>© 2026 soffyn. All rights reserved.</p>
-        <p>Built with love for busy brains. Your safe space to just be.</p>
-        <p>A Developed By Akia, LLC product</p>
-        <div class="footer-links">
-          <a href="/privacy" class="footer-link">Privacy Policy</a>
-          <a href="/terms" class="footer-link">Terms of Use</a>
-          <a href="/disclaimer" class="footer-link">Wellness Disclaimer</a>
-          <a href="/accessibility" class="footer-link">Accessibility</a>
-          <a href="/faq" class="footer-link">FAQ</a>
-          <a href="/contact" class="footer-link">Contact</a>
+        <div class="footer-brand">
+          <span class="footer-logo">soffyn™</span>
+          <p class="footer-tagline">your safe space to just be.</p>
+          <p class="footer-copy">© 2026 soffyn. All rights reserved.</p>
+          <p class="footer-copy">A Developed By Akia, LLC product</p>
+        </div>
+        <div>
+          <span class="footer-col-heading">Product</span>
+          <ul class="footer-col-links">
+            <li><a href="/founding-members.html">Founding Members</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/faq.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <span class="footer-col-heading">Legal</span>
+          <ul class="footer-col-links">
+            <li><a href="/privacy.html">Privacy Policy</a></li>
+            <li><a href="/terms.html">Terms of Use</a></li>
+            <li><a href="/disclaimer.html">Wellness Disclaimer</a></li>
+            <li><a href="/accessibility.html">Accessibility</a></li>
+          </ul>
+        </div>
+        <div>
+          <span class="footer-col-heading">Contact</span>
+          <ul class="footer-col-links">
+            <li><a href="mailto:hello@soffyn.com">hello@soffyn.com</a></li>
+            <li><a href="/contact.html">Contact page</a></li>
+          </ul>
         </div>
       </div>
+      <div class="footer-bottom">
+        <p>Built with love for busy brains.</p>
+      </div>
     </footer>
+
   </body>
 </html>
