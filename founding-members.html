@@ -9,7 +9,6 @@
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://soffyn.com/founding-members" />
 
-
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://soffyn.com/founding-members" />
@@ -27,6 +26,7 @@
     <meta name="twitter:description" content="Join soffyn before launch and your membership is free — forever. No trial. No card. I built this for you. Come in early." />
     <meta name="twitter:image" content="https://soffyn.com/assets/soffyn-og-image.png" />
 
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,15 +38,17 @@
   <body>
     <a class="skip-link" href="#main">Skip to main content</a>
 
-    <div class="fm-announcement-bar" style="background: var(--butter); color: var(--forest); font-size: 0.85rem; text-align: center; padding: 10px 20px;">
-      <span id="spots-remaining">137</span> founding member spots remaining · Waitlist closes at launch · Free forever
+    <!-- ── Announcement bar ────────────────────────────────── -->
+    <div class="announcement-bar">
+      <span id="spots-remaining">137</span> founding member spots remaining &middot; Waitlist closes at launch &middot; Free forever
     </div>
 
+    <!-- ── Global nav ──────────────────────────────────────── -->
     <nav>
       <a href="/" class="nav-logo">soffyn™</a>
       <div class="nav-links">
         <a href="/#about" class="nav-link">About</a>
-        <a href="/founding-members.html" class="nav-link" aria-current="page" style="color: var(--gold);">Founding Members</a>
+        <a href="/founding-members.html" class="nav-link nav-link--active" aria-current="page">Founding Members</a>
         <a href="/blog/" class="nav-link">Blog</a>
       </div>
       <a href="/#hero" class="nav-cta">Join the waitlist</a>
@@ -54,50 +56,72 @@
 
     <main id="main">
 
-      <!-- ── Hero ──────────────────────────────────────────── -->
-      <section id="hero" class="fm-hero">
-        <div class="fm-hero-inner">
-          <span class="hero-eyebrow">Limited — closes at launch</span>
+      <!-- ── Hero ───────────────────────────────────────────── -->
+      <section id="hero">
+        <div class="hero-text">
+          <span class="hero-eyebrow">Limited &mdash; closes at launch</span>
           <h1>Founding <em>Members.</em></h1>
-          <p class="hero-subheadline">Be one of the people who helped build soffyn before it launched. Join the waitlist — your membership is free, forever.</p>
+          <p class="hero-subheadline">Be one of the people who helped build soffyn before it launched.</p>
+          <p class="hero-sub">
+            Join the waitlist — your membership is free, forever.
+          </p>
+          <div class="hero-cta-group">
+            <a href="/#hero" class="btn-primary">Save my spot</a>
+          </div>
+          <p class="hero-founding-note">Seen is free, always. Founding Members get everything — free, forever.</p>
+        </div>
+        <div class="hero-image-wrap" aria-hidden="true">
+          <img
+            src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1400&h=580&fit=crop&q=80"
+            alt=""
+            loading="eager"
+          />
         </div>
       </section>
 
-      <!-- ── Community visual ─────────────────────────────── -->
-      <div class="fm-community-visual">
-        <img
-          src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1400&h=600&fit=crop&q=80"
-          alt="A group of Black women laughing together"
-          loading="lazy"
-        />
-        <div class="fm-community-overlay">
-          <p class="fm-community-quote">"The people who asked for soffyn before it existed also asked for a place to find each other."</p>
-        </div>
-      </div>
-
-      <!-- ── Community photo grid ──────────────────────────── -->
-      <div class="fm-photo-trio" aria-hidden="true">
-        <div class="fm-photo-trio-item">
-          <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&h=700&fit=crop&q=80" alt="A Black woman, confident and radiant" loading="lazy" />
-        </div>
-        <div class="fm-photo-trio-item fm-photo-trio-item--tall">
-          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=900&fit=crop&q=80" alt="A Black woman smiling warmly" loading="lazy" />
-        </div>
-        <div class="fm-photo-trio-item">
-          <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&h=700&fit=crop&q=80" alt="A Black woman, thoughtful and at ease" loading="lazy" />
-        </div>
-      </div>
-
-      <!-- ── What it means ─────────────────────────────────── -->
+      <!-- ── What it means — 2-col ───────────────────────────── -->
       <section class="fm-meaning">
-        <div class="fm-meaning-inner">
-          <p class="section-label">What it means</p>
-          <h2>You're not just an early user. <em>You're part of how this was built.</em></h2>
-          <p>I built soffyn by listening — to real people who told me what every other wellness app got wrong. Founding Members are the people who showed up before there was anything to show up for. That means something to me. So your access will always reflect that.</p>
+        <div class="representation-inner">
+          <div class="representation-copy">
+            <div class="representation-copy-left">
+              <p class="section-label">What it means</p>
+              <h2>You're not just an early user. <em>You're part of how this was built.</em></h2>
+            </div>
+            <div>
+              <p class="representation-sub">
+                I built soffyn by listening — to real people who told me what every other wellness app got wrong. Founding Members are the people who showed up before there was anything to show up for. That means something to me. So your access will always reflect that.
+              </p>
+            </div>
+          </div>
+
+          <!-- Photo trio -->
+          <div class="photo-row">
+            <div class="photo-row-item">
+              <img
+                src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&h=750&fit=crop&q=80"
+                alt="A Black woman, confident and radiant"
+                loading="lazy"
+              />
+            </div>
+            <div class="photo-row-item">
+              <img
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=750&fit=crop&q=80"
+                alt="A Black woman smiling warmly"
+                loading="lazy"
+              />
+            </div>
+            <div class="photo-row-item">
+              <img
+                src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&h=750&fit=crop&q=80"
+                alt="A Black woman, thoughtful and at ease"
+                loading="lazy"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
-      <!-- ── Pricing comparison ─────────────────────────────── -->
+      <!-- ── Pricing ─────────────────────────────────────────── -->
       <section class="fm-pricing">
         <div class="fm-pricing-inner">
           <p class="section-label">What you get</p>
@@ -105,14 +129,14 @@
 
           <div class="pricing-grid">
 
-            <!-- Seen — Free tier -->
+            <!-- Seen — free tier -->
             <div class="pricing-card">
               <div class="pricing-badge pricing-badge--plain">soffyn Seen</div>
               <div class="pricing-amount">
-                <span class="pricing-price" style="color: var(--ink);">Free</span>
+                <span class="pricing-price pricing-price--plain">Free</span>
                 <span class="pricing-period">always</span>
               </div>
-              <p class="pricing-desc" style="color: var(--ink-light); border-bottom-color: rgba(31,41,55,0.1);">The real soffyn experience — no trial, no credit card, no expiration. Just a space that's yours.</p>
+              <p class="pricing-desc pricing-desc--plain">The real soffyn experience — no trial, no credit card, no expiration. Just a space that's yours.</p>
               <ul class="pricing-features pricing-features--muted">
                 <li>One affirmation a day — written for brains like yours</li>
                 <li>Text journaling</li>
@@ -123,7 +147,7 @@
                 <li>90 days of journal history</li>
                 <li>Privacy-first — I never sell your data</li>
               </ul>
-              <a href="/#hero" class="fm-cta-btn fm-cta-btn--secondary">Start free</a>
+              <a href="/#hero" class="btn-secondary">Start free</a>
             </div>
 
             <!-- Founding Member — featured -->
@@ -145,7 +169,7 @@
                 <li>First access to new features</li>
                 <li>Your founding status, locked in permanently</li>
               </ul>
-              <a href="/#hero" class="fm-cta-btn">Claim my free spot</a>
+              <a href="/#hero" class="btn-primary">Save my spot</a>
               <p class="pricing-fine">Free forever means free forever. This is my commitment to the people who showed up early — soffyn Set is never yours to pay for.</p>
             </div>
 
@@ -153,10 +177,10 @@
             <div class="pricing-card">
               <div class="pricing-badge pricing-badge--plain">soffyn Set</div>
               <div class="pricing-amount">
-                <span class="pricing-price" style="color: var(--ink);">$8.99</span>
+                <span class="pricing-price pricing-price--plain">$8.99</span>
                 <span class="pricing-period">/ month</span>
               </div>
-              <p class="pricing-desc" style="color: var(--ink-light); border-bottom-color: rgba(31,41,55,0.1);">Full depth. Everything soffyn has — and everything it becomes. Available to everyone at launch.</p>
+              <p class="pricing-desc pricing-desc--plain">Full depth. Everything soffyn has — and everything it becomes. Available to everyone at launch.</p>
               <ul class="pricing-features pricing-features--muted">
                 <li>Everything in soffyn Seen</li>
                 <li>Full affirmations library — as it grows, you get all of it</li>
@@ -167,8 +191,8 @@
                 <li>Community access</li>
                 <li>First access to new features</li>
               </ul>
-              <a href="/#hero" class="fm-cta-btn fm-cta-btn--secondary">Join the waitlist instead →</a>
-              <p class="pricing-fine" style="color: var(--ink-light);">Annual plan: $64.99/year (save $43). Available at launch.</p>
+              <a href="/#hero" class="btn-secondary">Join the waitlist instead &rarr;</a>
+              <p class="pricing-fine pricing-fine--plain">Annual plan: $64.99/year (save $43). Available at launch.</p>
             </div>
 
           </div>
@@ -177,7 +201,7 @@
         </div>
       </section>
 
-      <!-- ── Who founding members are ───────────────────────── -->
+      <!-- ── Who this is for ─────────────────────────────────── -->
       <section class="fm-who">
         <div class="fm-who-inner">
           <p class="section-label">Who this is for</p>
@@ -199,51 +223,68 @@
         </div>
       </section>
 
-      <!-- ── From Akia ──────────────────────────────────────── -->
+      <!-- ── From Akia — teal-bordered quote block ───────────── -->
       <section class="fm-letter">
         <div class="fm-letter-inner">
           <p class="section-label">From Akia</p>
           <blockquote class="fm-quote">
             <p>"Founding Members aren't just early users. You're the people who said yes when there was nothing to say yes to yet. I don't take that lightly. Free forever isn't a marketing line — it's a commitment. You believed in this. soffyn will always remember that."</p>
-            <footer>— Akia, founder &amp; developer</footer>
+            <footer>&mdash; Akia, founder &amp; developer</footer>
           </blockquote>
         </div>
       </section>
 
-      <!-- ── Final CTA ──────────────────────────────────────── -->
+      <!-- ── Final CTA ───────────────────────────────────────── -->
       <section id="footer-cta">
         <div class="footer-cta-inner">
           <h2>Your spot is <em>waiting.</em></h2>
           <p>The waitlist closes when soffyn launches. Get in before then and your access is free — forever.</p>
-          <p style="font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-style: italic; color: var(--teal); margin-bottom: 32px;">If you've read this far, this was already built for you.</p>
-
-          <form name="waitlist-fm" method="POST" data-netlify="true" action="thank-you.html" class="footer-form">
-            <input type="email" name="EMAIL" placeholder="your@email.com" required aria-label="Email address" />
-            <button type="submit">Claim my free spot</button>
-            <input type="hidden" name="form-name" value="waitlist-fm" />
-          </form>
-
+          <p class="footer-cta-italic">If you've read this far, this was already built for you.</p>
+          <a href="/#hero" class="btn-primary">Save my spot</a>
           <p class="footer-cta-note">No card required. No pressure. No spam.</p>
         </div>
       </section>
 
     </main>
 
+    <!-- ── Global footer — 4-column ───────────────────────── -->
     <footer>
       <div class="footer-inner">
-        <p class="footer-logo">soffyn™</p>
-        <p>© 2026 soffyn. All rights reserved.</p>
-        <p>Built with love for busy brains. Your safe space to just be.</p>
-        <p>A Developed By Akia, LLC product</p>
-        <div class="footer-links">
-          <a href="/privacy" class="footer-link">Privacy Policy</a>
-          <a href="/terms" class="footer-link">Terms of Use</a>
-          <a href="/disclaimer" class="footer-link">Wellness Disclaimer</a>
-          <a href="/accessibility" class="footer-link">Accessibility</a>
-          <a href="/faq" class="footer-link">FAQ</a>
-          <a href="/contact" class="footer-link">Contact</a>
+        <div class="footer-brand">
+          <span class="footer-logo">soffyn™</span>
+          <p class="footer-tagline">your safe space to just be.</p>
+          <p class="footer-copy">© 2026 soffyn. All rights reserved.</p>
+          <p class="footer-copy">A Developed By Akia, LLC product</p>
+        </div>
+        <div>
+          <span class="footer-col-heading">Product</span>
+          <ul class="footer-col-links">
+            <li><a href="/founding-members.html">Founding Members</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/faq.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <span class="footer-col-heading">Legal</span>
+          <ul class="footer-col-links">
+            <li><a href="/privacy.html">Privacy Policy</a></li>
+            <li><a href="/terms.html">Terms of Use</a></li>
+            <li><a href="/disclaimer.html">Wellness Disclaimer</a></li>
+            <li><a href="/accessibility.html">Accessibility</a></li>
+          </ul>
+        </div>
+        <div>
+          <span class="footer-col-heading">Contact</span>
+          <ul class="footer-col-links">
+            <li><a href="mailto:hello@soffyn.com">hello@soffyn.com</a></li>
+            <li><a href="/contact.html">Contact page</a></li>
+          </ul>
         </div>
       </div>
+      <div class="footer-bottom">
+        <p>Built with love for busy brains.</p>
+      </div>
     </footer>
+
   </body>
 </html>
