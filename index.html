@@ -27,10 +27,7 @@
       property="og:description"
       content="A wellness app for neurodivergent Black women — no shame, no streaks, no pressure. Affirmations, journaling &amp; focus tools built for how your brain actually works. Launching September 2026."
     />
-    <meta
-      property="og:image"
-      content="https://soffyn.com/assets/soffyn-og-image.png"
-    />
+    <meta property="og:image" content="https://soffyn.com/assets/soffyn-og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta
@@ -46,14 +43,8 @@
       name="twitter:description"
       content="A wellness app for neurodivergent Black women — no shame, no streaks, no pressure. Launching September 2026."
     />
-    <meta
-      name="twitter:image"
-      content="https://soffyn.com/assets/soffyn-og-image.png"
-    />
-    <meta
-      name="twitter:image:alt"
-      content="soffyn — Your safe space to just be."
-    />
+    <meta name="twitter:image" content="https://soffyn.com/assets/soffyn-og-image.png" />
+    <meta name="twitter:image:alt" content="soffyn — Your safe space to just be." />
 
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css" />
@@ -125,6 +116,7 @@
   <body>
     <a class="skip-link" href="#main">Skip to main content</a>
 
+    <!-- ── Global nav ──────────────────────────────────────── -->
     <nav>
       <a href="/" class="nav-logo">soffyn™</a>
       <div class="nav-links">
@@ -136,40 +128,55 @@
     </nav>
 
     <main id="main">
-      <!-- ── Hero ──────────────────────────────────────────── -->
+
+      <!-- ── Hero ───────────────────────────────────────────── -->
       <section id="hero">
-        <div class="hero-bg" aria-hidden="true">
+        <div class="hero-text">
+          <span class="hero-eyebrow">Waitlist now open &mdash; launching September 2026.</span>
+          <h1>You spend all day masking, performing, and holding it together.</h1>
+          <p class="hero-subheadline">soffyn is where you don't have to.</p>
+          <p class="hero-sub">
+            A wellness app built for neurodivergent Black women — and everyone who needed something like this to exist.
+          </p>
+          <div class="hero-cta-group">
+            <a href="#waitlist" class="btn-primary">Save my spot</a>
+            <a href="#about" class="btn-secondary">Learn more</a>
+          </div>
+          <p class="hero-founding-note">Seen is free, always. Founding Members get everything — free, forever.</p>
+        </div>
+        <!-- REPLACE: /assets/soffyn-mood-checkin-regen.png -->
+        <div class="hero-image-wrap" aria-hidden="true">
           <img
-            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1400&h=900&fit=crop&q=80"
+            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1400&h=580&fit=crop&q=80"
             alt=""
             loading="eager"
           />
         </div>
-        <div class="hero-inner">
-          <span class="hero-eyebrow">Waitlist now open &mdash; launching September 2026.</span>
-          <h1>You spend all day masking, performing, and holding it together.</h1>
-          <p class="hero-sub">soffyn is where you don't have to. Built for neurodivergent Black women — and everyone who needed something like this to exist.</p>
-          <a href="#waitlist" class="hero-cta-btn">Save my spot</a>
-          <p class="hero-founding-note">Free to start — always. Founding members get full access free, forever.</p>
-        </div>
       </section>
 
-      <!-- ── Waitlist form ─────────────────────────────────── -->
+      <!-- ── Social proof bar ────────────────────────────────
+           SOCIAL PROOF BAR: Uncomment when press coverage is secured.
+           Placeholder: "137 founding members and counting"
+      ─────────────────────────────────────────────────────── -->
+
+      <!-- ── Waitlist form ───────────────────────────────────
+           Linked from hero CTA and nav. Anchor: #waitlist
+      ─────────────────────────────────────────────────────── -->
       <section id="waitlist">
         <div class="waitlist-inner">
           <p class="section-label">Join the waitlist</p>
-          <h2>Your safe space to <em>just be.</em></h2>
+          <h2>You found it. <em>Don't lose it.</em></h2>
           <form name="waitlist" method="POST" data-netlify="true" action="thank-you.html">
             <div class="signup-wrapper">
-              <p>Join free — while the waitlist is open.</p>
+              <p>Join the waitlist — open now.</p>
               <input type="text" name="FNAME" placeholder="your first name" />
               <input type="email" name="EMAIL" placeholder="your@email.com" required />
               <label class="gdpr-label" for="consent">
                 <input type="checkbox" name="consent" id="consent" value="yes" required />
                 <span>
                   I'd like to receive launch updates and early access info from soffyn. We'll only contact you about soffyn. You can unsubscribe at any time. By signing up, you agree to our
-                  <a href="/terms" style="color: #0F766E">Terms of Use</a> and
-                  <a href="/privacy" style="color: #0F766E">Privacy Policy</a>.
+                  <a href="/terms" style="color: #006964">Terms of Use</a> and
+                  <a href="/privacy" style="color: #006964">Privacy Policy</a>.
                 </span>
               </label>
               <p class="gdpr-note">No pressure, no spam.</p>
@@ -182,34 +189,38 @@
         </div>
       </section>
 
-      <!-- ── Representation ────────────────────────────────── -->
+      <!-- ── You belong here ────────────────────────────────── -->
       <section id="representation" aria-label="soffyn community">
         <div class="representation-inner">
           <div class="representation-copy">
-            <p class="section-label">This is for you</p>
-            <h2>You belong <em>here.</em></h2>
-            <p class="representation-sub">
-              Not the version of you that has it together. The actual you. The one who's tired, scattered, brilliant, and still figuring it out. That's who this was built for.
-            </p>
+            <div class="representation-copy-left">
+              <p class="section-label">This is for you</p>
+              <h2>You belong <em>here.</em></h2>
+            </div>
+            <div>
+              <p class="representation-sub">
+                Not the version of you that has it together. The actual you. The one who's tired, scattered, brilliant, and still figuring it out. That's who this was built for.
+              </p>
+            </div>
           </div>
-          <div class="photo-grid">
-            <div class="photo-frame photo-frame--large">
+          <div class="photo-row">
+            <div class="photo-row-item">
               <img
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=700&h=900&fit=crop&q=80"
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=750&fit=crop&q=80"
                 alt="A Black woman at peace, resting"
                 loading="lazy"
               />
             </div>
-            <div class="photo-frame photo-frame--small">
+            <div class="photo-row-item">
               <img
-                src="https://images.unsplash.com/photo-1598532162426-cf4700d7a9c0?w=500&h=450&fit=crop&q=80"
+                src="https://images.unsplash.com/photo-1598532162426-cf4700d7a9c0?w=600&h=750&fit=crop&q=80"
                 alt="A Black woman writing in her journal"
                 loading="lazy"
               />
             </div>
-            <div class="photo-frame photo-frame--small">
+            <div class="photo-row-item">
               <img
-                src="https://images.unsplash.com/photo-1622396481800-4f84fb5d01e7?w=500&h=450&fit=crop&q=80"
+                src="https://images.unsplash.com/photo-1622396481800-4f84fb5d01e7?w=600&h=750&fit=crop&q=80"
                 alt="A Black woman smiling, relaxed at home"
                 loading="lazy"
               />
@@ -218,231 +229,381 @@
         </div>
       </section>
 
-      <!-- ── Problem / Quotes ──────────────────────────────── -->
+      <!-- ── Survey quotes ──────────────────────────────────── -->
       <section id="problem">
         <div class="problem-inner">
           <p class="section-label">You told me what was broken.</p>
           <h2>You told me <em>why</em> you stopped using other apps.</h2>
           <div class="quotes-grid">
             <div class="quote-card">
-              <blockquote class="survey-quote">
+              <div class="quote-stars" aria-label="5 stars">★★★★★</div>
+              <blockquote>
                 <p>"Didn't hold my attention, also cost"</p>
               </blockquote>
+              <p class="quote-attribution">— soffyn community survey</p>
             </div>
             <div class="quote-card">
-              <blockquote class="survey-quote">
-                <p>
-                  "I didn't build the habit of using them, or I lost interest"
-                </p>
+              <div class="quote-stars" aria-label="5 stars">★★★★★</div>
+              <blockquote>
+                <p>"I didn't build the habit of using them, or I lost interest"</p>
               </blockquote>
+              <p class="quote-attribution">— soffyn community survey</p>
             </div>
             <div class="quote-card">
-              <blockquote class="survey-quote">
+              <div class="quote-stars" aria-label="5 stars">★★★★★</div>
+              <blockquote>
                 <p>"Had to pay for a version without ads"</p>
               </blockquote>
+              <p class="quote-attribution">— soffyn community survey</p>
             </div>
             <div class="quote-card">
-              <blockquote class="survey-quote">
-                <p>
-                  "Not being heard about whatever I'm dealing with, big and
-                  small"
-                </p>
+              <div class="quote-stars" aria-label="5 stars">★★★★★</div>
+              <blockquote>
+                <p>"Not being heard about whatever I'm dealing with, big and small"</p>
               </blockquote>
+              <p class="quote-attribution">— soffyn community survey</p>
             </div>
           </div>
-          <p class="problem-response">
-            I built soffyn around every single one.
-          </p>
+          <p class="problem-response">I built soffyn around every single one.</p>
         </div>
       </section>
 
-      <!-- ── Features ──────────────────────────────────────── -->
+      <!-- ── Features — alternating rows ───────────────────── -->
       <section id="features">
-        <div class="features-inner">
+        <div class="features-header">
           <p class="section-label">What's inside</p>
           <h2>Everything your brain <em>actually</em> needs.</h2>
-
-          <div class="feature-hero-card">
-            <div>
-              <p class="feature-hero-tag">Featured</p>
-              <p class="feature-hero-title">Daily affirmations</p>
-              <p class="feature-hero-desc">Affirmations written for us. Not toxic positivity. Truth that actually holds on hard days and good ones.</p>
-            </div>
-            <div class="feature-hero-visual">
-              <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=600&h=480&fit=crop&q=80" alt="" aria-hidden="true" loading="lazy" />
-            </div>
-          </div>
-
-          <div class="feature-grid">
-
-            <div class="feature-card feature-card--blush">
-              <div class="feature-card-visual">
-                <img src="https://images.unsplash.com/photo-1488751045188-435980b4a18b?w=600&h=300&fit=crop&q=80" alt="" aria-hidden="true" loading="lazy" />
-              </div>
-              <p class="feature-card-tag">Journaling</p>
-              <p class="feature-card-title">Flexible journaling</p>
-              <p class="feature-card-desc">Type it, photograph it, say it out loud. However the thought comes out.</p>
-            </div>
-
-            <div class="feature-card feature-card--lilac">
-              <div class="feature-card-visual">
-                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&h=300&fit=crop&q=80" alt="" aria-hidden="true" loading="lazy" />
-              </div>
-              <p class="feature-card-tag">Goals</p>
-              <p class="feature-card-title">Goal tracking</p>
-              <p class="feature-card-desc">Get your dreams out of the notes app. Come back whenever you're ready — no punishments, no pressure.</p>
-            </div>
-
-            <div class="feature-card feature-card--butter">
-              <div class="feature-card-visual">
-                <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&h=300&fit=crop&q=80" alt="" aria-hidden="true" loading="lazy" />
-              </div>
-              <p class="feature-card-tag">Privacy</p>
-              <p class="feature-card-title">Privacy, your way</p>
-              <p class="feature-card-desc">No ads built from your pain. What you share inside soffyn stays inside soffyn.</p>
-            </div>
-
-            <div class="feature-card feature-card--mist">
-              <div class="feature-card-visual">
-                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=300&fit=crop&q=80" alt="" aria-hidden="true" loading="lazy" />
-              </div>
-              <p class="feature-card-tag">Focus</p>
-              <p class="feature-card-title">Built for busy brains</p>
-              <p class="feature-card-desc">Start before you talk yourself out of it. The focus timer and quick-capture are designed to meet you at the thought — not after you've lost it.</p>
-            </div>
-
-            <div class="feature-card feature-card--sky feature-card--wide">
-              <div class="feature-card-inner">
-                <div>
-                  <p class="feature-card-tag">Mood</p>
-                  <p class="feature-card-title">Mood check-in</p>
-                  <p class="feature-card-desc">A gentle daily check-in that helps you notice patterns without pressure. No scores, no grades. Just you, noticing yourself a little more — on your own terms.</p>
-                </div>
-                <div class="feature-card-visual">
-                  <img src="https://images.unsplash.com/photo-1598532162426-cf4700d7a9c0?w=500&h=300&fit=crop&q=80" alt="" aria-hidden="true" loading="lazy" />
-                </div>
-              </div>
-            </div>
-
-          </div>
         </div>
-      </section>
 
-      <!-- ── Neurodivergent definition ─────────────────────── -->
-      <section id="definition">
-        <div class="definition-inner">
-          <div class="definition-card">
-            <p class="definition-eyebrow">New here? A quick note.</p>
-            <h3>What does <em>"neurodivergent"</em> mean?</h3>
+        <!-- 1. Daily affirmations — text left, image right -->
+        <div class="feature-alt-row">
+          <div class="feature-alt-text">
+            <p class="section-label">Daily affirmations</p>
+            <h3>Affirmations written <em>for us.</em></h3>
             <p>
-              Neurodivergent describes brains that think, learn, and experience
-              the world differently — including ADHD, autism, dyslexia, anxiety,
-              OCD, and more. It's not a flaw. It's just how your brain works.
+              Not toxic positivity. Truth that actually holds on hard days and good ones.
             </p>
             <p>
-              If you've spent your life in wellness spaces that weren't built
-              for how your brain actually works — you're in the right place. You
-              don't have to explain yourself here.
+              Every affirmation in soffyn was written with neurodivergent Black women in mind — the specific kind of tired that comes from masking all day, and the specific kind of strength that no one names but you carry anyway.
             </p>
           </div>
-        </div>
-      </section>
-
-      <!-- ── About ─────────────────────────────────────────── -->
-      <section id="about">
-        <div class="about-inner">
-          <div class="about-text">
-            <p class="section-label">About soffyn</p>
-            <h2>I built the app I <em>couldn't</em> find.</h2>
-            <p>
-              Hi, I'm Akia — a neurodivergent Black woman, software engineer,
-              and accessibility specialist who got tired of wellness apps that
-              weren't built for brains like mine.
-            </p>
-            <p>
-              I've tried almost every wellness app on the market. They were
-              either too cookie cutter, too demanding, or just too much for my
-              brain. I'm a forgetful girl. Out of sight, out of mind. Streaks
-              don't work for me. My hopes and dreams have a habit of becoming
-              hoarded thoughts in the notes app.
-            </p>
-            <p>
-              And no app understood the specific exhaustion of spending all day
-              masking — at work, in every room — and then coming home to a
-              wellness app that asked me to perform even more.
-            </p>
-            <p>
-              I needed something that meets me in the middle. A place to be
-              myself that's gentle, rewarding, and completely okay if I don't
-              show up every single day.
-            </p>
-            <p class="about-highlight">
-              Always there when you need it. Never mad when you don't.
-            </p>
-            <p>That's soffyn. I built it for me. And I built it for you.</p>
-            <p class="about-community">
-              The people who asked for soffyn before it existed also asked for a
-              place to find each other. That's next. Join the waitlist and be
-              first in the room when it opens.
-            </p>
-          </div>
-          <div class="about-photo" aria-hidden="true">
+          <!-- REPLACE: /assets/soffyn-mood-checkin-regen.png -->
+          <div class="feature-alt-image">
             <img
-              src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=720&h=900&fit=crop&q=80"
-              alt="Akia, founder of soffyn"
+              src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=800&h=600&fit=crop&q=80"
+              alt="A Black woman in a peaceful moment of reflection"
               loading="lazy"
             />
           </div>
         </div>
+
+        <!-- 2. Flexible journaling — image left, text right -->
+        <div class="feature-alt-row feature-alt-row--flip">
+          <div class="feature-alt-text">
+            <p class="section-label">Flexible journaling</p>
+            <h3>However the thought <em>comes out.</em></h3>
+            <p>
+              Type it, photograph it, say it out loud. However the thought comes out.
+            </p>
+            <p>
+              Some days you have words. Some days you have a voice memo and a feeling you can't name. soffyn meets you at both.
+            </p>
+          </div>
+          <!-- REPLACE: /assets/soffyn-journaling-nocoffee.png -->
+          <div class="feature-alt-image">
+            <img
+              src="https://images.unsplash.com/photo-1488751045188-435980b4a18b?w=800&h=600&fit=crop&q=80"
+              alt="A Black woman writing in her journal"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <!-- 3. Goal tracking — text left, image right -->
+        <div class="feature-alt-row">
+          <div class="feature-alt-text">
+            <p class="section-label">Goal tracking</p>
+            <h3>Get your dreams out of <em>the notes app.</em></h3>
+            <p>
+              Track goals, build habits, and come back whenever you're ready — no punishments, no pressure.
+            </p>
+            <p>
+              Basic goal tracking is free in Seen. Full tracking is in Set.
+            </p>
+          </div>
+          <!-- REPLACE: /assets/soffyn-goal-tracking-regen.png -->
+          <div class="feature-alt-image">
+            <img
+              src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&h=600&fit=crop&q=80"
+              alt="A Black woman working through her goals"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <!-- 4. Focus timer — image left, text right -->
+        <div class="feature-alt-row feature-alt-row--flip">
+          <div class="feature-alt-text">
+            <p class="section-label">Built for busy brains</p>
+            <h3>Start before you talk yourself <em>out of it.</em></h3>
+            <p>
+              The focus timer and quick-capture are designed to meet you at the thought — not after you've lost it.
+            </p>
+          </div>
+          <!-- REPLACE: /assets/soffyn-focus-timer-regen.png -->
+          <div class="feature-alt-image">
+            <img
+              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=600&fit=crop&q=80"
+              alt="A Black woman in a focused, calm state"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <!-- 5. Mood check-in — text left, image right -->
+        <div class="feature-alt-row">
+          <div class="feature-alt-text">
+            <p class="section-label">Mood check-in</p>
+            <h3>Just you, noticing yourself <em>a little more.</em></h3>
+            <p>
+              A gentle daily check-in that helps you notice patterns without pressure. No scores, no grades. Just you, noticing yourself a little more — on your own terms.
+            </p>
+          </div>
+          <!-- REPLACE: /assets/soffyn-mood-checkin-regen.png -->
+          <div class="feature-alt-image">
+            <img
+              src="https://images.unsplash.com/photo-1598532162426-cf4700d7a9c0?w=800&h=600&fit=crop&q=80"
+              alt="A Black woman in a quiet, reflective moment"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <!-- 6. Privacy — full-width teal block, no image -->
+        <div class="feature-privacy-block">
+          <p class="section-label">Privacy, your way</p>
+          <h3>Your reflections stay <em>yours.</em></h3>
+          <p>
+            No ads built from your pain. No selling your data to people who see you as a market. What you share inside soffyn stays inside soffyn.
+          </p>
+        </div>
+
       </section>
 
-      <!-- ── Footer CTA ─────────────────────────────────────── -->
+      <!-- ── Neurodivergent explainer — accordion ────────────── -->
+      <section id="definition">
+        <div class="definition-inner">
+          <span class="definition-eyebrow">New here? A quick note.</span>
+          <h3>What does <em>"neurodivergent"</em> mean?</h3>
+          <div class="accordion" role="list">
+
+            <div class="accordion-item" role="listitem">
+              <button class="accordion-trigger" aria-expanded="false" aria-controls="def-answer-1">
+                <span class="accordion-question">Understanding neurodivergence</span>
+                <span class="accordion-icon" aria-hidden="true">
+                  <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 4L6 8L10 4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </button>
+              <div class="accordion-body" id="def-answer-1" role="region">
+                <div class="accordion-body-inner">
+                  <p>
+                    Neurodivergent describes brains that think, learn, and experience the world differently — including ADHD, autism, dyslexia, anxiety, OCD, and more. It's not a flaw. It's just how your brain works.
+                  </p>
+                  <p>
+                    If you've spent your life in wellness spaces that weren't built for how your brain actually works — you're in the right place. You don't have to explain yourself here.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ── About / Founder — image left, text right ───────── -->
+      <section id="about">
+        <div class="about-inner">
+          <div class="about-photo" aria-hidden="true">
+            <img
+              src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=960&h=1200&fit=crop&q=80"
+              alt="Akia, founder of soffyn"
+              loading="lazy"
+            />
+          </div>
+          <div class="about-text">
+            <p class="section-label">About soffyn</p>
+            <h2>I built the app I <em>couldn't</em> find.</h2>
+            <p>
+              Hi, I'm Akia — a neurodivergent Black woman, software engineer, and accessibility specialist who got tired of wellness apps that weren't built for brains like mine.
+            </p>
+            <p>
+              I've tried almost every wellness app on the market. They were either too cookie cutter, too demanding, or just too much for my brain. I'm a forgetful girl. Out of sight, out of mind. Streaks don't work for me. My hopes and dreams have a habit of becoming hoarded thoughts in the notes app.
+            </p>
+            <p>
+              And no app understood the specific exhaustion of spending all day masking — at work, in every room — and then coming home to a wellness app that asked me to perform even more.
+            </p>
+            <p>
+              I needed something that meets me in the middle. A place to be myself that's gentle, rewarding, and completely okay if I don't show up every single day.
+            </p>
+            <p class="about-pull-quote">
+              Always there when you need it. Never mad when you don't.
+            </p>
+            <p>That's soffyn. I built it for me. And I built it for you.</p>
+            <p class="about-community">
+              The people who asked for soffyn before it existed also asked for a place to find each other. That's next. Join the waitlist and be first in the room when it opens.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Homepage FAQ — 5 questions ─────────────────────── -->
+      <section id="homepage-faq">
+        <div class="homepage-faq-inner">
+          <div class="homepage-faq-label">
+            <p class="section-label">Common questions</p>
+            <h2>Got <em>questions?</em></h2>
+            <a href="/faq.html">See all FAQs →</a>
+          </div>
+          <div class="accordion" role="list">
+
+            <div class="accordion-item" role="listitem">
+              <button class="accordion-trigger" aria-expanded="false" aria-controls="hfaq-1">
+                <span class="accordion-question">What is soffyn?</span>
+                <span class="accordion-icon" aria-hidden="true">
+                  <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 4L6 8L10 4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </button>
+              <div class="accordion-body" id="hfaq-1" role="region">
+                <div class="accordion-body-inner">
+                  <p>soffyn is a wellness app I built for neurodivergent Black women — and for everyone who needed something like this to exist. Daily affirmations, flexible journaling, goal tracking, a focus timer, quick-capture, and privacy controls. No streaks. No shame. Just a space that meets you where you are.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item" role="listitem">
+              <button class="accordion-trigger" aria-expanded="false" aria-controls="hfaq-2">
+                <span class="accordion-question">Who is soffyn for?</span>
+                <span class="accordion-icon" aria-hidden="true">
+                  <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 4L6 8L10 4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </button>
+              <div class="accordion-body" id="hfaq-2" role="region">
+                <div class="accordion-body-inner">
+                  <p>soffyn is built specifically for neurodivergent Black women — people with ADHD, autism, anxiety, dyslexia, sensory processing differences, or any brain that doesn't fit the mold. Everyone is welcome. But I center the people who have been most underserved by wellness apps — because that's who I built it for first.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item" role="listitem">
+              <button class="accordion-trigger" aria-expanded="false" aria-controls="hfaq-3">
+                <span class="accordion-question">Is soffyn only for Black women?</span>
+                <span class="accordion-icon" aria-hidden="true">
+                  <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 4L6 8L10 4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </button>
+              <div class="accordion-body" id="hfaq-3" role="region">
+                <div class="accordion-body-inner">
+                  <p>soffyn is built specifically for neurodivergent Black women — this community is centered, not an afterthought. But you don't have to be Black or a woman to find a home here. If you've been looking for a wellness space that doesn't feel like it was built for someone else's brain, you're welcome.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item" role="listitem">
+              <button class="accordion-trigger" aria-expanded="false" aria-controls="hfaq-4">
+                <span class="accordion-question">Will soffyn be free?</span>
+                <span class="accordion-icon" aria-hidden="true">
+                  <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 4L6 8L10 4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </button>
+              <div class="accordion-body" id="hfaq-4" role="region">
+                <div class="accordion-body-inner">
+                  <p>Yes. Seen, soffyn's core tier, is free — always, for everyone. If you join the waitlist before launch, you're a Founding Member and you get full Set-level access free, forever. After launch, Set is $8.99/month or $64.99/year.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item" role="listitem">
+              <button class="accordion-trigger" aria-expanded="false" aria-controls="hfaq-5">
+                <span class="accordion-question">When does soffyn launch?</span>
+                <span class="accordion-icon" aria-hidden="true">
+                  <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 4L6 8L10 4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </button>
+              <div class="accordion-body" id="hfaq-5" role="region">
+                <div class="accordion-body-inner">
+                  <p>soffyn is launching September 2026. <a href="#waitlist">Join the waitlist</a> to get early access when we open the doors.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Final CTA ───────────────────────────────────────── -->
       <section id="footer-cta">
         <div class="footer-cta-inner">
           <h2>You found it. Don't lose it.</h2>
           <p>
-            No streaks. No guilt. No performing. Just a space that's yours,
-            whenever you need it.
+            No streaks. No guilt. No performing. Just a space that's yours, whenever you need it.
           </p>
-
-          <form
-            name="waitlist-footer"
-            method="POST"
-            data-netlify="true"
-            action="thank-you.html"
-            class="footer-form"
-          >
-            <input
-              type="email"
-              name="EMAIL"
-              placeholder="your@email.com"
-              required
-              aria-label="Email address"
-            />
-            <button type="submit">Save my spot</button>
-            <input type="hidden" name="form-name" value="waitlist-footer" />
-          </form>
-
-          <p class="footer-cta-note">Founding members join free — forever. The waitlist closes at launch.</p>
+          <a href="#waitlist" class="btn-primary">Save my spot</a>
+          <p class="footer-cta-note">Seen is free, always. Founding Members get everything — free, forever.</p>
         </div>
       </section>
+
     </main>
 
+    <!-- ── Global footer — 4-column ───────────────────────── -->
     <footer>
       <div class="footer-inner">
-        <p class="footer-logo">soffyn™</p>
-        <p>© 2026 soffyn. All rights reserved.</p>
-        <p>Built with love for busy brains. Your safe space to just be.</p>
-        <p>A Developed By Akia, LLC product</p>
-        <div class="footer-links">
-          <a href="/privacy" class="footer-link">Privacy Policy</a>
-          <a href="/terms" class="footer-link">Terms of Use</a>
-          <a href="/disclaimer" class="footer-link">Wellness Disclaimer</a>
-          <a href="/accessibility" class="footer-link">Accessibility</a>
-          <a href="/faq" class="footer-link">FAQ</a>
-          <a href="/contact" class="footer-link">Contact</a>
+        <div class="footer-brand">
+          <span class="footer-logo">soffyn™</span>
+          <p class="footer-tagline">your safe space to just be.</p>
+          <p class="footer-copy">© 2026 soffyn. All rights reserved.</p>
+          <p class="footer-copy">A Developed By Akia, LLC product</p>
+        </div>
+        <div>
+          <span class="footer-col-heading">Product</span>
+          <ul class="footer-col-links">
+            <li><a href="/founding-members.html">Founding Members</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/faq.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <span class="footer-col-heading">Legal</span>
+          <ul class="footer-col-links">
+            <li><a href="/privacy.html">Privacy Policy</a></li>
+            <li><a href="/terms.html">Terms of Use</a></li>
+            <li><a href="/disclaimer.html">Wellness Disclaimer</a></li>
+            <li><a href="/accessibility.html">Accessibility</a></li>
+          </ul>
+        </div>
+        <div>
+          <span class="footer-col-heading">Contact</span>
+          <ul class="footer-col-links">
+            <li><a href="mailto:hello@soffyn.com">hello@soffyn.com</a></li>
+            <li><a href="/contact.html">Contact page</a></li>
+          </ul>
         </div>
       </div>
+      <div class="footer-bottom">
+        <p>Built with love for busy brains.</p>
+      </div>
     </footer>
+
   </body>
 </html>
