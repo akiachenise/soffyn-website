@@ -239,8 +239,43 @@ function initTestimonialCarousel() {
   update();
 }
 
+/* ── Mobile nav toggle ─────────────────────────────────────
+   Toggles .is-open on <nav> when the hamburger is clicked.
+   Closes on outside click or Escape key.
+   ───────────────────────────────────────────────────────── */
+function initMobileNav() {
+  const toggle = document.querySelector('.nav-toggle');
+  const nav    = toggle?.closest('nav');
+  if (!toggle || !nav) return;
+
+  toggle.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    toggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+  });
+
+  // Close on outside click
+  document.addEventListener('click', e => {
+    if (!nav.contains(e.target) && nav.classList.contains('is-open')) {
+      nav.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'Open menu');
+    }
+  });
+
+  // Close on Escape
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && nav.classList.contains('is-open')) {
+      nav.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'Open menu');
+    }
+  });
+}
+
 /* ── Init ───────────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
+  initMobileNav();
   initAccordions();
   initCategoryFilter();
   initFaqNav();

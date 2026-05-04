@@ -119,6 +119,11 @@
     <!-- ── Global nav ──────────────────────────────────────── -->
     <nav>
       <a href="/" class="nav-logo">soffyn™</a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
       <div class="nav-links">
         <a href="#about" class="nav-link">About</a>
         <a href="/blog/" class="nav-link">Blog</a>
@@ -157,9 +162,20 @@
         </div>
       </section>
 
-      <!-- ── Social proof bar ────────────────────────────────
-           SOCIAL PROOF BAR: Add when press coverage is secured.
-      ─────────────────────────────────────────────────────── -->
+      <!-- ── Press strip ────────────────────────────────────── -->
+      <section class="press-strip" aria-label="Press">
+        <div class="press-strip-inner">
+          <span class="press-strip-label">As featured in</span>
+          <div class="press-logos" aria-hidden="true">
+            <!-- REPLACE: swap each .press-logo-slot with an <img> when press logos are ready -->
+            <div class="press-logo-slot"></div>
+            <div class="press-logo-slot"></div>
+            <div class="press-logo-slot"></div>
+            <div class="press-logo-slot"></div>
+            <div class="press-logo-slot"></div>
+          </div>
+        </div>
+      </section>
 
       <!-- ── You belong here ────────────────────────────────── -->
       <section id="representation" aria-label="soffyn community">
@@ -707,6 +723,14 @@
           <ul class="footer-col-links">
             <li><a href="mailto:hello@soffyn.com">hello@soffyn.com</a></li>
             <li><a href="/contact.html">Contact page</a></li>
+          </ul>
+        </div>
+        <div>
+          <span class="footer-col-heading">Follow</span>
+          <ul class="footer-social-links">
+            <li><a href="https://www.instagram.com/soffynapp" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://www.tiktok.com/@soffynapp" target="_blank" rel="noopener">TikTok</a></li>
+            <li><a href="https://twitter.com/soffynapp" target="_blank" rel="noopener">X / Twitter</a></li>
           </ul>
         </div>
       </div>
