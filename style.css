@@ -62,18 +62,6 @@ html { scroll-behavior: smooth; }
 body {
   font-family: "DM Sans", sans-serif;
   background-color: #fcfcfc;
-  background-image: linear-gradient(
-    135deg,
-    var(--blush)           0%,
-    var(--sand)            22%,
-    var(--mist)            44%,
-    var(--lilac)           64%,
-    var(--sky)             80%,
-    rgba(252, 252, 252, 0) 100%
-  );
-  background-size: 100% 1000px;
-  background-repeat: no-repeat;
-  background-position: top left;
   color: var(--text-primary);
   line-height: 1.7;
   min-height: 100vh;
@@ -198,10 +186,10 @@ nav {
   gap: 48px;
   padding: 0 48px;
   height: 72px;
-  background: rgba(255, 255, 255, 0.96);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(31, 41, 55, 0.06);
+  background: transparent;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: none;
 }
 
 .nav-logo {
@@ -278,38 +266,56 @@ nav {
   transform: translateY(-1px);
 }
 
+/* ── Hero background — Tiimo-style grain + gradient ──── */
+/* Full-width wrapper; #hero stays a max-width container. */
+.hero-wrap {
+  position: relative;
+  overflow: hidden;
+  background: rgb(248, 247, 243); /* warm cream base */
+  margin-top: -72px;   /* slide up behind the sticky nav height */
+  padding-top: 72px;   /* push content back down so it isn't hidden */
+}
+
+/* Gradient layer: soft purple from top-left → transparent */
+/* + bottom fade to page white. mix-blend-mode: darken     */
+/* means it only tints where it's darker than the cream.   */
+.hero-wrap::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0,0,0,0) 52%, rgb(252,252,252)),
+    linear-gradient(143deg, rgba(160,130,220,0.58) 0%, rgba(252,231,239,0.3) 35%, rgba(255,255,255,0) 55%);
+  mix-blend-mode: darken;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Grain layer: SVG feTurbulence noise, soft-light blend.  */
+/* This is the ingredient that makes it feel like Tiimo.   */
+.hero-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n' x='0' y='0'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  mix-blend-mode: soft-light;
+  opacity: 0.40;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Lift hero content above the two overlay layers */
+.hero-wrap > * { position: relative; z-index: 2; }
+
 /* ── Section backgrounds ───────────────────────────────── */
-/* Gradient lives on the body (hero area only, fades out). */
-/* White sections create clean rhythm below.               */
 #features              { background: #ffffff; }
 #homepage-faq          { background: #ffffff; }
 .faq-body              { background: #ffffff; }
 .fm-pricing            { background: #ffffff; }
 .legal-content         { background: #ffffff; }
 .legal-wrapper         { background: #ffffff; }
-
-/* ── Footer CTA — soft gradient echo ──────────────────── */
-/* Mirrors Tiimo's footer gradient overlay: a soft whisper */
-/* of the palette from the opposite corner.               */
-#footer-cta {
-  position: relative;
-  overflow: hidden;
-}
-#footer-cta::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    320deg,
-    var(--sky)             0%,
-    var(--butter)          28%,
-    var(--blush)           52%,
-    rgba(252, 252, 252, 0) 75%
-  );
-  pointer-events: none;
-  z-index: 0;
-}
-#footer-cta > * { position: relative; z-index: 1; }
 
 /* ── Hero ──────────────────────────────────────────────── */
 #hero {
