@@ -61,7 +61,17 @@ html { scroll-behavior: smooth; }
 
 body {
   font-family: "DM Sans", sans-serif;
-  background: var(--white);
+  background-color: #fcfcfc;
+  background-image: linear-gradient(
+    160deg,
+    var(--blush)  0%,
+    var(--sand)   20%,
+    var(--mist)   40%,
+    var(--lilac)  60%,
+    var(--butter) 80%,
+    var(--sky)    100%
+  );
+  background-attachment: fixed;
   color: var(--text-primary);
   line-height: 1.7;
   min-height: 100vh;
@@ -266,38 +276,15 @@ nav {
   transform: translateY(-1px);
 }
 
-/* ── Section background colours (palette rhythm) ──────── */
-/* Each section gets its own colour so the page reads as   */
-/* distinct visual "rooms" as you scroll — same effect as  */
-/* Tiimo's per-section colour treatment.                   */
-#hero                  { background: var(--blush); }
-.press-strip           { background: var(--white); }
-#representation        { background: var(--sand); }
-#feature-carousel      { background: var(--mist); }
-#features              { background: var(--white); }
-#problem               { background: var(--lilac); }
-#waitlist              { background: var(--butter); }
-#definition            { background: var(--sky); }
-#about                 { background: var(--sand); }
-#homepage-faq          { background: var(--white); }
-#footer-cta            { background: var(--mist); }
-
-/* Utility / sub-pages */
-.utility-hero          { background: var(--blush); }
-.faq-body              { background: var(--white); }
-.faq-support           { background: var(--mist); }
-.blog-index-hero       { background: var(--blush); }
-.blog-grid-section     { background: var(--white); }
-.blog-email-cta        { background: var(--teal); }  /* already dark — keep */
-.fm-meaning            { background: var(--sand); }
-.fm-who                { background: var(--mist); }
-.fm-pricing            { background: var(--white); }
-.fm-letter             { background: var(--butter); }
-.contact-hero          { background: var(--blush); }
-.contact-cards         { background: var(--white); }
-.legal-hero            { background: var(--blush); }
-.legal-content         { background: var(--white); }
-.legal-wrapper         { background: var(--white); }
+/* ── Section backgrounds ───────────────────────────────── */
+/* Most sections are transparent — the fixed rainbow body  */
+/* gradient shows through. White breaks create rhythm.     */
+#features              { background: rgba(255, 255, 255, 0.88); }
+#homepage-faq          { background: rgba(255, 255, 255, 0.88); }
+.faq-body              { background: rgba(255, 255, 255, 0.88); }
+.fm-pricing            { background: rgba(255, 255, 255, 0.88); }
+.legal-content         { background: rgba(255, 255, 255, 0.88); }
+.legal-wrapper         { background: rgba(255, 255, 255, 0.88); }
 
 /* ── Hero ──────────────────────────────────────────────── */
 #hero {
