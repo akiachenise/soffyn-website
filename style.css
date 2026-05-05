@@ -63,15 +63,17 @@ body {
   font-family: "DM Sans", sans-serif;
   background-color: #fcfcfc;
   background-image: linear-gradient(
-    160deg,
-    var(--blush)  0%,
-    var(--sand)   20%,
-    var(--mist)   40%,
-    var(--lilac)  60%,
-    var(--butter) 80%,
-    var(--sky)    100%
+    135deg,
+    var(--blush)           0%,
+    var(--sand)            22%,
+    var(--mist)            44%,
+    var(--lilac)           64%,
+    var(--sky)             80%,
+    rgba(252, 252, 252, 0) 100%
   );
-  background-attachment: fixed;
+  background-size: 100% 1000px;
+  background-repeat: no-repeat;
+  background-position: top left;
   color: var(--text-primary);
   line-height: 1.7;
   min-height: 100vh;
@@ -277,14 +279,37 @@ nav {
 }
 
 /* ── Section backgrounds ───────────────────────────────── */
-/* Most sections are transparent — the fixed rainbow body  */
-/* gradient shows through. White breaks create rhythm.     */
-#features              { background: rgba(255, 255, 255, 0.88); }
-#homepage-faq          { background: rgba(255, 255, 255, 0.88); }
-.faq-body              { background: rgba(255, 255, 255, 0.88); }
-.fm-pricing            { background: rgba(255, 255, 255, 0.88); }
-.legal-content         { background: rgba(255, 255, 255, 0.88); }
-.legal-wrapper         { background: rgba(255, 255, 255, 0.88); }
+/* Gradient lives on the body (hero area only, fades out). */
+/* White sections create clean rhythm below.               */
+#features              { background: #ffffff; }
+#homepage-faq          { background: #ffffff; }
+.faq-body              { background: #ffffff; }
+.fm-pricing            { background: #ffffff; }
+.legal-content         { background: #ffffff; }
+.legal-wrapper         { background: #ffffff; }
+
+/* ── Footer CTA — soft gradient echo ──────────────────── */
+/* Mirrors Tiimo's footer gradient overlay: a soft whisper */
+/* of the palette from the opposite corner.               */
+#footer-cta {
+  position: relative;
+  overflow: hidden;
+}
+#footer-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    320deg,
+    var(--sky)             0%,
+    var(--butter)          28%,
+    var(--blush)           52%,
+    rgba(252, 252, 252, 0) 75%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+#footer-cta > * { position: relative; z-index: 1; }
 
 /* ── Hero ──────────────────────────────────────────────── */
 #hero {
