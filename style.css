@@ -59,12 +59,41 @@
 /* ── Base ──────────────────────────────────────────────── */
 html { scroll-behavior: smooth; }
 
+/* ── The Warm Room — Soffyn's design philosophy ────────
+   The page is a single warm room. Light shifts gently
+   as you scroll — cream at arrival, blush warmth, earthy
+   sand, golden butter, soft mist, back to cream at home.
+   A paper-grain texture sits over it all at 4% opacity
+   so it reads as material, not screen.
+   ───────────────────────────────────────────────────── */
 body {
   font-family: "DM Sans", sans-serif;
-  background-color: #fcfcfc;
+  background-color: #fdf8f2;
+  background-image: linear-gradient(
+    180deg,
+    #fdf8f2         0%,
+    var(--blush)    16%,
+    var(--sand)     34%,
+    var(--butter)   52%,
+    var(--mist)     70%,
+    #fdf8f2         100%
+  );
   color: var(--text-primary);
   line-height: 1.7;
   min-height: 100vh;
+}
+
+/* Paper grain — sits above gradient, below all content   */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+  background-repeat: repeat;
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 0;
 }
 
 h1, h2, h3 {
@@ -186,10 +215,10 @@ nav {
   gap: 48px;
   padding: 0 48px;
   height: 72px;
-  background: transparent;
+  background: rgba(253, 248, 242, 0.72);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: none;
+  border-bottom: 1px solid rgba(42, 31, 21, 0.06);
 }
 
 .nav-logo {
@@ -266,56 +295,15 @@ nav {
   transform: translateY(-1px);
 }
 
-/* ── Hero background — Tiimo-style grain + gradient ──── */
-/* Full-width wrapper; #hero stays a max-width container. */
-.hero-wrap {
-  position: relative;
-  overflow: hidden;
-  background: rgb(248, 247, 243); /* warm cream base */
-  margin-top: -72px;   /* slide up behind the sticky nav height */
-  padding-top: 72px;   /* push content back down so it isn't hidden */
-}
-
-/* Gradient layer: soft purple from top-left → transparent */
-/* + bottom fade to page white. mix-blend-mode: darken     */
-/* means it only tints where it's darker than the cream.   */
-.hero-wrap::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(0,0,0,0) 52%, rgb(252,252,252)),
-    linear-gradient(143deg, rgba(160,130,220,0.58) 0%, rgba(252,231,239,0.3) 35%, rgba(255,255,255,0) 55%);
-  mix-blend-mode: darken;
-  pointer-events: none;
-  z-index: 0;
-}
-
-/* Grain layer: SVG feTurbulence noise, soft-light blend.  */
-/* This is the ingredient that makes it feel like Tiimo.   */
-.hero-wrap::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n' x='0' y='0'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
-  background-repeat: repeat;
-  background-size: 200px 200px;
-  mix-blend-mode: soft-light;
-  opacity: 0.40;
-  pointer-events: none;
-  z-index: 1;
-}
-
-/* Lift hero content above the two overlay layers */
-.hero-wrap > * { position: relative; z-index: 2; }
-
 /* ── Section backgrounds ───────────────────────────────── */
-#features              { background: #ffffff; }
-#homepage-faq          { background: #ffffff; }
-.faq-body              { background: #ffffff; }
-.fm-pricing            { background: #ffffff; }
-.legal-content         { background: #ffffff; }
-.legal-wrapper         { background: #ffffff; }
+/* Sections are transparent — gradient shows through.      */
+/* Sections needing visual lift use warm cream, not white. */
+#features              { background: rgba(253, 248, 242, 0.72); }
+#homepage-faq          { background: rgba(253, 248, 242, 0.72); }
+.faq-body              { background: rgba(253, 248, 242, 0.72); }
+.fm-pricing            { background: rgba(253, 248, 242, 0.72); }
+.legal-content         { background: rgba(253, 248, 242, 0.80); }
+.legal-wrapper         { background: rgba(253, 248, 242, 0.80); }
 
 /* ── Hero ──────────────────────────────────────────────── */
 #hero {
@@ -2647,6 +2635,11 @@ footer p { font-size: 0.82rem; color: rgba(255, 255, 255, 0.45); }
 }
 
 @media (max-width: 900px) {
+  /* Hide secondary nav link — keeps one-row nav clean at tablet widths */
+  .nav-cta-secondary { display: none; }
+}
+
+@media (max-width: 768px) {
   nav {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
@@ -2667,7 +2660,6 @@ footer p { font-size: 0.82rem; color: rgba(255, 255, 255, 0.45); }
     justify-content: flex-end;
     gap: 8px;
   }
-  .nav-cta-secondary { display: none; }
 
   .feature-alt-row {
     grid-template-columns: 1fr;
