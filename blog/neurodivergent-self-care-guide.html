@@ -40,10 +40,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Instrument+Sans:wght@300;400&display=swap" rel="stylesheet" />
+    <script src="../script.js" defer></script>
     <link rel="stylesheet" href="../style.css" />
 
     <script type="application/ld+json">
@@ -89,14 +87,27 @@
   <body>
     <a class="skip-link" href="#main">Skip to main content</a>
 
-    <nav>
+    <nav id="nav">
       <a href="/" class="nav-logo">soffyn™</a>
       <div class="nav-links">
         <a href="/#about" class="nav-link">About</a>
         <a href="/founding-members.html" class="nav-link">Founding Members</a>
-        <a href="/blog/" class="nav-link" style="color:#5cd9d3;">Blog</a>
+        <a href="/blog/" class="nav-link nav-link--active" aria-current="page">Blog</a>
+        <a href="/#waitlist" class="nav-cta">Join the waitlist</a>
+        <button class="mode-toggle" id="mode-toggle" role="switch" aria-checked="false" aria-label="Switch to dark mode"></button>
       </div>
-      <a href="/#hero" class="nav-cta">Join the waitlist</a>
+      <div class="nav-right-mobile">
+        <button class="mode-toggle" id="mode-toggle-mobile" role="switch" aria-checked="false" aria-label="Switch to dark mode"></button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="mobile-menu" id="mobile-menu" role="menu">
+        <a href="/#about" class="mobile-link" role="menuitem">About</a>
+        <a href="/founding-members.html" class="mobile-link" role="menuitem">Founding Members</a>
+        <a href="/blog/" class="mobile-link nav-link--active" role="menuitem">Blog</a>
+        <a href="/#waitlist" class="mobile-link primary" role="menuitem">Join the waitlist</a>
+      </div>
     </nav>
 
     <main id="main" class="blog-post">

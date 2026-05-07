@@ -2,6 +2,66 @@
    soffyn — scripts
    ───────────────────────────────────────────────────────── */
 
+// ── DARK MODE ──
+function setMode(dark) {
+  document.body.classList.toggle('dark', dark);
+  document.querySelectorAll('.mode-toggle').forEach(function(t) {
+    t.setAttribute('aria-checked', String(dark));
+    t.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+  });
+}
+var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+setMode(prefersDark);
+document.querySelectorAll('.mode-toggle').forEach(function(t) {
+  t.addEventListener('click', function() {
+    setMode(!document.body.classList.contains('dark'));
+  });
+  t.addEventListener('keydown', function(e) {
+    if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); t.click(); }
+  });
+});
+
+// ── HAMBURGER ──
+var hamburger = document.getElementById('hamburger');
+var mobileMenu = document.getElementById('mobile-menu');
+if (hamburger && mobileMenu) {
+  hamburger.addEventListener('click', function() {
+    var open = mobileMenu.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', String(open));
+    hamburger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  });
+  mobileMenu.querySelectorAll('.mobile-link').forEach(function(link) {
+    link.addEventListener('click', function() {
+      mobileMenu.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.setAttribute('aria-label', 'Open menu');
+    });
+  });
+}
+
+// ── STICKY NAV ──
+var nav = document.getElementById('nav');
+if (nav) {
+  window.addEventListener('scroll', function() {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  }, { passive: true });
+}
+
+// ── SCROLL REVEAL ──
+var revealEls = document.querySelectorAll('.reveal');
+if (revealEls.length && 'IntersectionObserver' in window) {
+  var revealObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (!entry.isIntersecting) return;
+      var siblings = Array.from(entry.target.parentElement.querySelectorAll('.reveal:not(.in)'));
+      var idx = siblings.indexOf(entry.target);
+      setTimeout(function() { entry.target.classList.add('in'); }, Math.min(idx, 4) * 90);
+      revealObserver.unobserve(entry.target);
+    });
+  }, { threshold: 0.08 });
+  revealEls.forEach(function(el) { revealObserver.observe(el); });
+}
+
 /* ── Accordion ─────────────────────────────────────────────
    Works for:
    - Neurodivergent explainer on homepage
