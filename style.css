@@ -1370,7 +1370,7 @@ body.dark .press-strip { border-top-color: rgba(242,238,248,0.09); border-bottom
 body.dark .press-strip-label { color: #9B87AA; }
 body.dark .press-logo-slot { background: #2A1D38; }
 
-body.dark #representation { background: #1A1410; }
+body.dark #representation { background: #2A1D38; }
 body.dark .representation-sub { color: #9B87AA; }
 body.dark .photo-placeholder { background: #2A1D38; }
 
@@ -1425,7 +1425,7 @@ body.dark .homepage-faq-more a { color: #E8956A; }
 body.dark .footer-cta-note { color: #9B87AA; }
 body.dark #footer-cta > .footer-cta-inner > p { color: #9B87AA; }
 
-body.dark #founding-members { background: #1A1410; }
+body.dark #founding-members { background: #2A1D38; }
 body.dark .founding-intro { color: #9B87AA; }
 body.dark .founding-offer { color: #F2EEF8; }
 body.dark .founding-offer em { color: #E8956A; }
