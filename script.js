@@ -5,19 +5,23 @@
 // ── DARK MODE ──
 function setMode(dark) {
   document.body.classList.toggle('dark', dark);
+  localStorage.setItem('soffyn-theme', dark ? 'dark' : 'light');
   document.querySelectorAll('.mode-toggle').forEach(function(t) {
     t.setAttribute('aria-checked', String(dark));
     t.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
   });
+  document.querySelectorAll('.mode-label').forEach(function(l) {
+    l.textContent = dark ? '☾ Dark' : '☀ Light';
+  });
 }
+
+var saved = localStorage.getItem('soffyn-theme');
 var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-setMode(prefersDark);
+setMode(saved ? saved === 'dark' : prefersDark);
+
 document.querySelectorAll('.mode-toggle').forEach(function(t) {
   t.addEventListener('click', function() {
     setMode(!document.body.classList.contains('dark'));
-  });
-  t.addEventListener('keydown', function(e) {
-    if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); t.click(); }
   });
 });
 

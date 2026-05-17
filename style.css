@@ -258,6 +258,13 @@ nav.scrolled {
   left: 3px;
   transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1);
 }
+.mode-label {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--text-2);
+  user-select: none;
+  white-space: nowrap;
+}
 
 /* ── Hamburger ──────────────────────────────────────────── */
 .hamburger {
@@ -1221,6 +1228,7 @@ footer {
 /* ── Blog — index ───────────────────────────────────────── */
 .blog-index-hero { max-width: var(--max-w-text); margin: 0 auto; padding: var(--section-pad-v) 48px var(--section-pad-v-sm); }
 .blog-index-hero h1 { font-family: 'Fraunces', serif; font-size: clamp(2.4rem, 3.5vw, 4rem); font-weight: 300; margin-top: 16px; }
+.blog-index-sub { font-family: 'Instrument Sans', sans-serif; font-size: 1rem; color: var(--muted); font-weight: 300; margin-top: 12px; }
 
 .category-pills { max-width: var(--max-w); margin: 0 auto; padding: 0 48px 40px; display: flex; flex-wrap: wrap; gap: 8px; }
 .category-pill {
@@ -1252,6 +1260,15 @@ footer {
 .blog-card h2  { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 300; margin-bottom: 12px; line-height: 1.3; }
 .blog-card-desc { font-family: 'Instrument Sans', sans-serif; font-size: 0.85rem; color: var(--muted); line-height: 1.65; font-weight: 300; }
 .blog-card-meta { font-family: 'Instrument Sans', sans-serif; font-size: 0.75rem; color: var(--muted); margin-top: 16px; display: flex; gap: 8px; align-items: center; }
+.blog-card-link { display: inline-block; font-family: 'Instrument Sans', sans-serif; font-size: 0.78rem; color: var(--rose); text-decoration: none; margin-top: 16px; transition: color 0.2s ease; }
+.blog-card-link:hover { color: var(--text); }
+
+.blog-email-cta { background: var(--bg-2); padding: var(--section-pad-v) 0; margin-top: var(--section-pad-v); }
+.blog-email-cta-inner { max-width: 600px; margin: 0 auto; padding: 0 48px; text-align: center; }
+.blog-email-cta h2 { font-family: 'Fraunces', serif; font-size: clamp(1.8rem, 2.5vw, 2.5rem); font-weight: 300; margin-bottom: 16px; }
+.blog-email-cta p { font-family: 'Instrument Sans', sans-serif; font-size: 0.95rem; color: var(--muted); font-weight: 300; margin-bottom: 24px; }
+.blog-email-cta form { display: flex; flex-direction: column; gap: 12px; align-items: center; }
+.blog-email-cta input[type="email"] { width: 100%; max-width: 380px; padding: 12px 16px; border: 1px solid var(--rule); border-radius: 2px; background: var(--bg); font-family: 'Instrument Sans', sans-serif; font-size: 0.9rem; color: var(--text); }
 
 /* ── Blog — article ─────────────────────────────────────── */
 .blog-hero { max-width: var(--max-w-text); margin: 0 auto; padding: var(--section-pad-v) 48px var(--section-pad-v-sm); }
@@ -1306,6 +1323,16 @@ footer {
 .faq-category-pill.is-active,
 .faq-category-pill:hover { background: var(--bg-2); color: var(--text); }
 
+/* ── FAQ layout ─────────────────────────────────────────── */
+.faq-layout { max-width: 760px; margin: 0 auto; padding: 0 48px var(--section-pad-v); }
+.faq-category-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 48px; }
+.faq-sections { display: flex; flex-direction: column; gap: 0; }
+.faq-category-heading { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 300; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--rule); }
+
+#about-soffyn,
+#membership,
+#privacy { scroll-margin-top: 88px; }
+
 .faq-category-section { margin-bottom: 64px; }
 .faq-category-section h2 { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 300; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--rule); }
 
@@ -1338,6 +1365,7 @@ body.dark .nav-cta:hover { background: #E8956A; }
 
 body.dark .mode-toggle { background: #2A1D38; border-color: rgba(242,238,248,0.09); }
 body.dark .mode-toggle::after { background: #E8956A; transform: translateX(18px); }
+body.dark .mode-label { color: #9B87AA; }
 
 body.dark .hamburger { color: #F2EEF8; }
 body.dark .mobile-menu { background: #1E1528; border-bottom-color: rgba(242,238,248,0.09); }
@@ -1507,6 +1535,10 @@ body.dark .blog-back { color: #9B87AA; }
 body.dark .blog-back:hover { color: #E8956A; }
 body.dark .blog-post-cta { background: #2A1D38; }
 body.dark .blog-post-cta p { color: #9B87AA; }
+body.dark .blog-email-cta { background: #2A1D38; }
+body.dark .blog-email-cta p { color: #9B87AA; }
+body.dark .blog-email-cta input[type="email"] { background: #1E1528; border-color: rgba(242,238,248,0.09); color: #F2EEF8; }
+body.dark .blog-card-link { color: #E8956A; }
 
 body.dark .faq-category-section h2 { border-bottom-color: rgba(242,238,248,0.09); }
 body.dark .faq-category-pill { border-color: rgba(242,238,248,0.09); color: #9B87AA; }
@@ -1572,6 +1604,7 @@ body.dark .faq-category-pill:hover { background: #2A1D38; color: #F2EEF8; }
   .press-logos { gap: 16px; }
 
   .blog-grid        { grid-template-columns: 1fr; padding: 0 24px var(--section-pad-v-sm); }
+  .blog-email-cta-inner { padding: 0 24px; }
   .blog-hero        { padding: 48px 24px 32px; }
   .blog-body, .blog-content { padding: 0 24px var(--section-pad-v-sm); }
   .blog-index-hero  { padding: 48px 24px 32px; }
@@ -1582,6 +1615,7 @@ body.dark .faq-category-pill:hover { background: #2A1D38; color: #F2EEF8; }
   .legal-content, .legal-wrapper { padding: 0 24px var(--section-pad-v-sm); }
   .utility-hero { padding: 48px 24px 32px; }
   .faq-body { padding: 0 24px var(--section-pad-v-sm); }
+  .faq-layout { padding: 0 24px var(--section-pad-v-sm); }
 
   .thankyou-page    { grid-template-columns: 1fr; }
   .thankyou-visual  { display: none; }
