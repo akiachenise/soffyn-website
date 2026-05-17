@@ -1394,6 +1394,7 @@ body.dark h1 em, body.dark h2 em, body.dark h3 em { color: #E8956A; }
 body.dark .skip-link { background: #E8956A; color: #1E1528; }
 
 body.dark .hero-eyebrow { background: #2A1D38; border-color: rgba(242,238,248,0.09); color: #9B87AA; }
+body.dark #hero h1 { color: #F2EEF8; }
 body.dark .hero-subheadline { color: #9B87AA; }
 body.dark .hero-sub { color: #9B87AA; }
 body.dark .hero-founding-note { color: #9B87AA; }
