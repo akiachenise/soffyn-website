@@ -83,6 +83,17 @@ body::after {
 }
 
 img { display: block; max-width: 100%; }
+
+/* ── Image treatment — warm editorial filter ─────────────── */
+.site-img {
+  filter: contrast(1.05) saturate(0.92) sepia(0.08);
+  transition: filter 0.3s ease;
+}
+
+body.dark .site-img {
+  filter: contrast(1.08) saturate(0.85) sepia(0.12) brightness(0.95);
+}
+
 a   { color: inherit; }
 
 /* ── Typography ─────────────────────────────────────────── */
