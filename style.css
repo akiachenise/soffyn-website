@@ -157,7 +157,7 @@ h1 em, h2 em, h3 em { font-style: italic; color: var(--rose); }
   background: var(--rose);
   color: #F7F2FA;
   padding: 15px 36px;
-  border-radius: 100px;
+  border-radius: 14px;
   font-family: 'Instrument Sans', sans-serif;
   font-size: 0.78rem;
   font-weight: 400;
@@ -175,7 +175,7 @@ h1 em, h2 em, h3 em { font-style: italic; color: var(--rose); }
   background: transparent;
   color: var(--text);
   padding: 14px 34px;
-  border-radius: 100px;
+  border-radius: 14px;
   border: 1px solid var(--rule);
   font-family: 'Instrument Sans', sans-serif;
   font-size: 0.78rem;
@@ -261,7 +261,7 @@ nav.scrolled {
   text-decoration: none;
   padding: 9px 18px;
   border: 1px solid var(--rule);
-  border-radius: 100px;
+  border-radius: 14px;
   transition: background 0.2s ease;
   white-space: nowrap;
 }
@@ -271,7 +271,7 @@ nav.scrolled {
   background: var(--rose);
   color: #FAF6F0;
   padding: 10px 20px;
-  border-radius: 100px;
+  border-radius: 14px;
   text-decoration: none;
   font-family: 'Instrument Sans', sans-serif;
   font-size: 0.78rem;
