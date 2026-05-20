@@ -212,6 +212,45 @@ nav.scrolled {
   -webkit-backdrop-filter: blur(10px);
 }
 
+/* ── Announcement bar ─────────────────────────────────────── */
+.announce-bar {
+  position: sticky;
+  top: 72px;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 9px 48px;
+  background: transparent;
+  border-bottom: 1px solid var(--rule);
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.82rem;
+  color: var(--text-2);
+}
+
+.announce-bar-link {
+  color: var(--gold);
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.announce-bar-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .announce-bar {
+    padding: 8px 20px;
+    font-size: 0.78rem;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
 .nav-logo {
   font-family: 'Fraunces', serif;
   font-style: italic;
