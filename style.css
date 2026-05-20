@@ -222,7 +222,9 @@ nav.scrolled {
   justify-content: center;
   gap: 14px;
   padding: 9px 48px;
-  background: transparent;
+  background: rgba(247,242,250,0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--rule);
   font-family: "DM Sans", sans-serif;
   font-size: 0.82rem;
@@ -1447,6 +1449,7 @@ body.dark { background: #1E1528; color: #F2EEF8; }
 
 body.dark nav { border-bottom-color: rgba(242,238,248,0.09); }
 body.dark nav.scrolled { background: rgba(30,21,40,0.96); }
+body.dark .announce-bar { background: rgba(30,21,40,0.92); border-bottom-color: rgba(242,238,248,0.09); }
 
 body.dark .nav-logo { color: #F2EEF8; }
 body.dark .nav-link { color: #9B87AA; }
