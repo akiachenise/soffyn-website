@@ -9,11 +9,13 @@
   --bg-2:     #EDE6F5;
   --bg-3:     #E0D5EE;
   --text:     #1E1528;
+  --text-2:   #7A6888;
   --muted:    #7A6888;
   --muted-2:  #5C4A6A;
   --rose:     #C4705A;
   --gold:     #C4705A;
   --rule:     rgba(30,21,40,0.12);
+  --font-body: 'Instrument Sans', sans-serif;
 
   --max-w:            1200px;
   --max-w-text:       760px;
@@ -1430,7 +1432,7 @@ body.dark .fm-for-you-close { color: #F2EEF8; }
 
 #about-soffyn,
 #membership,
-#privacy { scroll-margin-top: 88px; }
+#privacy { scroll-margin-top: 130px; }
 
 .faq-category-section { margin-bottom: 64px; }
 .faq-category-section h2 { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 300; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--rule); }
@@ -1442,6 +1444,80 @@ body.dark .fm-for-you-close { color: #F2EEF8; }
 /* ── Quotes grid alias ──────────────────────────────────── */
 .quotes-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
 
+/* ── Legal updated (alias for legal-last-updated) ─────── */
+.legal-updated { font-family: 'Instrument Sans', sans-serif; font-size: 0.78rem; color: var(--muted); margin-bottom: 48px; }
+
+/* ── FM pricing paragraph ───────────────────────────────── */
+.fm-pricing-p {
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 1rem;
+  color: var(--muted);
+  line-height: 1.75;
+  font-weight: 300;
+  margin-bottom: 12px;
+}
+
+/* ── Footer CTA italic ──────────────────────────────────── */
+.footer-cta-italic {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--muted);
+  margin-top: 12px;
+}
+
+/* ── FAQ support / Contact cards ─────────────────────────── */
+.faq-support { padding: var(--section-pad-v) 0; background: var(--bg-2); }
+.faq-support-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 48px; }
+.faq-support h2 { font-family: 'Fraunces', serif; font-size: clamp(2rem, 3vw, 3rem); font-weight: 300; margin-bottom: 40px; }
+.faq-support-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 32px; }
+.faq-support-card {
+  background: var(--bg);
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.faq-support-card-label {
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+}
+.faq-support-card p {
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.75;
+  font-weight: 300;
+}
+
+/* ── Contact email display ──────────────────────────────── */
+.contact-email-display { padding: var(--section-pad-v) 0; text-align: center; }
+.contact-email-inner { max-width: 600px; margin: 0 auto; padding: 0 48px; }
+.contact-email-address {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--rose);
+  text-decoration: none;
+  display: block;
+  margin: 16px 0;
+  transition: color 0.2s ease;
+}
+.contact-email-address:hover { color: var(--text); }
+.contact-email-note { font-family: 'Instrument Sans', sans-serif; font-size: 0.85rem; color: var(--muted); font-weight: 300; }
+
+/* ── Contact cards section ──────────────────────────────── */
+.contact-cards { padding: 0 0 var(--section-pad-v); }
+.contact-cards-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 48px; }
+
 /* ─────────────────────────────────────────────────────────
    DARK MODE — explicit selectors per element, no cascade
    ───────────────────────────────────────────────────────── */
@@ -1449,7 +1525,7 @@ body.dark { background: #1E1528; color: #F2EEF8; }
 
 body.dark nav { border-bottom-color: rgba(242,238,248,0.09); }
 body.dark nav.scrolled { background: rgba(30,21,40,0.96); }
-body.dark .announce-bar { background: rgba(30,21,40,0.92); border-bottom-color: rgba(242,238,248,0.09); }
+body.dark .announce-bar { background: rgba(30,21,40,0.92); border-bottom-color: rgba(242,238,248,0.09); color: #9B87AA; }
 
 body.dark .nav-logo { color: #F2EEF8; }
 body.dark .nav-link { color: #9B87AA; }
@@ -1657,6 +1733,19 @@ body.dark .faq-category-pill { border-color: rgba(242,238,248,0.09); color: #9B8
 body.dark .faq-category-pill.is-active,
 body.dark .faq-category-pill:hover { background: #2A1D38; color: #F2EEF8; }
 
+body.dark .legal-updated { color: #9B87AA; }
+body.dark .fm-pricing-p { color: #9B87AA; }
+body.dark .footer-cta-italic { color: #9B87AA; }
+
+body.dark .faq-support { background: #2A1D38; }
+body.dark .faq-support-card { background: #1E1528; border-color: rgba(242,238,248,0.09); }
+body.dark .faq-support-card p { color: #9B87AA; }
+body.dark .faq-support-card-label { color: #E8956A; }
+
+body.dark .contact-email-address { color: #E8956A; }
+body.dark .contact-email-address:hover { color: #F2EEF8; }
+body.dark .contact-email-note { color: #9B87AA; }
+
 /* ─────────────────────────────────────────────────────────
    RESPONSIVE — max-width 800px
    ───────────────────────────────────────────────────────── */
@@ -1736,4 +1825,9 @@ body.dark .faq-category-pill:hover { background: #2A1D38; color: #F2EEF8; }
   .contact-hero, .contact-inner { padding: 48px 24px; }
 
   .fm-features-inner, .fm-pricing-inner, .fm-cta-inner { padding: 0 24px; }
+
+  .faq-support-inner { padding: 0 24px; }
+  .faq-support-cards { grid-template-columns: 1fr; }
+  .contact-email-inner { padding: 0 24px; }
+  .contact-cards-inner { padding: 0 24px; }
 }

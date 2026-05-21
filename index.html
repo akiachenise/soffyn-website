@@ -121,8 +121,7 @@
       <a href="/" class="nav-logo" aria-label="soffyn home">soffyn</a>
       <div class="nav-links">
         <a href="#about" class="nav-link">About</a>
-        <a href="/founding-members/" class="nav-link">Founding Members</a>
-        <a href="/blog/" class="nav-link">Blog</a>
+        <a href="/founding-members.html" class="nav-link">Founding Members</a>
         <a href="#waitlist" class="nav-link primary">Join the waitlist</a>
         <span class="mode-label">☀ Light</span>
         <button class="mode-toggle" id="mode-toggle" role="switch" aria-checked="false" aria-label="Switch to dark mode"></button>
@@ -136,8 +135,7 @@
       </div>
       <div class="mobile-menu" id="mobile-menu" role="menu">
         <a href="#about" class="mobile-link" role="menuitem">About</a>
-        <a href="/founding-members/" class="mobile-link" role="menuitem">Founding Members</a>
-        <a href="/blog/" class="mobile-link" role="menuitem">Blog</a>
+        <a href="/founding-members.html" class="mobile-link" role="menuitem">Founding Members</a>
         <a href="#waitlist" class="mobile-link primary" role="menuitem">Join the waitlist</a>
       </div>
     </nav>
@@ -160,7 +158,7 @@
             <a href="#about" class="btn-secondary">Learn more</a>
           </div>
         </div>
-        <div class="hero-image-wrap" aria-hidden="true">
+        <div class="hero-image-wrap">
           <div class="site-img-wrap"><img src="/assets/soffyn-hero.png" alt="A Black woman relaxed at home, phone in hand" loading="eager" /></div>
         </div>
       </section>
@@ -252,7 +250,7 @@
               <div class="fc-panel-text">
                 <p class="section-label">Built for busy brains</p>
                 <h3>Start before you talk yourself <em>out of it.</em></h3>
-                <p>You know the feeling. You're ready, the window is open, and then somehow forty minutes passed and you haven't started. The focus timer is built for that exact moment — to catch you before you talk yourself out of it. No neurotypical productivity pressure. Just a gentle on-ramp for a brain that needs one.</p>
+                <p>You know the feeling. You're ready, the window is open, and then somehow forty minutes pass and you still haven't started. The focus timer is built for that exact moment — a low-pressure way into the task before the window closes. No neurotypical productivity pressure. Just a gentle on-ramp for a brain that needs one.</p>
               </div>
             </div>
 
@@ -307,19 +305,18 @@
           <form name="waitlist" method="POST" data-netlify="true" action="thank-you.html">
             <div class="signup-wrapper">
               <p>Join the waitlist and you're in as a Founding Member — that means everything soffyn has, free forever. No card. No trial. No expiration date on the commitment I'm making to the people who showed up early.</p>
-              <input type="text" name="FNAME" placeholder="your first name" />
-              <input type="email" name="EMAIL" placeholder="your@email.com" required />
+              <input type="text" name="FNAME" placeholder="your first name" aria-label="First name" />
+              <input type="email" name="EMAIL" placeholder="your@email.com" aria-label="Email address" required />
               <label class="gdpr-label" for="consent">
                 <input type="checkbox" name="consent" id="consent" value="yes" required />
                 <span>
                   I'd like to receive launch updates and early access info from soffyn. We'll only contact you about soffyn. You can unsubscribe at any time. By signing up, you agree to our
-                  <a href="/terms" style="color: #C4907A">Terms of Use</a> and
-                  <a href="/privacy" style="color: #C4907A">Privacy Policy</a>.
+                  <a href="/terms.html" style="color: #C4907A">Terms of Use</a> and
+                  <a href="/privacy.html" style="color: #C4907A">Privacy Policy</a>.
                 </span>
               </label>
               <p class="gdpr-note">I'll send you a welcome email. Then occasional updates as we get closer to September. When the doors open, you're first through them.</p>
               <p class="gdpr-note" style="margin-top: 8px;">No spam. No pressure. Just me, building this thing, keeping you in the loop.</p>
-              <p class="founding-note">Seen is free, always. Join now and you're a Founding Member — that means Set-level access, free forever.</p>
               <button type="submit">Find my space</button>
               <input type="hidden" name="form-name" value="waitlist" />
             </div>
@@ -362,7 +359,7 @@
       <!-- ── About / Founder ───────────────────────────────── -->
       <section id="about">
         <div class="about-inner">
-          <div class="about-photo" aria-hidden="true">
+          <div class="about-photo">
             <div class="site-img-wrap"><img src="/assets/soffyn-akia.jpg" alt="Akia, founder of soffyn" loading="lazy" /></div>
           </div>
           <div class="about-text">
@@ -405,7 +402,7 @@
               <p class="founding-num" aria-label="150 founding member spots available">150</p>
               <p class="founding-num-label">spots.</p>
               <div class="founding-form-wrap">
-                <form action="thank-you" method="POST" name="founding">
+                <form action="thank-you.html" method="POST" name="founding" data-netlify="true">
                   <div class="form-wrap">
                     <div class="form-row">
                       <input type="email" name="EMAIL" placeholder="your email address" aria-label="Email address" autocomplete="email" required>
@@ -516,7 +513,7 @@
       <!-- ── Final CTA ───────────────────────────────────────── -->
       <section id="footer-cta">
         <div class="footer-cta-inner">
-          <p class="section-label">You found your thing.</p>
+          <p class="section-label">Your space is waiting.</p>
           <h2>You found your thing. Stay a while.</h2>
           <p>
             No streaks. No guilt. No performing. Just a space that's yours, whenever you need it.
@@ -541,7 +538,6 @@
           <span class="footer-col-heading">Product</span>
           <ul class="footer-col-links">
             <li><a href="/founding-members.html">Founding Members</a></li>
-            <li><a href="/blog/">Blog</a></li>
             <li><a href="/faq.html">FAQ</a></li>
           </ul>
         </div>

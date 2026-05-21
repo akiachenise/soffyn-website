@@ -44,7 +44,7 @@ if (hamburger && mobileMenu) {
 }
 
 // ── STICKY NAV ──
-var nav = document.getElementById('nav');
+var nav = document.getElementById('nav') || document.querySelector('nav');
 if (nav) {
   window.addEventListener('scroll', function() {
     nav.classList.toggle('scrolled', window.scrollY > 40);

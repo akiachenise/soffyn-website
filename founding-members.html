@@ -18,6 +18,7 @@
     <meta property="og:image" content="https://soffyn.com/assets/soffyn-og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="soffyn — Your safe space to just be. A wellness app for neurodivergent Black women." />
     <meta property="og:locale" content="en_US" />
 
     <!-- Twitter / X Card -->
@@ -25,6 +26,7 @@
     <meta name="twitter:title" content="Founding Members | soffyn" />
     <meta name="twitter:description" content="Join soffyn before launch and your membership is free — forever. No trial. No card. I built this for you. Come in early." />
     <meta name="twitter:image" content="https://soffyn.com/assets/soffyn-og-image.png" />
+    <meta name="twitter:image:alt" content="soffyn — Your safe space to just be." />
 
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css" />
@@ -39,16 +41,10 @@
     <a class="skip-link" href="#main">Skip to main content</a>
 
     <!-- ── Global nav ──────────────────────────────────────── -->
-    <nav>
+    <nav id="nav">
       <a href="/" class="nav-logo">soffyn™</a>
-      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
-        <span class="nav-toggle-bar"></span>
-        <span class="nav-toggle-bar"></span>
-        <span class="nav-toggle-bar"></span>
-      </button>
       <div class="nav-links">
         <a href="/#about" class="nav-link">About</a>
-        <a href="/blog/" class="nav-link">Blog</a>
         <a href="/faq.html" class="nav-link">FAQ</a>
         <span class="mode-label">☀ Light</span>
         <button class="mode-toggle" id="mode-toggle" role="switch" aria-checked="false" aria-label="Switch to dark mode"></button>
@@ -66,7 +62,6 @@
       </div>
       <div class="mobile-menu" id="mobile-menu" role="menu">
         <a href="/#about" class="mobile-link" role="menuitem">About</a>
-        <a href="/blog/" class="mobile-link" role="menuitem">Blog</a>
         <a href="/faq.html" class="mobile-link" role="menuitem">FAQ</a>
         <a href="/founding-members.html" class="mobile-link" role="menuitem">Founding Members</a>
         <a href="/#waitlist" class="mobile-link primary" role="menuitem">Join the waitlist</a>
@@ -85,15 +80,11 @@
           <span class="hero-eyebrow">Limited &mdash; closes at launch</span>
           <h1>You found this early. That matters.</h1>
           <p class="hero-subheadline">soffyn isn't out yet. The women who show up before it is become Founding Members — and they shape what it becomes. Your access is free. Forever.</p>
-          <p class="hero-sub">
-          </p>
           <div class="hero-cta-group">
             <a href="/#waitlist" class="btn-primary">Find my space</a>
           </div>
-          <p class="hero-founding-note"></p>
         </div>
-        <!-- REPLACE: /assets/soffyn-founding-members-hero.jpg -->
-        <div class="hero-image-wrap" aria-hidden="true">
+        <div class="hero-image-wrap">
           <div class="site-img-wrap"><img src="/assets/soffyn-fm-hero.png" alt="A Black woman standing by a window, calm and knowing" loading="eager" /></div>
         </div>
       </section>
@@ -130,15 +121,12 @@
 
           <div class="photo-row">
             <div class="photo-row-item">
-              <!-- REPLACE: /assets/soffyn-community-1.jpg -->
               <div class="site-img-wrap"><img src="/assets/soffyn-fm-1.png" alt="A Black woman sitting quietly with a mug" loading="lazy" /></div>
             </div>
             <div class="photo-row-item">
-              <!-- REPLACE: /assets/soffyn-community-2.jpg -->
               <div class="site-img-wrap"><img src="/assets/soffyn-fm-2.png" alt="A Black woman laughing freely" loading="lazy" /></div>
             </div>
             <div class="photo-row-item">
-              <!-- REPLACE: /assets/soffyn-community-3.jpg -->
               <div class="site-img-wrap"><img src="/assets/soffyn-fm-3.png" alt="A Black woman in quiet reflection" loading="lazy" /></div>
             </div>
           </div>
@@ -160,12 +148,8 @@
             <p>
               The free tier gives you one affirmation a day. As a Founding Member you get the full library — every category, every mood, everything that gets added after launch. All of it, always.
             </p>
-            <p>
-            </p>
           </div>
-          <!-- REPLACE: /assets/soffyn-affirmations-screen.png -->
-          <div class="feature-alt-image">
-          </div>
+          <div class="feature-alt-image" aria-hidden="true"></div>
         </div>
 
         <!-- 2. Audio & photo journaling — image left, text right -->
@@ -176,12 +160,8 @@
             <p>
               Some thoughts don't come in words. Founding Members get audio and photo journaling because a voice memo at 11pm counts just as much as three paragraphs in a notebook.
             </p>
-            <p>
-            </p>
           </div>
-          <!-- REPLACE: /assets/soffyn-journaling-screen.png -->
-          <div class="feature-alt-image">
-          </div>
+          <div class="feature-alt-image" aria-hidden="true"></div>
         </div>
 
         <!-- 3. Unlimited history — text left, image right -->
@@ -192,12 +172,8 @@
             <p>
               The free tier keeps 90 days. Founding Members keep everything. Every entry, every check-in, every moment you put into words — yours, with no expiration date.
             </p>
-            <p>
-            </p>
           </div>
-          <!-- REPLACE: /assets/soffyn-history-screen.png -->
-          <div class="feature-alt-image">
-          </div>
+          <div class="feature-alt-image" aria-hidden="true"></div>
         </div>
 
         <!-- 4. Full goal tracking — image left, text right -->
@@ -206,14 +182,10 @@
             <p class="section-label">Full goal tracking</p>
             <h3>Get your dreams out of <em>the notes app.</em></h3>
             <p>
-              Your goals deserve more than a list you never look at. soffyn holds them for you — and never makes you feel bad for coming back a long while later.
-            </p>
-            <p>
+              Your goals deserve more than a list you never look at. soffyn holds them for you — and never makes you feel bad for coming back after a long time away.
             </p>
           </div>
-          <!-- REPLACE: /assets/soffyn-goals-screen.png -->
-          <div class="feature-alt-image">
-          </div>
+          <div class="feature-alt-image" aria-hidden="true"></div>
         </div>
 
       </section>
@@ -245,9 +217,7 @@
         <div class="footer-cta-inner">
           <h2>You showed up before there was anything to show up for. That means something.</h2>
           <p>Join the waitlist before launch and your access is free, forever. No card. No pressure. No spam. Just me, keeping you in the loop until the doors open.</p>
-          <p class="footer-cta-italic"></p>
           <a href="/#waitlist" class="btn-primary">Find my space</a>
-          <p class="footer-cta-note"></p>
         </div>
       </section>
 
@@ -266,7 +236,6 @@
           <span class="footer-col-heading">Product</span>
           <ul class="footer-col-links">
             <li><a href="/founding-members.html">Founding Members</a></li>
-            <li><a href="/blog/">Blog</a></li>
             <li><a href="/faq.html">FAQ</a></li>
           </ul>
         </div>
@@ -286,7 +255,7 @@
             <li><a href="/contact.html">Contact page</a></li>
           </ul>
         </div>
-              <div>
+        <div>
           <span class="footer-col-heading">Follow</span>
           <ul class="footer-social-links">
             <li><a href="https://www.instagram.com/soffynapp" target="_blank" rel="noopener">Instagram</a></li>
