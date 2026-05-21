@@ -1315,31 +1315,6 @@ footer {
 .fm-cta-inner { max-width: 600px; margin: 0 auto; padding: 0 48px; }
 
 .fm-for-you { padding: var(--section-pad-v) 0; }
-.fm-for-you-inner {
-  max-width: var(--max-w);
-  margin: 0 auto;
-  padding: 0 48px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  align-items: start;
-}
-.fm-for-you-body p { font-family: 'Instrument Sans', sans-serif; font-size: 1rem; color: var(--muted); line-height: 1.8; font-weight: 300; margin-bottom: 20px; }
-.fm-for-you-close {
-  font-family: 'Fraunces', serif;
-  font-style: italic;
-  font-size: clamp(1.2rem, 1.8vw, 1.5rem);
-  color: var(--text);
-  font-weight: 300;
-  line-height: 1.5;
-  margin-top: 20px;
-}
-body.dark .fm-for-you-body p { color: #9B87AA; }
-body.dark .fm-for-you-close { color: #F2EEF8; }
-
-@media (max-width: 800px) {
-  .fm-for-you-inner { grid-template-columns: 1fr; padding: 0 24px; gap: 32px; }
-}
 
 /* ── Blog — index ───────────────────────────────────────── */
 .blog-index-hero { max-width: var(--max-w-text); margin: 0 auto; padding: var(--section-pad-v) 48px var(--section-pad-v-sm); }
