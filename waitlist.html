@@ -4,16 +4,19 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact | soffyn</title>
-    <meta name="description" content="Have a question, a press inquiry, or just want to say hi? I love to talk — reach out and let's connect." />
+    <title>Join the Waitlist | soffyn</title>
+    <meta name="description" content="Join the soffyn waitlist and become a Founding Member — full access, free forever. No card required. Built for neurodivergent Black women." />
+    <meta name="author" content="Developed By Akia, LLC" />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://soffyn.com/contact" />
+    <link rel="canonical" href="https://soffyn.com/waitlist" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 
+    <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://soffyn.com/contact" />
+    <meta property="og:url" content="https://soffyn.com/waitlist" />
     <meta property="og:site_name" content="soffyn" />
-    <meta property="og:title" content="Contact soffyn" />
-    <meta property="og:description" content="Have a question, a press inquiry, or just want to say hi? I love to talk — reach out and let's connect." />
+    <meta property="og:title" content="Join the soffyn Waitlist" />
+    <meta property="og:description" content="Join the soffyn waitlist and become a Founding Member — full access, free forever. No card required." />
     <meta property="og:image" content="https://soffyn.com/assets/soffyn-og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -22,8 +25,8 @@
 
     <!-- Twitter / X Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Contact soffyn" />
-    <meta name="twitter:description" content="Have a question, a press inquiry, or just want to say hi? I love to talk — reach out and let's connect." />
+    <meta name="twitter:title" content="Join the soffyn Waitlist" />
+    <meta name="twitter:description" content="Join the soffyn waitlist and become a Founding Member — full access, free forever. No card required." />
     <meta name="twitter:image" content="https://soffyn.com/assets/soffyn-og-image.png" />
     <meta name="twitter:image:alt" content="soffyn — Your safe space to just be." />
 
@@ -52,7 +55,7 @@
       </div>
       <div class="nav-right">
         <a href="/founding-members.html" class="nav-cta-secondary">Founding Members</a>
-        <a href="/waitlist.html" class="nav-cta">Join the waitlist</a>
+        <a href="/waitlist.html" class="nav-cta nav-link--active" aria-current="page">Join the waitlist</a>
       </div>
       <div class="nav-right-mobile">
         <span class="mode-label">☀ Light</span>
@@ -76,38 +79,32 @@
 
     <main id="main">
 
-      <!-- ── Hero ───────────────────────────────────────────── -->
-      <section class="utility-hero">
-        <span class="utility-hero-eyebrow">Let's talk</span>
-        <h1>Got something on your mind? I'm here.</h1>
-        <p class="hero-subheadline">Questions, press inquiries, accessibility feedback, or just a hello — I read everything.</p>
-      </section>
-
-      <!-- ── Contact form ───────────────────────────────────── -->
-      <section class="contact-cards">
-        <div class="contact-cards-inner">
-
-          <form name="contact" method="POST" data-netlify="true" action="/thank-you.html">
-            <input type="hidden" name="form-name" value="contact" />
+      <!-- ── Waitlist form ───────────────────────────────────── -->
+      <section id="waitlist">
+        <div class="waitlist-inner">
+          <p class="section-label">Join the waitlist</p>
+          <h2>You've been looking for this. Here it is.</h2>
+          <form name="waitlist" method="POST" data-netlify="true" action="/thank-you.html">
             <div class="signup-wrapper">
-              <input type="text" name="name" placeholder="your name" aria-label="Name" required />
-              <input type="email" name="email" placeholder="your@email.com" aria-label="Email address" required />
-              <textarea name="message" placeholder="what's on your mind?" aria-label="Message" rows="5" required></textarea>
-              <button type="submit">Send message</button>
+              <p>Join the waitlist and you're in as a Founding Member — that means everything soffyn has, free forever. No card, no trial, and I'm not changing my mind about the people who showed up early.</p>
+              <input type="text" name="FNAME" placeholder="your first name" aria-label="First name" />
+              <input type="email" name="EMAIL" placeholder="your@email.com" aria-label="Email address" required />
+              <label class="gdpr-label" for="consent">
+                <input type="checkbox" name="consent" id="consent" value="yes" required />
+                <span>
+                  I'd like to receive launch updates and early access info from soffyn. We'll only contact you about soffyn. You can unsubscribe at any time. By signing up, you agree to our
+                  <a href="/terms.html" style="color: #C4907A">Terms of Use</a> and
+                  <a href="/privacy.html" style="color: #C4907A">Privacy Policy</a>.
+                </span>
+              </label>
+              <p class="gdpr-note">I'll send you a welcome email. Then occasional updates as we get closer to September. When the doors open, you're first through them.</p>
+              <p class="gdpr-note" style="margin-top: 8px;">No spam, no pressure — just me, building this thing, keeping you in the loop.</p>
+              <button type="submit">Find my space</button>
+              <input type="hidden" name="form-name" value="waitlist" />
             </div>
           </form>
-
-          <div class="faq-support-cards">
-            <div class="faq-support-card">
-              <p class="faq-support-card-label">Founding membership</p>
-              <p>Questions about what it means to join before launch? I've got answers.</p>
-              <a href="/founding-members.html" class="btn-secondary">Learn more &rarr;</a>
-            </div>
-          </div>
-
         </div>
       </section>
-
 
     </main>
 
@@ -116,7 +113,7 @@
       <div class="footer-inner">
         <div class="footer-brand">
           <span class="footer-logo">soffyn™</span>
-          <p class="footer-tagline">your safe space to just be.</p>
+          <p class="footer-unclench">to unclench. to let go. to just be.</p>
           <p class="footer-copy">© 2026 soffyn. All rights reserved.</p>
           <p class="footer-copy">A Developed By Akia, LLC product</p>
         </div>

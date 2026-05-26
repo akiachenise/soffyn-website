@@ -4,16 +4,19 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact | soffyn</title>
-    <meta name="description" content="Have a question, a press inquiry, or just want to say hi? I love to talk — reach out and let's connect." />
+    <title>About | soffyn — Wellness App for Neurodivergent Black Women</title>
+    <meta name="description" content="soffyn was built by Akia — a neurodivergent Black woman, developer, and accessibility specialist who couldn't find a wellness app built for a brain like hers. So she built it." />
+    <meta name="author" content="Developed By Akia, LLC" />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://soffyn.com/contact" />
+    <link rel="canonical" href="https://soffyn.com/about" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 
+    <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://soffyn.com/contact" />
+    <meta property="og:url" content="https://soffyn.com/about" />
     <meta property="og:site_name" content="soffyn" />
-    <meta property="og:title" content="Contact soffyn" />
-    <meta property="og:description" content="Have a question, a press inquiry, or just want to say hi? I love to talk — reach out and let's connect." />
+    <meta property="og:title" content="About soffyn" />
+    <meta property="og:description" content="soffyn was built by Akia — a neurodivergent Black woman who couldn't find a wellness app built for a brain like hers. So she built it." />
     <meta property="og:image" content="https://soffyn.com/assets/soffyn-og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -22,8 +25,8 @@
 
     <!-- Twitter / X Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Contact soffyn" />
-    <meta name="twitter:description" content="Have a question, a press inquiry, or just want to say hi? I love to talk — reach out and let's connect." />
+    <meta name="twitter:title" content="About soffyn" />
+    <meta name="twitter:description" content="soffyn was built by Akia — a neurodivergent Black woman who couldn't find a wellness app built for a brain like hers. So she built it." />
     <meta name="twitter:image" content="https://soffyn.com/assets/soffyn-og-image.png" />
     <meta name="twitter:image:alt" content="soffyn — Your safe space to just be." />
 
@@ -44,7 +47,7 @@
     <nav id="nav">
       <a href="/" class="nav-logo">soffyn™</a>
       <div class="nav-links">
-        <a href="/about.html" class="nav-link">About</a>
+        <a href="/about.html" class="nav-link nav-link--active" aria-current="page">About</a>
         <a href="/blog/" class="nav-link">Blog</a>
         <a href="/faq.html" class="nav-link">FAQ</a>
         <span class="mode-label">☀ Light</span>
@@ -78,36 +81,36 @@
 
       <!-- ── Hero ───────────────────────────────────────────── -->
       <section class="utility-hero">
-        <span class="utility-hero-eyebrow">Let's talk</span>
-        <h1>Got something on your mind? I'm here.</h1>
-        <p class="hero-subheadline">Questions, press inquiries, accessibility feedback, or just a hello — I read everything.</p>
+        <span class="utility-hero-eyebrow">About soffyn</span>
+        <h1>I built the app I <em>couldn't</em> find.</h1>
+        <p>Built by a neurodivergent Black woman who needed it and couldn't find it anywhere else.</p>
       </section>
 
-      <!-- ── Contact form ───────────────────────────────────── -->
-      <section class="contact-cards">
-        <div class="contact-cards-inner">
-
-          <form name="contact" method="POST" data-netlify="true" action="/thank-you.html">
-            <input type="hidden" name="form-name" value="contact" />
-            <div class="signup-wrapper">
-              <input type="text" name="name" placeholder="your name" aria-label="Name" required />
-              <input type="email" name="email" placeholder="your@email.com" aria-label="Email address" required />
-              <textarea name="message" placeholder="what's on your mind?" aria-label="Message" rows="5" required></textarea>
-              <button type="submit">Send message</button>
-            </div>
-          </form>
-
-          <div class="faq-support-cards">
-            <div class="faq-support-card">
-              <p class="faq-support-card-label">Founding membership</p>
-              <p>Questions about what it means to join before launch? I've got answers.</p>
-              <a href="/founding-members.html" class="btn-secondary">Learn more &rarr;</a>
-            </div>
+      <!-- ── Founder section ────────────────────────────────── -->
+      <section id="about">
+        <div class="about-inner">
+          <div class="about-photo">
+            <div class="site-img-wrap"><img src="/assets/soffyn-akia.jpg" alt="Akia, founder of soffyn" loading="eager" /></div>
           </div>
+          <div class="about-text">
+            <p class="section-label">About soffyn</p>
+            <h2>I built the app I <em>couldn't</em> find.</h2>
+            <p>I built this because I needed it and it didn't exist.</p>
 
+            <p>I'm a neurodivergent Black woman, software engineer, and accessibility specialist. I've tried almost every app. They were either too cookie cutter, too demanding, or just too much for my brain. I'm a forgetful girl. Out of sight, out of mind. Streaks don't work for me. My hopes and dreams have a habit of becoming hoarded thoughts in the notes app.</p>
+
+            <p>And no app understood the specific exhaustion of spending all day masking — at work, in every room — and coming home to something that asked me to perform even more.</p>
+
+            <p>I needed something that meets me in the middle. A space that's gentle, rewarding, and completely okay if I don't show up every single day.</p>
+
+            <p class="about-highlight">Always there when you need it, and still there when you come back from a long while away.</p>
+
+            <p>That's soffyn. I built it for me. And I built it for you.</p>
+
+            <p class="about-community">The women who asked for soffyn before it existed also asked for a place to find each other. That room is coming. Join the waitlist and be first in it.</p>
+          </div>
         </div>
       </section>
-
 
     </main>
 
@@ -116,7 +119,7 @@
       <div class="footer-inner">
         <div class="footer-brand">
           <span class="footer-logo">soffyn™</span>
-          <p class="footer-tagline">your safe space to just be.</p>
+          <p class="footer-unclench">to unclench. to let go. to just be.</p>
           <p class="footer-copy">© 2026 soffyn. All rights reserved.</p>
           <p class="footer-copy">A Developed By Akia, LLC product</p>
         </div>
