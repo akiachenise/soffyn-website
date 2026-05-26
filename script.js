@@ -171,8 +171,9 @@ function initFaqNav() {
       if (target && target.startsWith('#')) {
         const section = document.querySelector(target);
         if (section) {
-          const navHeight = document.querySelector('nav')?.offsetHeight || 80;
-          const top = section.getBoundingClientRect().top + window.scrollY - navHeight - 24;
+          const navHeight = document.querySelector('nav#nav')?.offsetHeight || 72;
+          const barHeight = document.querySelector('.announce-bar')?.offsetHeight || 38;
+          const top = section.getBoundingClientRect().top + window.scrollY - navHeight - barHeight - 24;
           window.scrollTo({ top, behavior: 'smooth' });
         }
       }
