@@ -1154,6 +1154,13 @@ nav#nav.is-open .nav-toggle-bar:nth-child(3) {
   margin-bottom: 32px;
 }
 
+#waitlist h1 {
+  font-family: "Fraunces", serif;
+  font-size: clamp(2rem, 3vw, 3.5rem);
+  font-weight: 300;
+  margin-bottom: 32px;
+}
+
 .signup-wrapper {
   display: flex;
   flex-direction: column;
