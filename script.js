@@ -17,7 +17,7 @@ function setMode(dark) {
 
 var saved = localStorage.getItem('soffyn-theme');
 var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-setMode(saved ? saved === 'dark' : prefersDark);
+setMode(saved === 'dark');
 
 document.querySelectorAll('.mode-toggle').forEach(function(t) {
   t.addEventListener('click', function() {
