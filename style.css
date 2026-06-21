@@ -250,15 +250,11 @@ nav#nav {
   left: 0;
   right: 0;
   z-index: 50;
-  background-color: #1e1528;
+  background-color: #f7f2fa;
   height: 60px;
   display: flex;
   align-items: center;
   padding: 0 24px;
-}
-
-body.light nav#nav {
-  background-color: #f7f2fa;
 }
 
 /* ── Announcement bar ─────────────────────────────────────── */
@@ -1150,6 +1146,13 @@ nav#nav.is-open .nav-toggle-bar:nth-child(3) {
 #waitlist h2 {
   font-family: "Fraunces", serif;
   font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 300;
+  margin-bottom: 32px;
+}
+
+#waitlist h1 {
+  font-family: "Fraunces", serif;
+  font-size: clamp(2rem, 3vw, 3.5rem);
   font-weight: 300;
   margin-bottom: 32px;
 }
