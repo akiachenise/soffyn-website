@@ -5,7 +5,6 @@
 // ── DARK MODE ──
 function setMode(dark) {
   document.body.classList.toggle('dark', dark);
-  document.body.classList.toggle('light', !dark);
   localStorage.setItem('soffyn-theme', dark ? 'dark' : 'light');
   document.querySelectorAll('.mode-toggle').forEach(function(t) {
     t.setAttribute('aria-checked', String(dark));
@@ -18,7 +17,7 @@ function setMode(dark) {
 
 var saved = localStorage.getItem('soffyn-theme');
 var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-setMode(saved === 'dark');
+setMode(saved ? saved === 'dark' : prefersDark);
 
 document.querySelectorAll('.mode-toggle').forEach(function(t) {
   t.addEventListener('click', function() {
