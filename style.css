@@ -554,16 +554,6 @@ nav#nav.is-open .nav-toggle-bar:nth-child(3) {
   font-weight: 400;
 }
 
-/* ── Problem reframe ────────────────────────────────────── */
-.problem-reframe {
-  font-family: "Fraunces", serif;
-  font-style: italic;
-  font-size: 1.15rem;
-  color: var(--amethyst-ink);
-  margin-top: 2rem;
-  margin-bottom: 0.5rem;
-}
-
 /* ── Founding members section ───────────────────────────── */
 .founding-inner {
   max-width: 1080px;
@@ -1170,6 +1160,14 @@ body.dark #hero::before {
   font-size: 1rem;
   color: var(--muted);
   margin-left: auto;
+}
+
+.problem-body p {
+  color: var(--muted-2);
+  margin-bottom: 1rem;
+}
+.problem-body p:last-child {
+  margin-bottom: 0;
 }
 
 /* ── Waitlist ────────────────────────────────────────────── */
@@ -2673,9 +2671,6 @@ body.dark .quote-stars {
 }
 body.dark .quote-attribution {
   color: var(--muted);
-}
-body.dark .problem-reframe {
-  color: var(--amethyst-ink);
 }
 body.dark .problem-response {
   color: var(--muted);
