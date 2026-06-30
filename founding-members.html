@@ -18,7 +18,7 @@
     <meta property="og:image" content="https://soffyn.com/assets/soffyn-og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="soffyn — Your safe space to just be. A wellness app for neurodivergent Black women." />
+    <meta property="og:image:alt" content="soffyn — A wellness app for neurodivergent Black women." />
     <meta property="og:locale" content="en_US" />
 
     <!-- Twitter / X Card -->
@@ -26,9 +26,10 @@
     <meta name="twitter:title" content="Founding Members | soffyn" />
     <meta name="twitter:description" content="Join soffyn before launch and your membership is free — forever. No trial. No card. I built this for you. Come in early." />
     <meta name="twitter:image" content="https://soffyn.com/assets/soffyn-og-image.png" />
-    <meta name="twitter:image:alt" content="soffyn — Your safe space to just be." />
+    <meta name="twitter:image:alt" content="soffyn — A wellness app for neurodivergent Black women." />
 
     <script src="script.js" defer></script>
+    <script type="module" src="/assets/waitlist-count.js"></script>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -42,7 +43,7 @@
 
     <!-- ── Global nav ──────────────────────────────────────── -->
     <nav id="nav">
-      <a href="/" class="nav-logo">soffyn™</a>
+      <a href="/" class="nav-logo" aria-label="soffyn home">soffyn</a>
       <div class="nav-links">
         <a href="/about.html" class="nav-link">About</a>
         <a href="/blog/" class="nav-link">Blog</a>
@@ -70,7 +71,7 @@
       </div>
     </nav>
     <div class="announce-bar" role="complementary" aria-label="Waitlist announcement">
-      <span>Waitlist is open. Founding Members get full access — free forever.</span>
+      <span>The Founding Member door closes at launch. Full access — free forever.</span>
       <a href="/waitlist.html" class="announce-bar-link">Find my space →</a>
     </div>
 
@@ -82,6 +83,7 @@
           <span class="hero-eyebrow">Limited &mdash; closes at launch</span>
           <h1>You found this early. That matters.</h1>
           <p class="hero-subheadline">soffyn isn't out yet. The women who show up before it is become Founding Members — and they shape what it becomes. Your access is free. Forever.</p>
+          <p class="founding-num-label" data-waitlist-count hidden></p>
           <div class="hero-cta-group">
             <a href="/waitlist.html" class="btn-primary">Find my space</a>
           </div>
@@ -225,7 +227,8 @@
       <div class="footer-inner">
         <div class="footer-brand">
           <span class="footer-logo">soffyn™</span>
-          <p class="footer-tagline">your safe space to just be.</p>
+          <p class="footer-tagline">soffyn (v.) like soften.</p>
+          <p class="footer-unclench">to unclench. to let go. to just be.</p>
           <p class="footer-copy">© 2026 soffyn. All rights reserved.</p>
           <p class="footer-copy">A Developed By Akia, LLC product</p>
         </div>
