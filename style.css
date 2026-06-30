@@ -204,7 +204,7 @@ h3 em {
 .btn-primary {
   display: inline-block;
   background: var(--amethyst);
-  color: var(--bg);
+  color: #FFFFFF;
   padding: 15px 36px;
   border-radius: 14px;
   font-family: var(--font-body);
@@ -252,7 +252,7 @@ h3 em {
   color: var(--amethyst-ink);
 }
 .btn-primary--white:hover {
-  background: rgba(247, 242, 250, 0.9);
+  background: rgba(244, 240, 248, 0.9);
 }
 
 /* ── Navigation ─────────────────────────────────────────── */
@@ -285,10 +285,10 @@ nav#nav {
   padding: 0 16px;
   overflow: hidden;
   white-space: nowrap;
-  background-color: rgba(196, 112, 90, 0.12);
+  background-color: rgba(122, 62, 157, 0.12);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(196, 112, 90, 0.25);
+  border-bottom: 1px solid rgba(122, 62, 157, 0.25);
 }
 
 .announce-bar span {
@@ -669,7 +669,7 @@ nav#nav.is-open .nav-toggle-bar:nth-child(3) {
 .form-row {
   display: flex;
   align-items: baseline;
-  border-bottom: 1px solid rgba(122, 104, 136, 0.4);
+  border-bottom: 1px solid rgba(110, 97, 120, 0.4);
   padding-bottom: 0.6rem;
   margin-bottom: 0.8rem;
 }
@@ -1264,7 +1264,7 @@ body.dark #hero::before {
 
 .signup-wrapper button[type="submit"] {
   background: var(--amethyst);
-  color: var(--bg);
+  color: #FFFFFF;
   padding: 15px 36px;
   border-radius: 2px;
   border: none;
@@ -2443,17 +2443,17 @@ footer {
    DARK MODE — explicit selectors per element, no cascade
    ───────────────────────────────────────────────────────── */
 body.dark {
-  background: var(--text);
+  background: var(--bg);
   color: var(--text);
 }
 
 body.dark nav#nav {
-  background: var(--text);
-  border-bottom-color: rgba(242, 238, 248, 0.09);
+  background: var(--bg);
+  border-bottom-color: rgba(244, 240, 248, 0.09);
 }
 body.dark .announce-bar {
-  background: rgba(196, 112, 90, 0.15);
-  border-bottom-color: rgba(196, 112, 90, 0.25);
+  background: rgba(196, 160, 220, 0.15);
+  border-bottom-color: rgba(196, 160, 220, 0.25);
   color: var(--muted);
 }
 
@@ -2469,7 +2469,7 @@ body.dark .nav-link.nav-link--active {
 }
 body.dark .nav-link.primary {
   color: var(--amethyst-ink);
-  border-color: rgba(242, 238, 248, 0.09);
+  border-color: rgba(244, 240, 248, 0.09);
 }
 body.dark .nav-link.primary:hover {
   background: var(--bg);
@@ -2477,7 +2477,7 @@ body.dark .nav-link.primary:hover {
 
 body.dark .nav-cta-secondary {
   color: var(--text);
-  border-color: rgba(242, 238, 248, 0.09);
+  border-color: rgba(244, 240, 248, 0.09);
 }
 body.dark .nav-cta-secondary:hover {
   background: var(--bg);
@@ -2492,7 +2492,7 @@ body.dark .nav-cta:hover {
 
 body.dark .mode-toggle {
   background: var(--bg);
-  border-color: rgba(242, 238, 248, 0.09);
+  border-color: rgba(244, 240, 248, 0.09);
 }
 body.dark .mode-toggle::after {
   background: var(--amethyst);
@@ -2519,12 +2519,12 @@ body.dark .hamburger {
   color: var(--text);
 }
 body.dark .mobile-menu {
-  background: var(--text);
-  border-bottom-color: rgba(242, 238, 248, 0.09);
+  background: var(--bg);
+  border-bottom-color: rgba(244, 240, 248, 0.09);
 }
 body.dark .mobile-link {
   color: var(--text);
-  border-bottom-color: rgba(242, 238, 248, 0.09);
+  border-bottom-color: rgba(244, 240, 248, 0.09);
 }
 body.dark .mobile-link:hover {
   background: var(--bg);
@@ -2561,7 +2561,7 @@ body.dark .skip-link {
 
 body.dark .hero-eyebrow {
   background: var(--bg);
-  border-color: rgba(242, 238, 248, 0.09);
+  border-color: rgba(244, 240, 248, 0.09);
   color: var(--muted);
 }
 body.dark #hero h1 {
@@ -2589,15 +2589,15 @@ body.dark .btn-primary:hover {
 }
 body.dark .btn-secondary {
   color: var(--text);
-  border-color: rgba(242, 238, 248, 0.09);
+  border-color: rgba(244, 240, 248, 0.09);
 }
 body.dark .btn-secondary:hover {
   background: var(--bg);
 }
 
 body.dark .press-strip {
-  border-top-color: rgba(242, 238, 248, 0.09);
-  border-bottom-color: rgba(242, 238, 248, 0.09);
+  border-top-color: rgba(244, 240, 248, 0.09);
+  border-bottom-color: rgba(244, 240, 248, 0.09);
 }
 body.dark .press-strip-label {
   color: var(--muted);
@@ -2618,7 +2618,7 @@ body.dark .photo-placeholder {
 
 body.dark .fc-tab {
   color: var(--muted);
-  border-color: rgba(242, 238, 248, 0.09);
+  border-color: rgba(244, 240, 248, 0.09);
 }
 body.dark .fc-tab.is-active,
 body.dark .fc-tab:hover {
@@ -2633,7 +2633,7 @@ body.dark .fc-counter {
 }
 
 body.dark .carousel-btn {
-  border-color: rgba(242, 238, 248, 0.09);
+  border-color: rgba(244, 240, 248, 0.09);
   color: var(--text);
 }
 body.dark .carousel-btn:hover {
@@ -2652,7 +2652,7 @@ body.dark .feature-privacy-block p {
 
 body.dark .testimonial-card {
   background: var(--bg);
-  border-color: rgba(242, 238, 248, 0.09);
+  border-color: rgba(244, 240, 248, 0.09);
 }
 body.dark .testimonial-card blockquote p {
   color: var(--text);
@@ -2676,7 +2676,7 @@ body.dark .signup-wrapper p {
 body.dark .signup-wrapper input[type="text"],
 body.dark .signup-wrapper input[type="email"] {
   background: var(--bg);
-  border-color: rgba(242, 238, 248, 0.09);
+  border-color: rgba(244, 240, 248, 0.09);
   color: var(--text);
 }
 body.dark .signup-wrapper input:focus {
@@ -2703,10 +2703,10 @@ body.dark .definition-eyebrow {
   color: var(--muted);
 }
 body.dark .accordion-item {
-  border-top-color: rgba(242, 238, 248, 0.09);
+  border-top-color: rgba(244, 240, 248, 0.09);
 }
 body.dark .accordion-item:last-child {
-  border-bottom-color: rgba(242, 238, 248, 0.09);
+  border-bottom-color: rgba(244, 240, 248, 0.09);
 }
 body.dark .accordion-trigger {
   color: var(--text);
@@ -2733,7 +2733,7 @@ body.dark .about-pull-quote {
 }
 body.dark .about-community {
   color: var(--muted);
-  border-top-color: rgba(242, 238, 248, 0.09);
+  border-top-color: rgba(244, 240, 248, 0.09);
 }
 
 body.dark #homepage-faq {
@@ -2767,10 +2767,10 @@ body.dark .founding-offer em {
 }
 body.dark .perk {
   color: var(--muted);
-  border-top-color: rgba(242, 238, 248, 0.09);
+  border-top-color: rgba(244, 240, 248, 0.09);
 }
 body.dark .perk:last-child {
-  border-bottom-color: rgba(242, 238, 248, 0.09);
+  border-bottom-color: rgba(244, 240, 248, 0.09);
 }
 body.dark .perk-mark {
   color: var(--amethyst-ink);
@@ -2783,13 +2783,13 @@ body.dark .founding-num-label {
 }
 body.dark .founding-form-wrap {
   background: rgba(255, 255, 255, 0.03);
-  border-color: rgba(242, 238, 248, 0.08);
+  border-color: rgba(244, 240, 248, 0.08);
 }
 body.dark .founding-closing {
   color: var(--muted);
 }
 body.dark .form-row {
-  border-bottom-color: rgba(155, 135, 170, 0.3);
+  border-bottom-color: rgba(183, 169, 196, 0.3);
 }
 body.dark .form-row input {
   color: var(--text);
@@ -2808,38 +2808,38 @@ body.dark .form-note {
 }
 
 body.dark footer {
-  background: var(--text);
+  background: var(--bg);
   color: var(--text);
-  border-top: 1px solid rgba(242, 238, 248, 0.09);
+  border-top: 1px solid rgba(244, 240, 248, 0.09);
 }
 body.dark .footer-unclench {
   color: var(--muted);
 }
 body.dark .footer-tagline {
-  color: rgba(242, 238, 248, 0.5);
+  color: rgba(244, 240, 248, 0.5);
 }
 body.dark .footer-copy {
-  color: rgba(242, 238, 248, 0.35);
+  color: rgba(244, 240, 248, 0.35);
 }
 body.dark .footer-col-heading {
-  color: rgba(242, 238, 248, 0.35);
+  color: rgba(244, 240, 248, 0.35);
 }
 body.dark .footer-col-links a,
 body.dark .footer-social-links a {
-  color: rgba(242, 238, 248, 0.7);
+  color: rgba(244, 240, 248, 0.7);
 }
 body.dark .footer-col-links a:hover,
 body.dark .footer-social-links a:hover {
   color: var(--text);
 }
 body.dark .footer-bottom {
-  border-top-color: rgba(242, 238, 248, 0.07);
+  border-top-color: rgba(244, 240, 248, 0.07);
 }
 body.dark .footer-bottom p {
-  color: rgba(242, 238, 248, 0.3);
+  color: rgba(244, 240, 248, 0.3);
 }
 body.dark .footer-link {
-  color: rgba(242, 238, 248, 0.6);
+  color: rgba(244, 240, 248, 0.6);
 }
 body.dark .footer-link:hover {
   color: var(--text);
@@ -2847,7 +2847,7 @@ body.dark .footer-link:hover {
 
 body.dark .utility-hero-eyebrow {
   background: var(--bg);
-  border-color: rgba(242, 238, 248, 0.09);
+  border-color: rgba(244, 240, 248, 0.09);
   color: var(--muted);
 }
 body.dark .utility-hero p {
@@ -2906,7 +2906,7 @@ body.dark .contact-field input,
 body.dark .contact-field textarea,
 body.dark .contact-field select {
   background: var(--bg);
-  border-color: rgba(242, 238, 248, 0.09);
+  border-color: rgba(244, 240, 248, 0.09);
   color: var(--text);
 }
 body.dark .contact-field input:focus,
@@ -2918,11 +2918,11 @@ body.dark .contact-field select:focus {
 body.dark .announcement-bar {
   background: var(--bg);
   color: var(--muted);
-  border-bottom-color: rgba(242, 238, 248, 0.09);
+  border-bottom-color: rgba(244, 240, 248, 0.09);
 }
 body.dark .fm-card {
   background: var(--bg);
-  border-color: rgba(242, 238, 248, 0.09);
+  border-color: rgba(244, 240, 248, 0.09);
 }
 body.dark .fm-card p {
   color: var(--muted);
@@ -2935,7 +2935,7 @@ body.dark .fm-cta-section {
 }
 
 body.dark .category-pill {
-  border-color: rgba(242, 238, 248, 0.09);
+  border-color: rgba(244, 240, 248, 0.09);
   color: var(--muted);
 }
 body.dark .category-pill.is-active,
@@ -2946,7 +2946,7 @@ body.dark .category-pill:hover {
 
 body.dark .blog-card {
   background: var(--bg);
-  border-color: rgba(242, 238, 248, 0.09);
+  border-color: rgba(244, 240, 248, 0.09);
 }
 body.dark .blog-card-desc {
   color: var(--muted);
@@ -3004,8 +3004,8 @@ body.dark .blog-email-cta p {
   color: var(--muted);
 }
 body.dark .blog-email-cta input[type="email"] {
-  background: var(--text);
-  border-color: rgba(242, 238, 248, 0.09);
+  background: var(--bg);
+  border-color: rgba(244, 240, 248, 0.09);
   color: var(--text);
 }
 body.dark .blog-card-link {
@@ -3013,10 +3013,10 @@ body.dark .blog-card-link {
 }
 
 body.dark .faq-category-section h2 {
-  border-bottom-color: rgba(242, 238, 248, 0.09);
+  border-bottom-color: rgba(244, 240, 248, 0.09);
 }
 body.dark .faq-category-pill {
-  border-color: rgba(242, 238, 248, 0.09);
+  border-color: rgba(244, 240, 248, 0.09);
   color: var(--muted);
 }
 body.dark .faq-category-pill.is-active,
@@ -3039,8 +3039,8 @@ body.dark .faq-support {
   background: var(--bg);
 }
 body.dark .faq-support-card {
-  background: var(--text);
-  border-color: rgba(242, 238, 248, 0.09);
+  background: var(--bg);
+  border-color: rgba(244, 240, 248, 0.09);
 }
 body.dark .faq-support-card p {
   color: var(--muted);
