@@ -1,20 +1,21 @@
 /* ─────────────────────────────────────────────────────────
    soffyn — global stylesheet
-   Fonts: Fraunces · Instrument Sans · Alex Brush
+   Fonts: Fraunces · Public Sans
    ───────────────────────────────────────────────────────── */
 
 /* ── Design tokens — light mode ─────────────────────────── */
 :root {
-  --bg: #f7f2fa;
-  --bg-2: #ede6f5;
-  --bg-3: #e0d5ee;
-  --text: #1e1528;
-  --text-2: #7a6888;
-  --muted: #7a6888;
-  --muted-2: #5c4a6a;
-  --rose: #c4705a;
-  --rule: rgba(30, 21, 40, 0.12);
-  --font-body: "Instrument Sans", sans-serif;
+  --bg: #F4F0F8;
+  --surface: #EAE2F0;
+  --text: #241A2E;
+  --muted: #6E6178;
+  --muted-2: #574A66;
+  --amethyst: #7A3E9D;        /* CTA fill (white label); links/icons on light */
+  --amethyst-ink: #7A3E9D;    /* amethyst as text/link/icon; flips on dark */
+  --amethyst-on-dark: #C4A0DC;/* amethyst text/link/icon value in dark */
+  --gold: #C2A04E;            /* fill / hero glow only — never text/link/button */
+  --rule: rgba(36, 26, 46, 0.12);
+  --font-body: "Public Sans", sans-serif;
 
   --max-w: 1200px;
   --max-w-text: 760px;
@@ -22,6 +23,17 @@
   --section-pad-v-sm: 48px;
   --radius-img: 3px;
   --radius-card: 3px;
+}
+
+/* ── Design tokens — dark mode override ─────────────────── */
+body.dark {
+  --bg: #241A2E;
+  --surface: #2F2438;
+  --text: #F4F0F8;
+  --muted: #B7A9C4;
+  --muted-2: #B7A9C4;
+  --amethyst-ink: #C4A0DC;
+  --rule: rgba(244, 240, 248, 0.14);
 }
 
 /* ── Reset ──────────────────────────────────────────────── */
@@ -35,7 +47,7 @@
 
 /* ── Accessibility ──────────────────────────────────────── */
 :focus-visible {
-  outline: 2px solid #c4705a;
+  outline: 2px solid var(--amethyst-ink);
   outline-offset: 3px;
 }
 
@@ -44,10 +56,10 @@
   top: 0;
   transform: translateY(-100%);
   left: 0;
-  background: var(--rose);
-  color: #f2eef8;
+  background: var(--amethyst);
+  color: #FFFFFF;
   padding: 12px 24px;
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.9rem;
   font-weight: 400;
   text-decoration: none;
@@ -65,8 +77,8 @@ html {
 }
 
 body {
-  font-family: "Instrument Sans", sans-serif;
-  font-weight: 300;
+  font-family: var(--font-body);
+  font-weight: 400;
   background: var(--bg);
   color: var(--text);
   line-height: 1.7;
@@ -124,7 +136,7 @@ img {
   right: -20px;
   width: 120px;
   height: 80px;
-  background: #c4705a;
+  background: var(--amethyst);
   border-radius: 50%;
   opacity: 0.42;
   z-index: 2;
@@ -137,7 +149,7 @@ img {
   left: -16px;
   width: 90px;
   height: 65px;
-  background: #9b87aa;
+  background: var(--muted);
   border-radius: 50%;
   opacity: 0.38;
   z-index: 2;
@@ -156,23 +168,23 @@ h1,
 h2,
 h3 {
   font-family: "Fraunces", serif;
-  font-weight: 300;
+  font-weight: 400;
 }
 h1 em,
 h2 em,
 h3 em {
   font-style: italic;
-  color: var(--rose);
+  color: var(--amethyst-ink);
 }
 
 /* ── Shared utilities ───────────────────────────────────── */
 .section-label {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.65rem;
   font-weight: 400;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--rose);
+  color: var(--amethyst-ink);
   margin-bottom: 16px;
   display: block;
 }
@@ -191,11 +203,11 @@ h3 em {
 /* ── Buttons ────────────────────────────────────────────── */
 .btn-primary {
   display: inline-block;
-  background: var(--rose);
-  color: #f7f2fa;
+  background: var(--amethyst);
+  color: var(--bg);
   padding: 15px 36px;
   border-radius: 14px;
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.78rem;
   font-weight: 400;
   letter-spacing: 0.1em;
@@ -208,7 +220,7 @@ h3 em {
   white-space: nowrap;
 }
 .btn-primary:hover {
-  background: var(--rose);
+  background: var(--amethyst);
   transform: translateY(-2px);
 }
 
@@ -219,7 +231,7 @@ h3 em {
   padding: 14px 34px;
   border-radius: 14px;
   border: 1px solid var(--rule);
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.78rem;
   font-weight: 400;
   letter-spacing: 0.1em;
@@ -231,13 +243,13 @@ h3 em {
   white-space: nowrap;
 }
 .btn-secondary:hover {
-  background: var(--bg-2);
+  background: var(--surface);
   transform: translateY(-2px);
 }
 
 .btn-primary--white {
-  background: #f7f2fa;
-  color: var(--rose);
+  background: var(--bg);
+  color: var(--amethyst-ink);
 }
 .btn-primary--white:hover {
   background: rgba(247, 242, 250, 0.9);
@@ -250,7 +262,7 @@ nav#nav {
   left: 0;
   right: 0;
   z-index: 50;
-  background-color: #f7f2fa;
+  background-color: var(--bg);
   height: 60px;
   display: flex;
   align-items: center;
@@ -302,7 +314,7 @@ nav#nav {
   font-family: "Fraunces", serif;
   font-style: italic;
   font-size: 1.5rem;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--text);
   text-decoration: none;
 }
@@ -315,7 +327,7 @@ nav#nav {
 }
 
 .nav-link {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.78rem;
   font-weight: 400;
   letter-spacing: 0.08em;
@@ -331,12 +343,12 @@ nav#nav {
 }
 
 .nav-link.primary {
-  color: var(--rose);
+  color: var(--amethyst-ink);
   border: 1px solid var(--rule);
   padding: 8px 16px;
 }
 .nav-link.primary:hover {
-  background: var(--bg-2);
+  background: var(--surface);
 }
 
 /* Keep .nav-right for utility pages */
@@ -347,7 +359,7 @@ nav#nav {
 }
 
 .nav-cta-secondary {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.78rem;
   font-weight: 400;
   letter-spacing: 0.08em;
@@ -360,16 +372,16 @@ nav#nav {
   white-space: nowrap;
 }
 .nav-cta-secondary:hover {
-  background: var(--bg-2);
+  background: var(--surface);
 }
 
 .nav-cta {
-  background: var(--rose);
-  color: #f2eef8;
+  background: var(--amethyst);
+  color: #FFFFFF;
   padding: 10px 20px;
   border-radius: 14px;
   text-decoration: none;
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.78rem;
   font-weight: 400;
   letter-spacing: 0.08em;
@@ -377,7 +389,7 @@ nav#nav {
   white-space: nowrap;
 }
 .nav-cta:hover {
-  background: var(--rose);
+  background: var(--amethyst);
 }
 
 /* ── Mode toggle ────────────────────────────────────────── */
@@ -386,7 +398,7 @@ nav#nav {
   width: 42px;
   height: 23px;
   border-radius: 12px;
-  background: var(--bg-3);
+  background: var(--surface);
   border: 1px solid var(--rule);
   cursor: pointer;
   flex-shrink: 0;
@@ -398,7 +410,7 @@ nav#nav {
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background: var(--rose);
+  background: var(--amethyst);
   top: 3px;
   left: 3px;
   transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -406,7 +418,7 @@ nav#nav {
 .mode-label {
   font-family: var(--font-body);
   font-size: 0.75rem;
-  color: var(--text-2);
+  color: var(--muted);
   user-select: none;
   white-space: nowrap;
 }
@@ -461,7 +473,7 @@ nav#nav {
 .mobile-link {
   display: block;
   padding: 0.9rem 2.5rem;
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.78rem;
   font-weight: 400;
   letter-spacing: 0.12em;
@@ -472,10 +484,10 @@ nav#nav {
   transition: background 0.2s ease;
 }
 .mobile-link:hover {
-  background: var(--bg-2);
+  background: var(--surface);
 }
 .mobile-link.primary {
-  color: var(--rose);
+  color: var(--amethyst-ink);
 }
 
 /* Old nav-toggle — kept for utility pages still using it */
@@ -512,18 +524,18 @@ nav#nav.is-open .nav-toggle-bar:nth-child(3) {
 
 /* ── Section backgrounds ────────────────────────────────── */
 #representation {
-  background: var(--bg-2);
+  background: var(--surface);
 }
 #founding-members {
-  background: var(--bg-2);
+  background: var(--surface);
 }
 #homepage-faq {
-  background: var(--bg-2);
+  background: var(--surface);
 }
 
 /* ── Photo placeholder ──────────────────────────────────── */
 .photo-placeholder {
-  background: var(--bg-2);
+  background: var(--surface);
   border-radius: 2px;
   width: 100%;
   height: 100%;
@@ -532,13 +544,13 @@ nav#nav.is-open .nav-toggle-bar:nth-child(3) {
 
 /* ── Counter line ───────────────────────────────────────── */
 .counter-line {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.75rem;
   color: var(--muted);
   margin-bottom: 1.75rem;
 }
 .counter-line strong {
-  color: var(--rose);
+  color: var(--amethyst-ink);
   font-weight: 400;
 }
 
@@ -547,7 +559,7 @@ nav#nav.is-open .nav-toggle-bar:nth-child(3) {
   font-family: "Fraunces", serif;
   font-style: italic;
   font-size: 1.15rem;
-  color: var(--rose);
+  color: var(--amethyst-ink);
   margin-top: 2rem;
   margin-bottom: 0.5rem;
 }
@@ -572,7 +584,7 @@ nav#nav.is-open .nav-toggle-bar:nth-child(3) {
 }
 
 .founding-intro {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.9rem;
   color: var(--muted);
   line-height: 1.75;
@@ -588,7 +600,7 @@ nav#nav.is-open .nav-toggle-bar:nth-child(3) {
   line-height: 1.5;
 }
 .founding-offer em {
-  color: var(--rose);
+  color: var(--amethyst-ink);
 }
 
 .perks {
@@ -600,7 +612,7 @@ nav#nav.is-open .nav-toggle-bar:nth-child(3) {
   gap: 1rem;
   padding: 1rem 0;
   border-top: 1px solid var(--rule);
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.88rem;
   color: var(--muted-2);
   line-height: 1.6;
@@ -610,7 +622,7 @@ nav#nav.is-open .nav-toggle-bar:nth-child(3) {
 }
 
 .perk-mark {
-  color: var(--rose);
+  color: var(--amethyst-ink);
   flex-shrink: 0;
 }
 
@@ -618,14 +630,14 @@ nav#nav.is-open .nav-toggle-bar:nth-child(3) {
   font-family: "Fraunces", serif;
   font-style: italic;
   font-size: 6rem;
-  font-weight: 300;
-  color: var(--rose);
+  font-weight: 400;
+  color: var(--amethyst-ink);
   opacity: 0.28;
   line-height: 1;
 }
 
 .founding-num-label {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.65rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -641,7 +653,7 @@ nav#nav.is-open .nav-toggle-bar:nth-child(3) {
 }
 
 .founding-closing {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.72rem;
   font-style: italic;
   color: var(--muted);
@@ -668,9 +680,9 @@ nav#nav.is-open .nav-toggle-bar:nth-child(3) {
   border: none;
   outline: none;
   color: var(--text);
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.9rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 .form-row input::placeholder {
   color: var(--muted);
@@ -680,8 +692,8 @@ nav#nav.is-open .nav-toggle-bar:nth-child(3) {
   background: transparent;
   border: none;
   cursor: pointer;
-  color: var(--rose);
-  font-family: "Instrument Sans", sans-serif;
+  color: var(--amethyst-ink);
+  font-family: var(--font-body);
   font-size: 0.68rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -690,17 +702,19 @@ nav#nav.is-open .nav-toggle-bar:nth-child(3) {
   transition: color 0.2s ease;
 }
 .form-btn:hover {
-  color: var(--rose);
+  color: var(--amethyst-ink);
 }
 
 .form-note {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.72rem;
   color: var(--muted);
 }
 
 /* ── Hero ───────────────────────────────────────────────── */
 #hero {
+  position: relative;
+  overflow: hidden;
   max-width: var(--max-w);
   margin: 0 auto;
   padding: 80px 48px;
@@ -710,11 +724,36 @@ nav#nav.is-open .nav-toggle-bar:nth-child(3) {
   align-items: center;
 }
 
+/* Aurora glow — static decorative layer behind hero content */
+#hero > * {
+  position: relative;
+  z-index: 1;
+}
+#hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(58% 50% at 16% 12%, rgba(122, 62, 157, 0.20), transparent 60%),
+    radial-gradient(52% 46% at 86% 20%, rgba(194, 160, 78, 0.18), transparent 62%),
+    radial-gradient(60% 52% at 75% 88%, rgba(150, 90, 165, 0.16), transparent 64%),
+    radial-gradient(50% 44% at 22% 92%, rgba(224, 213, 238, 0.55), transparent 70%);
+}
+body.dark #hero::before {
+  background:
+    radial-gradient(60% 52% at 14% 10%, rgba(140, 82, 184, 0.40), transparent 60%),
+    radial-gradient(54% 48% at 88% 18%, rgba(194, 160, 78, 0.26), transparent 62%),
+    radial-gradient(62% 54% at 78% 90%, rgba(118, 68, 150, 0.36), transparent 64%),
+    radial-gradient(52% 46% at 20% 94%, rgba(168, 128, 196, 0.26), transparent 70%);
+}
+
 .hero-eyebrow {
   display: inline-block;
-  background: var(--bg-3);
+  background: var(--surface);
   color: var(--muted);
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.72rem;
   font-weight: 400;
   letter-spacing: 0.1em;
@@ -728,7 +767,7 @@ nav#nav.is-open .nav-toggle-bar:nth-child(3) {
 #hero h1 {
   font-family: "Fraunces", serif;
   font-size: clamp(2.4rem, 3.5vw, 4rem);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.1;
   color: var(--text);
   margin-bottom: 24px;
@@ -746,7 +785,7 @@ nav#nav.is-open .nav-toggle-bar:nth-child(3) {
   font-family: "Fraunces", serif;
   font-size: clamp(1.1rem, 1.6vw, 1.35rem);
   font-style: italic;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--muted);
   margin-bottom: 28px;
   line-height: 1.5;
@@ -761,7 +800,7 @@ nav#nav.is-open .nav-toggle-bar:nth-child(3) {
 }
 
 .hero-founding-note {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.82rem;
   color: var(--muted);
   opacity: 0.7;
@@ -794,7 +833,7 @@ nav#nav.is-open .nav-toggle-bar:nth-child(3) {
   gap: 32px;
 }
 .press-strip-label {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.72rem;
   font-weight: 400;
   letter-spacing: 0.12em;
@@ -811,7 +850,7 @@ nav#nav.is-open .nav-toggle-bar:nth-child(3) {
 .press-logo-slot {
   height: 28px;
   width: 80px;
-  background: var(--bg-3);
+  background: var(--surface);
   border-radius: 2px;
   opacity: 0.4;
 }
@@ -834,15 +873,15 @@ nav#nav.is-open .nav-toggle-bar:nth-child(3) {
 #representation h2 {
   font-family: "Fraunces", serif;
   font-size: clamp(2rem, 3vw, 3rem);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .representation-sub {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 1rem;
   color: var(--muted);
   line-height: 1.75;
-  font-weight: 300;
+  font-weight: 400;
   padding-top: 8px;
 }
 
@@ -882,7 +921,7 @@ nav#nav.is-open .nav-toggle-bar:nth-child(3) {
 }
 
 .fc-tab {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.78rem;
   font-weight: 400;
   letter-spacing: 0.08em;
@@ -898,7 +937,7 @@ nav#nav.is-open .nav-toggle-bar:nth-child(3) {
 }
 .fc-tab.is-active,
 .fc-tab:hover {
-  background: var(--bg-2);
+  background: var(--surface);
   color: var(--text);
 }
 
@@ -928,16 +967,16 @@ nav#nav.is-open .nav-toggle-bar:nth-child(3) {
 .fc-panel-text h3 {
   font-family: "Fraunces", serif;
   font-size: 2rem;
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 16px;
 }
 .fc-panel-text p {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.95rem;
   color: var(--muted);
   line-height: 1.75;
   margin-bottom: 12px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .fc-controls {
@@ -947,7 +986,7 @@ nav#nav.is-open .nav-toggle-bar:nth-child(3) {
   margin-top: 40px;
 }
 .fc-counter {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.78rem;
   color: var(--muted);
 }
@@ -968,7 +1007,7 @@ nav#nav.is-open .nav-toggle-bar:nth-child(3) {
   transition: background 0.2s ease;
 }
 .carousel-btn:hover {
-  background: var(--bg-2);
+  background: var(--surface);
 }
 .carousel-btn:disabled {
   opacity: 0.35;
@@ -989,7 +1028,7 @@ nav#nav.is-open .nav-toggle-bar:nth-child(3) {
 .features-header h2 {
   font-family: "Fraunces", serif;
   font-size: clamp(2rem, 3vw, 3rem);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .feature-alt-row {
@@ -1011,16 +1050,16 @@ nav#nav.is-open .nav-toggle-bar:nth-child(3) {
 .feature-alt-text h3 {
   font-family: "Fraunces", serif;
   font-size: clamp(1.5rem, 2.2vw, 2.2rem);
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 16px;
 }
 .feature-alt-text p {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.95rem;
   color: var(--muted);
   line-height: 1.75;
   margin-bottom: 12px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .feature-alt-image {
@@ -1040,21 +1079,21 @@ nav#nav.is-open .nav-toggle-bar:nth-child(3) {
   max-width: var(--max-w);
   margin: 0 auto;
   padding: 64px 48px;
-  background: var(--bg-2);
+  background: var(--surface);
 }
 .feature-privacy-block h3 {
   font-family: "Fraunces", serif;
   font-size: clamp(1.5rem, 2.2vw, 2.2rem);
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 16px;
   margin-top: 8px;
 }
 .feature-privacy-block p {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.95rem;
   color: var(--muted);
   line-height: 1.75;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .feature-grid {
@@ -1078,7 +1117,7 @@ nav#nav.is-open .nav-toggle-bar:nth-child(3) {
 .problem-header h2 {
   font-family: "Fraunces", serif;
   font-size: clamp(2rem, 3vw, 3rem);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .testimonial-carousel {
@@ -1093,14 +1132,14 @@ nav#nav.is-open .nav-toggle-bar:nth-child(3) {
 
 .testimonial-card {
   flex: 0 0 calc(50% - 12px);
-  background: var(--bg-2);
+  background: var(--surface);
   border-radius: 2px;
   padding: 32px;
   border: 1px solid var(--rule);
 }
 .quote-stars {
   font-size: 0.85rem;
-  color: var(--rose);
+  color: var(--amethyst-ink);
   margin-bottom: 16px;
   letter-spacing: 0.08em;
 }
@@ -1108,12 +1147,12 @@ nav#nav.is-open .nav-toggle-bar:nth-child(3) {
   font-family: "Fraunces", serif;
   font-style: italic;
   font-size: 1.05rem;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--text);
   line-height: 1.6;
 }
 .quote-attribution {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.75rem;
   color: var(--muted);
   margin-top: 12px;
@@ -1146,14 +1185,14 @@ nav#nav.is-open .nav-toggle-bar:nth-child(3) {
 #waitlist h2 {
   font-family: "Fraunces", serif;
   font-size: clamp(2rem, 3vw, 3rem);
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 32px;
 }
 
 #waitlist h1 {
   font-family: "Fraunces", serif;
   font-size: clamp(2rem, 3vw, 3.5rem);
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 32px;
 }
 
@@ -1164,10 +1203,10 @@ nav#nav.is-open .nav-toggle-bar:nth-child(3) {
   align-items: center;
 }
 .signup-wrapper p {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.95rem;
   color: var(--muted);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .signup-wrapper input[type="text"],
@@ -1179,13 +1218,13 @@ nav#nav.is-open .nav-toggle-bar:nth-child(3) {
   border-radius: 2px;
   background: var(--bg);
   color: var(--text);
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.9rem;
-  font-weight: 300;
+  font-weight: 400;
   outline: none;
 }
 .signup-wrapper input:focus {
-  border-color: var(--rose);
+  border-color: var(--amethyst-ink);
 }
 
 .gdpr-label {
@@ -1194,7 +1233,7 @@ nav#nav.is-open .nav-toggle-bar:nth-child(3) {
   align-items: flex-start;
   max-width: 400px;
   text-align: left;
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.78rem;
   color: var(--muted);
   line-height: 1.6;
@@ -1206,7 +1245,7 @@ nav#nav.is-open .nav-toggle-bar:nth-child(3) {
 }
 
 .gdpr-note {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.75rem;
   color: var(--muted);
   line-height: 1.6;
@@ -1215,7 +1254,7 @@ nav#nav.is-open .nav-toggle-bar:nth-child(3) {
 }
 
 .founding-note {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.78rem;
   color: var(--muted);
   max-width: 400px;
@@ -1224,20 +1263,20 @@ nav#nav.is-open .nav-toggle-bar:nth-child(3) {
 }
 
 .signup-wrapper button[type="submit"] {
-  background: var(--rose);
-  color: #f7f2fa;
+  background: var(--amethyst);
+  color: var(--bg);
   padding: 15px 36px;
   border-radius: 2px;
   border: none;
   cursor: pointer;
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.78rem;
   font-weight: 400;
   letter-spacing: 0.1em;
   transition: background 0.2s ease;
 }
 .signup-wrapper button[type="submit"]:hover {
-  background: var(--rose);
+  background: var(--amethyst);
 }
 
 /* ── Definition / accordion ─────────────────────────────── */
@@ -1252,7 +1291,7 @@ nav#nav.is-open .nav-toggle-bar:nth-child(3) {
 
 .definition-eyebrow {
   display: block;
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.78rem;
   color: var(--muted);
   margin-bottom: 8px;
@@ -1262,7 +1301,7 @@ nav#nav.is-open .nav-toggle-bar:nth-child(3) {
 #definition h3 {
   font-family: "Fraunces", serif;
   font-size: clamp(1.5rem, 2.2vw, 2rem);
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 32px;
 }
 
@@ -1286,7 +1325,7 @@ nav#nav.is-open .nav-toggle-bar:nth-child(3) {
   color: var(--text);
 }
 .accordion-question {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.95rem;
   font-weight: 400;
   text-align: left;
@@ -1318,18 +1357,18 @@ nav#nav.is-open .nav-toggle-bar:nth-child(3) {
   padding: 0 0 20px;
 }
 .accordion-body-inner p {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.9rem;
   color: var(--muted);
   line-height: 1.75;
   margin-bottom: 12px;
-  font-weight: 300;
+  font-weight: 400;
 }
 .accordion-body-inner p:last-child {
   margin-bottom: 0;
 }
 .accordion-body-inner a {
-  color: var(--rose);
+  color: var(--amethyst-ink);
   text-decoration: underline;
 }
 
@@ -1362,16 +1401,16 @@ nav#nav.is-open .nav-toggle-bar:nth-child(3) {
 .about-text h2 {
   font-family: "Fraunces", serif;
   font-size: clamp(2rem, 3vw, 3rem);
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 24px;
 }
 .about-text p {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.95rem;
   color: var(--muted);
   line-height: 1.75;
   margin-bottom: 16px;
-  font-weight: 300;
+  font-weight: 400;
 }
 .about-highlight,
 .about-pull-quote {
@@ -1381,10 +1420,10 @@ nav#nav.is-open .nav-toggle-bar:nth-child(3) {
   color: var(--text);
   margin: 24px 0 16px;
   line-height: 1.4;
-  font-weight: 300;
+  font-weight: 400;
 }
 .about-community {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.85rem;
   color: var(--muted);
   line-height: 1.7;
@@ -1405,17 +1444,17 @@ nav#nav.is-open .nav-toggle-bar:nth-child(3) {
 #homepage-faq h2 {
   font-family: "Fraunces", serif;
   font-size: clamp(2rem, 3vw, 3rem);
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 40px;
 }
 .homepage-faq-more {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.85rem;
   color: var(--muted);
   margin-top: 32px;
 }
 .homepage-faq-more a {
-  color: var(--rose);
+  color: var(--amethyst-ink);
   text-decoration: underline;
 }
 
@@ -1432,18 +1471,18 @@ nav#nav.is-open .nav-toggle-bar:nth-child(3) {
 #footer-cta h2 {
   font-family: "Fraunces", serif;
   font-size: clamp(2rem, 3vw, 3rem);
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 16px;
 }
 #footer-cta > .footer-cta-inner > p {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 1rem;
   color: var(--muted);
   margin-bottom: 32px;
-  font-weight: 300;
+  font-weight: 400;
 }
 .footer-cta-note {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.78rem;
   color: var(--muted);
   margin-top: 16px;
@@ -1451,7 +1490,7 @@ nav#nav.is-open .nav-toggle-bar:nth-child(3) {
 
 /* ── Footer ─────────────────────────────────────────────── */
 footer {
-  background: var(--bg-2);
+  background: var(--surface);
   color: var(--text);
   padding: 64px 0 32px;
 }
@@ -1467,32 +1506,33 @@ footer {
   font-family: "Fraunces", serif;
   font-style: italic;
   font-size: 1.5rem;
-  font-weight: 300;
+  font-weight: 400;
   display: block;
   margin-bottom: 12px;
 }
 .footer-tagline {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: "Fraunces", serif;
+  font-style: italic;
   font-size: 0.85rem;
   color: var(--muted);
   margin-bottom: 12px;
-  font-weight: 300;
+  font-weight: 400;
 }
 .footer-copy {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.75rem;
-  color: rgba(30, 21, 40, 0.5);
+  color: rgba(36, 26, 46, 0.5);
   line-height: 1.6;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .footer-col-heading {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.65rem;
   font-weight: 400;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: rgba(30, 21, 40, 0.45);
+  color: rgba(36, 26, 46, 0.45);
   display: block;
   margin-bottom: 16px;
 }
@@ -1511,11 +1551,11 @@ footer {
 
 .footer-col-links a,
 .footer-social-links a {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.85rem;
-  color: rgba(30, 21, 40, 0.75);
+  color: rgba(36, 26, 46, 0.75);
   text-decoration: none;
-  font-weight: 300;
+  font-weight: 400;
   transition: color 0.2s ease;
 }
 .footer-col-links a:hover,
@@ -1530,10 +1570,10 @@ footer {
   border-top: 1px solid var(--rule);
 }
 .footer-bottom p {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.75rem;
-  color: rgba(30, 21, 40, 0.4);
-  font-weight: 300;
+  color: rgba(36, 26, 46, 0.4);
+  font-weight: 400;
 }
 
 /* Footer links (thank-you page simple footer) */
@@ -1544,7 +1584,7 @@ footer {
   margin-top: 16px;
 }
 .footer-link {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.78rem;
   color: var(--muted);
   text-decoration: none;
@@ -1556,7 +1596,7 @@ footer {
 .footer-unclench {
   font-family: "Fraunces", serif;
   font-style: italic;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 0.9rem;
   color: var(--muted);
   letter-spacing: 0.04em;
@@ -1572,9 +1612,9 @@ footer {
 }
 .utility-hero-eyebrow {
   display: inline-block;
-  background: var(--bg-3);
+  background: var(--surface);
   color: var(--muted);
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.72rem;
   font-weight: 400;
   letter-spacing: 0.1em;
@@ -1587,14 +1627,14 @@ footer {
 .utility-hero h1 {
   font-family: "Fraunces", serif;
   font-size: clamp(2rem, 3vw, 3.5rem);
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 16px;
 }
 .utility-hero p {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 1rem;
   color: var(--muted);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .legal-content,
@@ -1608,14 +1648,14 @@ footer {
 .legal-wrapper h2 {
   font-family: "Fraunces", serif;
   font-size: 1.4rem;
-  font-weight: 300;
+  font-weight: 400;
   margin: 40px 0 16px;
   color: var(--text);
 }
 
 .legal-content h3,
 .legal-wrapper h3 {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 1rem;
   font-weight: 400;
   margin: 24px 0 8px;
@@ -1624,12 +1664,12 @@ footer {
 
 .legal-content p,
 .legal-wrapper p {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.9rem;
   color: var(--muted);
   line-height: 1.75;
   margin-bottom: 16px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .legal-content ul,
@@ -1640,22 +1680,22 @@ footer {
 
 .legal-content li,
 .legal-wrapper li {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.9rem;
   color: var(--muted);
   line-height: 1.75;
   margin-bottom: 8px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .legal-content a,
 .legal-wrapper a {
-  color: var(--rose);
+  color: var(--amethyst-ink);
   text-decoration: underline;
 }
 
 .legal-last-updated {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.78rem;
   color: var(--muted);
   margin-bottom: 48px;
@@ -1663,7 +1703,7 @@ footer {
 
 .legal-toc {
   list-style: none;
-  background: var(--bg-2);
+  background: var(--surface);
   padding: 24px;
   border-radius: 2px;
   margin-bottom: 48px;
@@ -1672,13 +1712,13 @@ footer {
   margin-bottom: 8px;
 }
 .legal-toc a {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.85rem;
   color: var(--muted-2);
   text-decoration: none;
 }
 .legal-toc a:hover {
-  color: var(--rose);
+  color: var(--amethyst-ink);
 }
 
 /* ── Thank-you page ─────────────────────────────────────── */
@@ -1696,16 +1736,16 @@ footer {
 .thankyou-content h1 {
   font-family: "Fraunces", serif;
   font-size: clamp(2.5rem, 4vw, 4rem);
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 24px;
 }
 .thankyou-content p {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 1rem;
   color: var(--muted);
   line-height: 1.75;
   margin-bottom: 16px;
-  font-weight: 300;
+  font-weight: 400;
 }
 .thankyou-sig {
   font-family: "Fraunces", serif;
@@ -1713,11 +1753,11 @@ footer {
   font-size: 1.15rem;
   color: var(--text);
   margin-top: 8px;
-  font-weight: 300;
+  font-weight: 400;
 }
 .thankyou-visual {
   overflow: hidden;
-  background: var(--bg-2);
+  background: var(--surface);
 }
 .thankyou-visual img {
   width: 100%;
@@ -1735,14 +1775,14 @@ footer {
 .contact-hero h1 {
   font-family: "Fraunces", serif;
   font-size: clamp(2rem, 3vw, 3.5rem);
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 16px;
 }
 .contact-hero p {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 1rem;
   color: var(--muted);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .contact-form {
@@ -1757,7 +1797,7 @@ footer {
   gap: 6px;
 }
 .contact-field label {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.78rem;
   font-weight: 400;
   letter-spacing: 0.1em;
@@ -1772,15 +1812,15 @@ footer {
   border-radius: 2px;
   padding: 12px 16px;
   color: var(--text);
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.9rem;
-  font-weight: 300;
+  font-weight: 400;
   outline: none;
 }
 .contact-field input:focus,
 .contact-field textarea:focus,
 .contact-field select:focus {
-  border-color: var(--rose);
+  border-color: var(--amethyst-ink);
 }
 .contact-field textarea {
   min-height: 120px;
@@ -1789,9 +1829,9 @@ footer {
 
 /* ── Announcement bar (founding-members page) ───────────── */
 .announcement-bar {
-  background: var(--bg-3);
+  background: var(--surface);
   color: var(--muted);
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.75rem;
   font-weight: 400;
   letter-spacing: 0.08em;
@@ -1807,7 +1847,7 @@ footer {
   padding: 0 48px;
 }
 .fm-card {
-  background: var(--bg-2);
+  background: var(--surface);
   border: 1px solid var(--rule);
   border-radius: 2px;
   padding: 32px;
@@ -1815,15 +1855,15 @@ footer {
 .fm-card h3 {
   font-family: "Fraunces", serif;
   font-size: 1.25rem;
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 12px;
 }
 .fm-card p {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.9rem;
   color: var(--muted);
   line-height: 1.75;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .fm-pricing {
@@ -1838,15 +1878,15 @@ footer {
 .fm-pricing h2 {
   font-family: "Fraunces", serif;
   font-size: clamp(2rem, 3vw, 3rem);
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 16px;
 }
 .fm-pricing p {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.95rem;
   color: var(--muted);
   line-height: 1.75;
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 12px;
 }
 
@@ -1855,15 +1895,15 @@ footer {
   font-family: "Fraunces", serif;
   font-style: italic;
   font-size: 3rem;
-  font-weight: 300;
-  color: var(--rose);
+  font-weight: 400;
+  color: var(--amethyst-ink);
   margin: 24px 0;
 }
 
 .fm-cta-section {
   padding: var(--section-pad-v) 0;
   text-align: center;
-  background: var(--bg-2);
+  background: var(--surface);
 }
 .fm-cta-inner {
   max-width: 600px;
@@ -1884,14 +1924,14 @@ footer {
 .blog-index-hero h1 {
   font-family: "Fraunces", serif;
   font-size: clamp(2.4rem, 3.5vw, 4rem);
-  font-weight: 300;
+  font-weight: 400;
   margin-top: 16px;
 }
 .blog-index-sub {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 1rem;
   color: var(--muted);
-  font-weight: 300;
+  font-weight: 400;
   margin-top: 12px;
 }
 
@@ -1904,7 +1944,7 @@ footer {
   gap: 8px;
 }
 .category-pill {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.78rem;
   font-weight: 400;
   background: transparent;
@@ -1919,7 +1959,7 @@ footer {
 }
 .category-pill.is-active,
 .category-pill:hover {
-  background: var(--bg-2);
+  background: var(--surface);
   color: var(--text);
 }
 
@@ -1946,7 +1986,7 @@ footer {
 .blog-card-image {
   aspect-ratio: 16 / 9;
   overflow: hidden;
-  background: var(--bg-2);
+  background: var(--surface);
 }
 .blog-card-image img,
 .blog-card-image .photo-placeholder {
@@ -1960,31 +2000,31 @@ footer {
   padding: 24px;
 }
 .blog-card-tag {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.65rem;
   font-weight: 400;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--rose);
+  color: var(--amethyst-ink);
   margin-bottom: 8px;
   display: block;
 }
 .blog-card h2 {
   font-family: "Fraunces", serif;
   font-size: 1.15rem;
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 12px;
   line-height: 1.3;
 }
 .blog-card-desc {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.85rem;
   color: var(--muted);
   line-height: 1.65;
-  font-weight: 300;
+  font-weight: 400;
 }
 .blog-card-meta {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.75rem;
   color: var(--muted);
   margin-top: 16px;
@@ -1994,9 +2034,9 @@ footer {
 }
 .blog-card-link {
   display: inline-block;
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.78rem;
-  color: var(--rose);
+  color: var(--amethyst-ink);
   text-decoration: none;
   margin-top: 16px;
   transition: color 0.2s ease;
@@ -2006,7 +2046,7 @@ footer {
 }
 
 .blog-email-cta {
-  background: var(--bg-2);
+  background: var(--surface);
   padding: var(--section-pad-v) 0;
   margin-top: var(--section-pad-v);
 }
@@ -2019,14 +2059,14 @@ footer {
 .blog-email-cta h2 {
   font-family: "Fraunces", serif;
   font-size: clamp(1.8rem, 2.5vw, 2.5rem);
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 16px;
 }
 .blog-email-cta p {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.95rem;
   color: var(--muted);
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 24px;
 }
 .blog-email-cta form {
@@ -2042,7 +2082,7 @@ footer {
   border: 1px solid var(--rule);
   border-radius: 2px;
   background: var(--bg);
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.9rem;
   color: var(--text);
 }
@@ -2055,29 +2095,29 @@ footer {
 }
 .blog-hero-tag {
   display: block;
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.65rem;
   font-weight: 400;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--rose);
+  color: var(--amethyst-ink);
   margin-bottom: 16px;
 }
 .blog-hero h1 {
   font-family: "Fraunces", serif;
   font-size: clamp(2rem, 3.5vw, 3.5rem);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.15;
   margin-bottom: 24px;
 }
 .blog-meta {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.8rem;
   color: var(--muted);
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .blog-body,
@@ -2091,24 +2131,24 @@ footer {
 .blog-content h2 {
   font-family: "Fraunces", serif;
   font-size: 1.6rem;
-  font-weight: 300;
+  font-weight: 400;
   margin: 48px 0 16px;
 }
 .blog-body h3,
 .blog-content h3 {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 1.05rem;
   font-weight: 400;
   margin: 32px 0 8px;
 }
 .blog-body p,
 .blog-content p {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 1rem;
   color: var(--muted);
   line-height: 1.8;
   margin-bottom: 20px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .blog-body ul,
@@ -2120,37 +2160,37 @@ footer {
 }
 .blog-body li,
 .blog-content li {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 1rem;
   color: var(--muted);
   line-height: 1.8;
   margin-bottom: 8px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .blog-body a,
 .blog-content a {
-  color: var(--rose);
+  color: var(--amethyst-ink);
   text-decoration: underline;
 }
 
 .blog-body blockquote,
 .blog-content blockquote {
-  border-left: 3px solid var(--rose);
+  border-left: 3px solid var(--amethyst-ink);
   padding-left: 24px;
   margin: 32px 0;
   font-family: "Fraunces", serif;
   font-style: italic;
   font-size: 1.1rem;
   color: var(--text);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .blog-back {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.78rem;
   color: var(--muted);
   text-decoration: none;
@@ -2158,7 +2198,7 @@ footer {
   transition: color 0.2s ease;
 }
 .blog-back:hover {
-  color: var(--rose);
+  color: var(--amethyst-ink);
 }
 
 .blog-post-footer {
@@ -2168,7 +2208,7 @@ footer {
   margin: 0 auto;
 }
 .blog-post-cta {
-  background: var(--bg-2);
+  background: var(--surface);
   border-radius: 2px;
   padding: 48px;
   text-align: center;
@@ -2176,15 +2216,15 @@ footer {
 .blog-post-cta h3 {
   font-family: "Fraunces", serif;
   font-size: 1.5rem;
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 16px;
 }
 .blog-post-cta p {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.9rem;
   color: var(--muted);
   margin-bottom: 24px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 /* ── FAQ page ───────────────────────────────────────────── */
@@ -2200,7 +2240,7 @@ footer {
   margin-bottom: 48px;
 }
 .faq-category-pill {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.78rem;
   background: transparent;
   border: 1px solid var(--rule);
@@ -2215,7 +2255,7 @@ footer {
 }
 .faq-category-pill.is-active,
 .faq-category-pill:hover {
-  background: var(--bg-2);
+  background: var(--surface);
   color: var(--text);
 }
 
@@ -2239,7 +2279,7 @@ footer {
 .faq-category-heading {
   font-family: "Fraunces", serif;
   font-size: 1.5rem;
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 24px;
   padding-bottom: 16px;
   border-bottom: 1px solid var(--rule);
@@ -2257,7 +2297,7 @@ footer {
 .faq-category-section h2 {
   font-family: "Fraunces", serif;
   font-size: 1.5rem;
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 24px;
   padding-bottom: 16px;
   border-bottom: 1px solid var(--rule);
@@ -2285,7 +2325,7 @@ footer {
 
 /* ── Legal updated (alias for legal-last-updated) ─────── */
 .legal-updated {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.78rem;
   color: var(--muted);
   margin-bottom: 48px;
@@ -2293,11 +2333,11 @@ footer {
 
 /* ── FM pricing paragraph ───────────────────────────────── */
 .fm-pricing-p {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 1rem;
   color: var(--muted);
   line-height: 1.75;
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 12px;
 }
 
@@ -2313,7 +2353,7 @@ footer {
 /* ── FAQ support / Contact cards ─────────────────────────── */
 .faq-support {
   padding: var(--section-pad-v) 0;
-  background: var(--bg-2);
+  background: var(--surface);
 }
 .faq-support-inner {
   max-width: var(--max-w);
@@ -2323,7 +2363,7 @@ footer {
 .faq-support h2 {
   font-family: "Fraunces", serif;
   font-size: clamp(2rem, 3vw, 3rem);
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 40px;
 }
 .faq-support-cards {
@@ -2342,20 +2382,20 @@ footer {
   gap: 12px;
 }
 .faq-support-card-label {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.65rem;
   font-weight: 400;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--rose);
+  color: var(--amethyst-ink);
   display: block;
 }
 .faq-support-card p {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.9rem;
   color: var(--muted);
   line-height: 1.75;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 /* ── Contact email display ──────────────────────────────── */
@@ -2371,9 +2411,9 @@ footer {
 .contact-email-address {
   font-family: "Fraunces", serif;
   font-size: clamp(1.5rem, 2.5vw, 2.5rem);
-  font-weight: 300;
+  font-weight: 400;
   font-style: italic;
-  color: var(--rose);
+  color: var(--amethyst-ink);
   text-decoration: none;
   display: block;
   margin: 16px 0;
@@ -2383,10 +2423,10 @@ footer {
   color: var(--text);
 }
 .contact-email-note {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.85rem;
   color: var(--muted);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 /* ── Contact cards section ──────────────────────────────── */
@@ -2403,156 +2443,156 @@ footer {
    DARK MODE — explicit selectors per element, no cascade
    ───────────────────────────────────────────────────────── */
 body.dark {
-  background: #1e1528;
-  color: #f2eef8;
+  background: var(--text);
+  color: var(--text);
 }
 
 body.dark nav#nav {
-  background: #1e1528;
+  background: var(--text);
   border-bottom-color: rgba(242, 238, 248, 0.09);
 }
 body.dark .announce-bar {
   background: rgba(196, 112, 90, 0.15);
   border-bottom-color: rgba(196, 112, 90, 0.25);
-  color: #9b87aa;
+  color: var(--muted);
 }
 
 body.dark .nav-logo {
-  color: #f2eef8;
+  color: var(--text);
 }
 body.dark .nav-link {
-  color: #9b87aa;
+  color: var(--muted);
 }
 body.dark .nav-link:hover,
 body.dark .nav-link.nav-link--active {
-  color: #f2eef8;
+  color: var(--text);
 }
 body.dark .nav-link.primary {
-  color: #e8956a;
+  color: var(--amethyst-ink);
   border-color: rgba(242, 238, 248, 0.09);
 }
 body.dark .nav-link.primary:hover {
-  background: #2a1d38;
+  background: var(--bg);
 }
 
 body.dark .nav-cta-secondary {
-  color: #f2eef8;
+  color: var(--text);
   border-color: rgba(242, 238, 248, 0.09);
 }
 body.dark .nav-cta-secondary:hover {
-  background: #2a1d38;
+  background: var(--bg);
 }
 body.dark .nav-cta {
-  background: #e8956a;
-  color: #1e1528;
+  background: var(--amethyst);
+  color: var(--text);
 }
 body.dark .nav-cta:hover {
-  background: #e8956a;
+  background: var(--amethyst);
 }
 
 body.dark .mode-toggle {
-  background: #2a1d38;
+  background: var(--bg);
   border-color: rgba(242, 238, 248, 0.09);
 }
 body.dark .mode-toggle::after {
-  background: #e8956a;
+  background: var(--amethyst);
   transform: translateX(18px);
 }
 body.dark .mode-label {
-  color: #9b87aa;
+  color: var(--muted);
 }
 .exhale {
   display: block;
   font-family: "Fraunces", serif;
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 400;
   font-style: italic;
   color: var(--muted);
   letter-spacing: 0.04em;
   margin: 4px 0;
 }
 body.dark .exhale {
-  color: #9b87aa;
+  color: var(--muted);
 }
 
 body.dark .hamburger {
-  color: #f2eef8;
+  color: var(--text);
 }
 body.dark .mobile-menu {
-  background: #1e1528;
+  background: var(--text);
   border-bottom-color: rgba(242, 238, 248, 0.09);
 }
 body.dark .mobile-link {
-  color: #f2eef8;
+  color: var(--text);
   border-bottom-color: rgba(242, 238, 248, 0.09);
 }
 body.dark .mobile-link:hover {
-  background: #2a1d38;
+  background: var(--bg);
 }
 body.dark .mobile-link.primary {
-  color: #e8956a;
+  color: var(--amethyst-ink);
 }
 
 body.dark .nav-toggle {
-  color: #f2eef8;
+  color: var(--text);
 }
 body.dark .nav-toggle-bar {
-  background: #f2eef8;
+  background: var(--text);
 }
 
 body.dark .section-label {
-  color: #e8956a;
+  color: var(--amethyst-ink);
 }
 body.dark h1,
 body.dark h2,
 body.dark h3 {
-  color: #f2eef8;
+  color: var(--text);
 }
 body.dark h1 em,
 body.dark h2 em,
 body.dark h3 em {
-  color: #e8956a;
+  color: var(--amethyst-ink);
 }
 
 body.dark .skip-link {
-  background: #e8956a;
-  color: #1e1528;
+  background: var(--amethyst);
+  color: var(--text);
 }
 
 body.dark .hero-eyebrow {
-  background: #2a1d38;
+  background: var(--bg);
   border-color: rgba(242, 238, 248, 0.09);
-  color: #9b87aa;
+  color: var(--muted);
 }
 body.dark #hero h1 {
-  color: #f2eef8;
+  color: var(--text);
 }
 body.dark .hero-subheadline {
-  color: #9b87aa;
+  color: var(--muted);
 }
 body.dark .hero-founding-note {
-  color: #9b87aa;
+  color: var(--muted);
 }
 body.dark .counter-line {
-  color: #9b87aa;
+  color: var(--muted);
 }
 body.dark .counter-line strong {
-  color: #e8956a;
+  color: var(--amethyst-ink);
 }
 
 body.dark .btn-primary {
-  background: #e8956a;
-  color: #1e1528;
+  background: var(--amethyst);
+  color: var(--text);
 }
 body.dark .btn-primary:hover {
-  background: #e8956a;
+  background: var(--amethyst);
 }
 body.dark .btn-secondary {
-  color: #f2eef8;
+  color: var(--text);
   border-color: rgba(242, 238, 248, 0.09);
 }
 body.dark .btn-secondary:hover {
-  background: #2a1d38;
+  background: var(--bg);
 }
 
 body.dark .press-strip {
@@ -2560,107 +2600,107 @@ body.dark .press-strip {
   border-bottom-color: rgba(242, 238, 248, 0.09);
 }
 body.dark .press-strip-label {
-  color: #9b87aa;
+  color: var(--muted);
 }
 body.dark .press-logo-slot {
-  background: #2a1d38;
+  background: var(--bg);
 }
 
 body.dark #representation {
-  background: #2a1d38;
+  background: var(--bg);
 }
 body.dark .representation-sub {
-  color: #9b87aa;
+  color: var(--muted);
 }
 body.dark .photo-placeholder {
-  background: #2a1d38;
+  background: var(--bg);
 }
 
 body.dark .fc-tab {
-  color: #9b87aa;
+  color: var(--muted);
   border-color: rgba(242, 238, 248, 0.09);
 }
 body.dark .fc-tab.is-active,
 body.dark .fc-tab:hover {
-  background: #2a1d38;
-  color: #f2eef8;
+  background: var(--bg);
+  color: var(--text);
 }
 body.dark .fc-panel-text p {
-  color: #9b87aa;
+  color: var(--muted);
 }
 body.dark .fc-counter {
-  color: #9b87aa;
+  color: var(--muted);
 }
 
 body.dark .carousel-btn {
   border-color: rgba(242, 238, 248, 0.09);
-  color: #f2eef8;
+  color: var(--text);
 }
 body.dark .carousel-btn:hover {
-  background: #2a1d38;
+  background: var(--bg);
 }
 
 body.dark .feature-alt-text p {
-  color: #9b87aa;
+  color: var(--muted);
 }
 body.dark .feature-privacy-block {
-  background: #2a1d38;
+  background: var(--bg);
 }
 body.dark .feature-privacy-block p {
-  color: #9b87aa;
+  color: var(--muted);
 }
 
 body.dark .testimonial-card {
-  background: #2a1d38;
+  background: var(--bg);
   border-color: rgba(242, 238, 248, 0.09);
 }
 body.dark .testimonial-card blockquote p {
-  color: #f2eef8;
+  color: var(--text);
 }
 body.dark .quote-stars {
-  color: #e8956a;
+  color: var(--amethyst-ink);
 }
 body.dark .quote-attribution {
-  color: #9b87aa;
+  color: var(--muted);
 }
 body.dark .problem-reframe {
-  color: #e8956a;
+  color: var(--amethyst-ink);
 }
 body.dark .problem-response {
-  color: #9b87aa;
+  color: var(--muted);
 }
 
 body.dark .signup-wrapper p {
-  color: #9b87aa;
+  color: var(--muted);
 }
 body.dark .signup-wrapper input[type="text"],
 body.dark .signup-wrapper input[type="email"] {
-  background: #2a1d38;
+  background: var(--bg);
   border-color: rgba(242, 238, 248, 0.09);
-  color: #f2eef8;
+  color: var(--text);
 }
 body.dark .signup-wrapper input:focus {
-  border-color: #e8956a;
+  border-color: var(--amethyst-ink);
 }
 body.dark .gdpr-label {
-  color: #9b87aa;
+  color: var(--muted);
 }
 body.dark .gdpr-note {
-  color: #9b87aa;
+  color: var(--muted);
 }
 body.dark .founding-note {
-  color: #9b87aa;
+  color: var(--muted);
 }
 body.dark .signup-wrapper button[type="submit"] {
-  background: #e8956a;
-  color: #1e1528;
+  background: var(--amethyst);
+  color: var(--text);
 }
 body.dark .signup-wrapper button[type="submit"]:hover {
-  background: #e8956a;
+  background: var(--amethyst);
 }
 
 body.dark .definition-eyebrow {
-  color: #9b87aa;
+  color: var(--muted);
 }
 body.dark .accordion-item {
   border-top-color: rgba(242, 238, 248, 0.09);
@@ -2669,111 +2709,111 @@ body.dark .accordion-item:last-child {
   border-bottom-color: rgba(242, 238, 248, 0.09);
 }
 body.dark .accordion-trigger {
-  color: #f2eef8;
+  color: var(--text);
 }
 body.dark .accordion-question {
-  color: #f2eef8;
+  color: var(--text);
 }
 body.dark .accordion-icon svg {
-  stroke: #9b87aa;
+  stroke: var(--muted);
 }
 body.dark .accordion-body-inner p {
-  color: #9b87aa;
+  color: var(--muted);
 }
 body.dark .accordion-body-inner a {
-  color: #e8956a;
+  color: var(--amethyst-ink);
 }
 
 body.dark .about-text p {
-  color: #9b87aa;
+  color: var(--muted);
 }
 body.dark .about-highlight,
 body.dark .about-pull-quote {
-  color: #f2eef8;
+  color: var(--text);
 }
 body.dark .about-community {
-  color: #9b87aa;
+  color: var(--muted);
   border-top-color: rgba(242, 238, 248, 0.09);
 }
 
 body.dark #homepage-faq {
-  background: #2a1d38;
+  background: var(--bg);
 }
 body.dark .homepage-faq-more {
-  color: #9b87aa;
+  color: var(--muted);
 }
 body.dark .homepage-faq-more a {
-  color: #e8956a;
+  color: var(--amethyst-ink);
 }
 
 body.dark .footer-cta-note {
-  color: #9b87aa;
+  color: var(--muted);
 }
 body.dark #footer-cta > .footer-cta-inner > p {
-  color: #9b87aa;
+  color: var(--muted);
 }
 
 body.dark #founding-members {
-  background: #2a1d38;
+  background: var(--bg);
 }
 body.dark .founding-intro {
-  color: #9b87aa;
+  color: var(--muted);
 }
 body.dark .founding-offer {
-  color: #f2eef8;
+  color: var(--text);
 }
 body.dark .founding-offer em {
-  color: #e8956a;
+  color: var(--amethyst-ink);
 }
 body.dark .perk {
-  color: #9b87aa;
+  color: var(--muted);
   border-top-color: rgba(242, 238, 248, 0.09);
 }
 body.dark .perk:last-child {
   border-bottom-color: rgba(242, 238, 248, 0.09);
 }
 body.dark .perk-mark {
-  color: #e8956a;
+  color: var(--amethyst-ink);
 }
 body.dark .founding-num {
-  color: #e8956a;
+  color: var(--amethyst-ink);
 }
 body.dark .founding-num-label {
-  color: #9b87aa;
+  color: var(--muted);
 }
 body.dark .founding-form-wrap {
   background: rgba(255, 255, 255, 0.03);
   border-color: rgba(242, 238, 248, 0.08);
 }
 body.dark .founding-closing {
-  color: #9b87aa;
+  color: var(--muted);
 }
 body.dark .form-row {
   border-bottom-color: rgba(155, 135, 170, 0.3);
 }
 body.dark .form-row input {
-  color: #f2eef8;
+  color: var(--text);
 }
 body.dark .form-row input::placeholder {
-  color: #9b87aa;
+  color: var(--muted);
 }
 body.dark .form-btn {
-  color: #e8956a;
+  color: var(--amethyst-ink);
 }
 body.dark .form-btn:hover {
-  color: #e8956a;
+  color: var(--amethyst-ink);
 }
 body.dark .form-note {
-  color: #9b87aa;
+  color: var(--muted);
 }
 
 body.dark footer {
-  background: #1e1528;
-  color: #f2eef8;
+  background: var(--text);
+  color: var(--text);
   border-top: 1px solid rgba(242, 238, 248, 0.09);
 }
 body.dark .footer-unclench {
-  color: #9b87aa;
+  color: var(--muted);
 }
 body.dark .footer-tagline {
   color: rgba(242, 238, 248, 0.5);
@@ -2790,7 +2830,7 @@ body.dark .footer-social-links a {
 }
 body.dark .footer-col-links a:hover,
 body.dark .footer-social-links a:hover {
-  color: #f2eef8;
+  color: var(--text);
 }
 body.dark .footer-bottom {
   border-top-color: rgba(242, 238, 248, 0.07);
@@ -2802,174 +2842,174 @@ body.dark .footer-link {
   color: rgba(242, 238, 248, 0.6);
 }
 body.dark .footer-link:hover {
-  color: #f2eef8;
+  color: var(--text);
 }
 
 body.dark .utility-hero-eyebrow {
-  background: #2a1d38;
+  background: var(--bg);
   border-color: rgba(242, 238, 248, 0.09);
-  color: #9b87aa;
+  color: var(--muted);
 }
 body.dark .utility-hero p {
-  color: #9b87aa;
+  color: var(--muted);
 }
 body.dark .legal-content h2,
 body.dark .legal-wrapper h2 {
-  color: #f2eef8;
+  color: var(--text);
 }
 body.dark .legal-content h3,
 body.dark .legal-wrapper h3 {
-  color: #f2eef8;
+  color: var(--text);
 }
 body.dark .legal-content p,
 body.dark .legal-wrapper p {
-  color: #9b87aa;
+  color: var(--muted);
 }
 body.dark .legal-content li,
 body.dark .legal-wrapper li {
-  color: #9b87aa;
+  color: var(--muted);
 }
 body.dark .legal-content a,
 body.dark .legal-wrapper a {
-  color: #e8956a;
+  color: var(--amethyst-ink);
 }
 body.dark .legal-last-updated {
-  color: #9b87aa;
+  color: var(--muted);
 }
 body.dark .legal-toc {
-  background: #2a1d38;
+  background: var(--bg);
 }
 body.dark .legal-toc a {
-  color: #9b87aa;
+  color: var(--muted);
 }
 body.dark .legal-toc a:hover {
-  color: #e8956a;
+  color: var(--amethyst-ink);
 }
 
 body.dark .thankyou-content p {
-  color: #9b87aa;
+  color: var(--muted);
 }
 body.dark .thankyou-sig {
-  color: #f2eef8;
+  color: var(--text);
 }
 body.dark .thankyou-visual {
-  background: #2a1d38;
+  background: var(--bg);
 }
 
 body.dark .contact-hero p {
-  color: #9b87aa;
+  color: var(--muted);
 }
 body.dark .contact-field label {
-  color: #9b87aa;
+  color: var(--muted);
 }
 body.dark .contact-field input,
 body.dark .contact-field textarea,
 body.dark .contact-field select {
-  background: #2a1d38;
+  background: var(--bg);
   border-color: rgba(242, 238, 248, 0.09);
-  color: #f2eef8;
+  color: var(--text);
 }
 body.dark .contact-field input:focus,
 body.dark .contact-field textarea:focus,
 body.dark .contact-field select:focus {
-  border-color: #e8956a;
+  border-color: var(--amethyst-ink);
 }
 
 body.dark .announcement-bar {
-  background: #2a1d38;
-  color: #9b87aa;
+  background: var(--bg);
+  color: var(--muted);
   border-bottom-color: rgba(242, 238, 248, 0.09);
 }
 body.dark .fm-card {
-  background: #2a1d38;
+  background: var(--bg);
   border-color: rgba(242, 238, 248, 0.09);
 }
 body.dark .fm-card p {
-  color: #9b87aa;
+  color: var(--muted);
 }
 body.dark .fm-pricing p {
-  color: #9b87aa;
+  color: var(--muted);
 }
 body.dark .fm-cta-section {
-  background: #2a1d38;
+  background: var(--bg);
 }
 
 body.dark .category-pill {
   border-color: rgba(242, 238, 248, 0.09);
-  color: #9b87aa;
+  color: var(--muted);
 }
 body.dark .category-pill.is-active,
 body.dark .category-pill:hover {
-  background: #2a1d38;
-  color: #f2eef8;
+  background: var(--bg);
+  color: var(--text);
 }
 
 body.dark .blog-card {
-  background: #2a1d38;
+  background: var(--bg);
   border-color: rgba(242, 238, 248, 0.09);
 }
 body.dark .blog-card-desc {
-  color: #9b87aa;
+  color: var(--muted);
 }
 body.dark .blog-card-meta {
-  color: #9b87aa;
+  color: var(--muted);
 }
 body.dark .blog-hero-tag {
-  color: #e8956a;
+  color: var(--amethyst-ink);
 }
 body.dark .blog-meta {
-  color: #9b87aa;
+  color: var(--muted);
 }
 body.dark .blog-body p,
 body.dark .blog-content p {
-  color: #9b87aa;
+  color: var(--muted);
 }
 body.dark .blog-body h2,
 body.dark .blog-content h2 {
-  color: #f2eef8;
+  color: var(--text);
 }
 body.dark .blog-body h3,
 body.dark .blog-content h3 {
-  color: #f2eef8;
+  color: var(--text);
 }
 body.dark .blog-body a,
 body.dark .blog-content a {
-  color: #e8956a;
+  color: var(--amethyst-ink);
 }
 body.dark .blog-body blockquote,
 body.dark .blog-content blockquote {
-  border-left-color: #e8956a;
-  color: #f2eef8;
+  border-left-color: var(--amethyst-ink);
+  color: var(--text);
 }
 body.dark .blog-body li,
 body.dark .blog-content li {
-  color: #9b87aa;
+  color: var(--muted);
 }
 body.dark .blog-back {
-  color: #9b87aa;
+  color: var(--muted);
 }
 body.dark .blog-back:hover {
-  color: #e8956a;
+  color: var(--amethyst-ink);
 }
 body.dark .blog-post-cta {
-  background: #2a1d38;
+  background: var(--bg);
 }
 body.dark .blog-post-cta p {
-  color: #9b87aa;
+  color: var(--muted);
 }
 body.dark .blog-email-cta {
-  background: #2a1d38;
+  background: var(--bg);
 }
 body.dark .blog-email-cta p {
-  color: #9b87aa;
+  color: var(--muted);
 }
 body.dark .blog-email-cta input[type="email"] {
-  background: #1e1528;
+  background: var(--text);
   border-color: rgba(242, 238, 248, 0.09);
-  color: #f2eef8;
+  color: var(--text);
 }
 body.dark .blog-card-link {
-  color: #e8956a;
+  color: var(--amethyst-ink);
 }
 
 body.dark .faq-category-section h2 {
@@ -2977,46 +3017,46 @@ body.dark .faq-category-section h2 {
 }
 body.dark .faq-category-pill {
   border-color: rgba(242, 238, 248, 0.09);
-  color: #9b87aa;
+  color: var(--muted);
 }
 body.dark .faq-category-pill.is-active,
 body.dark .faq-category-pill:hover {
-  background: #2a1d38;
-  color: #f2eef8;
+  background: var(--bg);
+  color: var(--text);
 }
 
 body.dark .legal-updated {
-  color: #9b87aa;
+  color: var(--muted);
 }
 body.dark .fm-pricing-p {
-  color: #9b87aa;
+  color: var(--muted);
 }
 body.dark .footer-cta-italic {
-  color: #9b87aa;
+  color: var(--muted);
 }
 
 body.dark .faq-support {
-  background: #2a1d38;
+  background: var(--bg);
 }
 body.dark .faq-support-card {
-  background: #1e1528;
+  background: var(--text);
   border-color: rgba(242, 238, 248, 0.09);
 }
 body.dark .faq-support-card p {
-  color: #9b87aa;
+  color: var(--muted);
 }
 body.dark .faq-support-card-label {
-  color: #e8956a;
+  color: var(--amethyst-ink);
 }
 
 body.dark .contact-email-address {
-  color: #e8956a;
+  color: var(--amethyst-ink);
 }
 body.dark .contact-email-address:hover {
-  color: #f2eef8;
+  color: var(--text);
 }
 body.dark .contact-email-note {
-  color: #9b87aa;
+  color: var(--muted);
 }
 
 /* ─────────────────────────────────────────────────────────
