@@ -1251,7 +1251,7 @@ body.dark #hero::before {
   text-align: left;
 }
 .gdpr-label a {
-  color: var(--amethyst-ink) !important;
+  color: var(--amethyst-ink);
   text-decoration: underline;
 }
 
