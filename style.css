@@ -304,9 +304,19 @@ nav#nav {
   flex-shrink: 0;
 }
 
+.announce-short {
+  display: none;
+}
+
 @media (max-width: 640px) {
   body {
     padding-top: 96px;
+  }
+  .announce-full {
+    display: none;
+  }
+  .announce-short {
+    display: inline;
   }
 }
 
