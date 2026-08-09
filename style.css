@@ -946,9 +946,12 @@ body.dark #hero::before {
 }
 .fc-panel.is-active {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 80px;
   align-items: center;
+}
+.fc-panel-text {
+  max-width: 640px;
 }
 
 .fc-panel-image {
