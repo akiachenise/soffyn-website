@@ -73,6 +73,7 @@ body.dark {
 /* ── Base ───────────────────────────────────────────────── */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 60px;
   height: 100%;
 }
 
@@ -85,7 +86,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  padding-top: 96px;
+  padding-top: 60px;
 }
 
 main {
@@ -271,11 +272,6 @@ nav#nav {
 
 /* ── Announcement bar ─────────────────────────────────────── */
 .announce-bar {
-  position: fixed;
-  top: 60px;
-  left: 0;
-  right: 0;
-  z-index: 40;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -310,7 +306,7 @@ nav#nav {
 
 @media (max-width: 640px) {
   body {
-    padding-top: 96px;
+    padding-top: 60px;
   }
   .announce-full {
     display: none;
@@ -2308,7 +2304,7 @@ footer {
 #about-soffyn,
 #membership,
 #privacy {
-  scroll-margin-top: 130px;
+  scroll-margin-top: 34px;
 }
 
 .faq-category-section {
