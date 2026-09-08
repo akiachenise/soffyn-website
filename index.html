@@ -130,7 +130,7 @@
       </div>
       <div class="nav-right">
         <a href="/founding-members.html" class="nav-cta-secondary">Founding Members</a>
-        <a href="#waitlist" class="nav-cta">Join the waitlist</a>
+        <a href="#waitlist" class="nav-cta">Join soffyn</a>
       </div>
       <div class="nav-right-mobile">
         <span class="mode-label">☀ Light</span>
@@ -144,13 +144,13 @@
         <a href="/blog/" class="mobile-link" role="menuitem">Blog</a>
         <a href="/faq.html" class="mobile-link" role="menuitem">FAQ</a>
         <a href="/founding-members.html" class="mobile-link" role="menuitem">Founding Members</a>
-        <a href="#waitlist" class="mobile-link primary" role="menuitem">Join the waitlist</a>
+        <a href="#waitlist" class="mobile-link primary" role="menuitem">Join soffyn</a>
       </div>
     </nav>
     <div class="announce-bar" role="complementary" aria-label="Waitlist announcement">
       <span class="announce-full">The Founding Member door closes at launch. Full access — free forever.</span>
       <span class="announce-short">Founding Members — free forever.</span>
-      <a href="#waitlist" class="announce-bar-link">Find my space →</a>
+      <a href="#waitlist" class="announce-bar-link">Join soffyn →</a>
     </div>
 
     <main id="main">
@@ -158,14 +158,16 @@
       <!-- ── Hero ──────────────────────────────────────────────── -->
       <section id="hero">
         <div class="hero-text">
-          <h1><span class="hero-h1-line">You hold it together all day.</span><span class="hero-h1-line">At work. In every room. soffyn is where you don't have to.</span></h1>
+          <h1><span class="hero-h1-line">You hold it together all day.</span><span class="hero-h1-line">At work. In every room.</span><span class="hero-h1-line">soffyn is where you don't have to.</span></h1>
           <p class="hero-subheadline">
-            A wellness app built for neurodivergent Black women — affirmations, journaling, and goals that never ask you to perform. No streaks. No shame.
+            A wellness app for neurodivergent Black women to journal, check in, focus, and take a little weight off.
           </p>
+          <p class="footer-cta-italic">No streaks. No shame.</p>
           <div class="hero-cta-group">
-            <a href="#waitlist" class="btn-primary">Find my space</a>
-            <a href="#about" class="btn-secondary">Learn more</a>
+            <a href="#waitlist" class="btn-primary">Join soffyn</a>
+            <a href="#how-it-works" class="btn-secondary">See how soffyn works</a>
           </div>
+          <p class="hero-founding-note">Join before launch and become a Founding Member.</p>
         </div>
         <div class="hero-image-wrap">
           <div class="site-img-wrap"><img src="/assets/soffyn-hero.png" alt="A Black woman relaxed at home, phone in hand" loading="eager" /></div>
@@ -195,10 +197,14 @@
             <div class="representation-copy-left">
               <h2>This is for the you that nobody sees.</h2>
             </div>
-            <div>
-              <p class="representation-sub">
-                The one who's tired in a way sleep doesn't fix. Who's brilliant and scattered and has seventeen tabs open and hasn't eaten since noon. Who holds it together for everyone else and falls apart in the car on the way home. Wherever you are with your own stuff — that's where soffyn meets you.
-              </p>
+            <div class="representation-sub copy-lines">
+              <p>You made the meeting.</p>
+              <p>Answered the message.</p>
+              <p>Remembered what somebody needed from you.</p>
+              <p>Kept going even after your brain had already had enough.</p>
+              <p>By Wednesday, you're running on fumes.</p>
+              <p>So you reach for something easy. A funny video. A song you've played a hundred times. Five minutes where nobody needs anything from you.</p>
+              <p>Sometimes you just need somewhere to exhale.</p>
             </div>
           </div>
           <div class="photo-row">
@@ -217,68 +223,70 @@
 
       <!-- ── Feature carousel — 4 slides ───────────────────── -->
       <section id="feature-carousel">
-        <div class="fc-inner">
-          <p class="section-label">what's waiting for you</p>
-          <h2>Finally — soften. Something that gets <em>you.</em></h2>
+        <div class="fc-inner" id="how-it-works">
+          <h2>Wellness that keeps no score.</h2>
+
+          <div class="fc-intro copy-lines">
+            <p>soffyn gives you somewhere to check in without turning the check-in into another thing to keep up with.</p>
+            <p>Write something down. Sit with an affirmation. Give yourself a few minutes to focus. Notice how you're feeling.</p>
+            <p>Or do one thing and close the app.</p>
+            <p>You can come back whenever you're ready.</p>
+          </div>
 
           <div class="fc-nav" role="tablist" aria-label="Feature navigation">
-            <button class="fc-tab is-active" role="tab" aria-selected="true"  data-tab="0">Affirmations</button>
-            <button class="fc-tab"            role="tab" aria-selected="false" data-tab="1">Journaling</button>
-            <button class="fc-tab"            role="tab" aria-selected="false" data-tab="2">Focus timer</button>
-            <button class="fc-tab"            role="tab" aria-selected="false" data-tab="3">Mood check-in</button>
+            <button class="fc-tab is-active" role="tab" aria-selected="true"  id="fc-tab-0" aria-controls="fc-panel-0" data-tab="0">Journaling</button>
+            <button class="fc-tab"            role="tab" aria-selected="false" id="fc-tab-1" aria-controls="fc-panel-1" data-tab="1">Affirmations</button>
+            <button class="fc-tab"            role="tab" aria-selected="false" id="fc-tab-2" aria-controls="fc-panel-2" data-tab="2">Focus timer</button>
+            <button class="fc-tab"            role="tab" aria-selected="false" id="fc-tab-3" aria-controls="fc-panel-3" data-tab="3">Mood check-in</button>
           </div>
 
           <div class="fc-panels">
 
-            <div class="fc-panel is-active" data-panel="0">
-              <!-- restore when app screenshots are ready
-              <div class="fc-panel-image">
-                <div class="photo-placeholder" role="img" aria-label="soffyn affirmations feature"></div>
-              </div>
-              -->
-              <div class="fc-panel-text">
-                <p class="section-label">Daily affirmations</p>
-                <h3>Affirmations you don't have to <em>brace against.</em></h3>
-                <p>The ones you've tried before felt like lying to your own face. 'I am enough' hits different when your brain is already three steps ahead calling it out. The affirmations in soffyn were written for the specific kind of tired that comes from masking all day — the kind that holds up even when your brain is already looking for the lie.</p>
-              </div>
-            </div>
-
-            <div class="fc-panel" data-panel="1">
+            <div class="fc-panel is-active" id="fc-panel-0" role="tabpanel" aria-labelledby="fc-tab-0" data-panel="0">
               <!-- restore when app screenshots are ready
               <div class="fc-panel-image">
                 <div class="photo-placeholder" role="img" aria-label="soffyn journaling feature"></div>
               </div>
               -->
               <div class="fc-panel-text">
-                <p class="section-label">Flexible journaling</p>
-                <h3>However the thought <em>comes out.</em></h3>
-                <p>A thought can disappear before you finish having it. Or it shows up as a feeling you can't put a name to, or a voice memo at midnight, or three words in the notes app. Type it, photograph it, say it out loud. However it comes out, there's a place for it here.</p>
+                <h3>Get it out of your head.</h3>
+                <p>Write a page. Leave three words. Add a photo. Come back later. However it comes out is enough.</p>
               </div>
             </div>
 
-            <div class="fc-panel" data-panel="2">
+            <div class="fc-panel" id="fc-panel-1" role="tabpanel" aria-labelledby="fc-tab-1" data-panel="1">
+              <!-- restore when app screenshots are ready
+              <div class="fc-panel-image">
+                <div class="photo-placeholder" role="img" aria-label="soffyn affirmations feature"></div>
+              </div>
+              -->
+              <div class="fc-panel-text">
+                <h3>Something you can actually believe.</h3>
+                <p>Words for real days, especially the ones when a shiny "you can do anything" isn't what you need.</p>
+              </div>
+            </div>
+
+            <div class="fc-panel" id="fc-panel-2" role="tabpanel" aria-labelledby="fc-tab-2" data-panel="2">
               <!-- restore when app screenshots are ready
               <div class="fc-panel-image">
                 <div class="photo-placeholder" role="img" aria-label="soffyn focus timer feature"></div>
               </div>
               -->
               <div class="fc-panel-text">
-                <p class="section-label">Built for busy brains</p>
-                <h3>A soft start, before you talk yourself <em>out of it.</em></h3>
-                <p>You know the feeling. You're ready, the window is open, and then somehow forty minutes pass and you still haven't started. The focus timer is a gentle on-ramp — something to catch you in that window before the momentum disappears, without any of the neurotypical productivity pressure attached.</p>
+                <h3>A little help getting started.</h3>
+                <p>A gentle place to begin when you know what needs to happen and your brain hasn't caught up yet.</p>
               </div>
             </div>
 
-            <div class="fc-panel" data-panel="3">
+            <div class="fc-panel" id="fc-panel-3" role="tabpanel" aria-labelledby="fc-tab-3" data-panel="3">
               <!-- restore when app screenshots are ready
               <div class="fc-panel-image">
                 <div class="photo-placeholder" role="img" aria-label="soffyn mood check-in feature"></div>
               </div>
               -->
               <div class="fc-panel-text">
-                <p class="section-label">Mood check-in</p>
-                <h3>Noticing, <em>not scoring.</em></h3>
-                <p>One question. You answer it honestly or you don't — either way, you're not being scored on anything. Over time you just start to notice yourself a little more clearly. That's the whole point.</p>
+                <h3>How are you doing today?</h3>
+                <p>Pause long enough to notice what you're carrying, without turning the answer into a score.</p>
               </div>
             </div>
 
@@ -294,82 +302,23 @@
       </section>
 
 
-      <!-- ── Problem ───────────────────────────────────────── -->
+      <!-- ── Returning — no streaks ────────────────────────── -->
       <section id="problem">
         <div class="problem-inner">
           <div class="problem-header">
-            <p class="section-label">The space that was missing</p>
-            <h2>A lot of us have been sorting through our own heads in places that weren't <em>built for it.</em></h2>
+            <h2>You don't have to start over every time you come back.</h2>
           </div>
 
           <div class="problem-body">
-            <p>You've already been trying to take care of yourself.</p>
-            <p>The notes app. The ChatGPT window at 11pm because it doesn't judge and it's always there. The group chat you don't want to burden again. Therapy, when you can afford it and have enough left in you to actually be open.</p>
-            <p>None of those were wrong. But none of them were built for this — for the version of you that's overstimulated and scattered and just needs somewhere to put it down for a minute.</p>
-            <p>soffyn is the space that was missing — built for how your brain actually works, still there when you come back, and never making a thing of how long you were gone.</p>
+            <p>Maybe you use soffyn every day for a week.</p>
+            <p>Then work gets busy. Your routine disappears. A few days turn into a few weeks.</p>
+            <p>When you open soffyn again, there isn't a broken streak waiting for you or a reminder of how long you've been gone.</p>
+            <p>You're here.</p>
+            <p>That's enough.</p>
           </div>
 
-          <p class="problem-response">Yours, whenever you need it.</p>
+          <p class="about-highlight">Still here when you come back.</p>
 
-        </div>
-      </section>
-
-      <!-- ── Waitlist form ───────────────────────────────────── -->
-      <section id="waitlist">
-        <div class="waitlist-inner">
-          <p class="section-label">Join the waitlist</p>
-          <h2>You've been looking for this. Here it is.</h2>
-          <form name="waitlist" method="POST" data-netlify="true" action="thank-you.html">
-            <div class="signup-wrapper">
-              <p>Join the waitlist and you're in as a Founding Member — that means everything soffyn has, free forever. No card, no trial, and I'm not changing my mind about the people who showed up early.</p>
-              <input type="text" name="FNAME" placeholder="your first name" aria-label="First name" />
-              <input type="email" name="EMAIL" placeholder="your@email.com" aria-label="Email address" required />
-              <label class="gdpr-label" for="consent">
-                <input type="checkbox" name="consent" id="consent" value="yes" required />
-                <span>
-                  I'd like to receive launch updates and early access info from soffyn. We'll only contact you about soffyn. You can unsubscribe at any time. By signing up, you agree to our
-                  <a href="/terms.html">Terms of Use</a> and
-                  <a href="/privacy.html">Privacy Policy</a>.
-                </span>
-              </label>
-              <p class="gdpr-note">I'll send you a welcome email. Then occasional updates as we get closer to September. When the doors open, you're first through them.</p>
-              <p class="gdpr-note" style="margin-top: 8px;">No spam, no pressure — just me, building this thing, keeping you in the loop.</p>
-              <button type="submit">Find my space</button>
-              <input type="hidden" name="form-name" value="waitlist" />
-            </div>
-          </form>
-        </div>
-      </section>
-
-      <!-- ── Neurodivergent explainer — accordion ────────────── -->
-      <section id="definition">
-        <div class="definition-inner">
-          <span class="definition-eyebrow">New here? A quick note.</span>
-          <h3>What does <em>"neurodivergent"</em> mean?</h3>
-          <div class="accordion" role="list">
-
-            <div class="accordion-item" role="listitem">
-              <button class="accordion-trigger" aria-expanded="false" aria-controls="def-answer-1">
-                <span class="accordion-question">Understanding neurodivergence</span>
-                <span class="accordion-icon" aria-hidden="true">
-                  <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M2 4L6 8L10 4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </span>
-              </button>
-              <div class="accordion-body" id="def-answer-1" role="region">
-                <div class="accordion-body-inner">
-                  <p>
-                    Neurodivergent describes brains that think, learn, and experience the world differently — including ADHD, autism, dyslexia, anxiety, OCD, and more. A different way of processing, not a broken one.
-                  </p>
-                  <p>
-                    If you've spent your life in wellness spaces that weren't built for how your brain actually works — you're in the right place. You don't have to explain yourself here.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-          </div>
         </div>
       </section>
 
@@ -381,51 +330,57 @@
           </div>
           <div class="about-text">
             <p class="section-label">About soffyn</p>
-            <h2>I built the app I <em>couldn't</em> find.</h2>
-            <p>I built this because I needed it and it didn't exist.</p>
+            <h2>I kept wondering why wellness felt like more work.</h2>
 
-            <p>I'm a neurodivergent Black woman, software engineer, and accessibility specialist. I've tried almost every app. They were either too cookie cutter, too demanding, or just too much for my brain. I'm a forgetful girl. Out of sight, out of mind. Streaks don't work for me. My hopes and dreams have a habit of becoming hoarded thoughts in the notes app.</p>
+            <p>Hi, I'm Akia. I'm the developer and accessibility specialist building soffyn.</p>
 
-            <p>And no app understood the specific exhaustion of spending all day masking — at work, in every room — and coming home to something that asked me to perform even more.</p>
+            <p>I spent years downloading apps I genuinely wanted to use, then feeling like I'd failed when I stopped opening them.</p>
 
-            <p>I needed something that meets me in the middle. A space that's gentle, rewarding, and completely okay if I don't show up every single day.</p>
+            <p>Eventually, I started asking a different question:</p>
 
-            <p class="about-highlight">Still here when you come back.</p>
+            <p class="about-highlight">"What would I build if I expected a brain like mine to walk through the door from the beginning?"</p>
 
-            <p>That's soffyn. I built it for me. And I built it for you.</p>
+            <p>That question became soffyn.</p>
 
-            <p class="about-community">The women who asked for soffyn before it existed also asked for a place to find each other. That room is coming. Join the waitlist and be first in it.</p>
+            <p class="about-cta"><a href="/about.html" class="btn-secondary">Read the story behind soffyn &rarr;</a></p>
           </div>
         </div>
       </section>
 
-      <!-- ── Founding members ───────────────────────────────── -->
-      <section id="founding-members">
+      <!-- ── Founding members + signup ──────────────────────── -->
+      <section id="waitlist" class="founding-section">
         <div class="founding-inner">
           <div class="founding-grid">
             <div class="founding-left">
               <p class="section-label">Founding members</p>
-              <h2>The first room is still open.</h2>
-              <p class="founding-intro">Every woman who joins before September is a Founding Member. The door closes the day soffyn launches, and it never reopens. I'm not changing my mind about the people who showed up early.</p>
-              <p class="founding-offer">Permanent access to everything soffyn has, free forever — because you showed up before there was anything to show up for.</p>
+              <h2>You found soffyn early.</h2>
+              <p class="founding-intro">soffyn is getting closer to launch, and I'm inviting the people who are here now to be part of what comes next.</p>
+              <p class="founding-intro">Join before launch and you'll become a Founding Member with full access to soffyn for free.</p>
+              <p class="founding-intro">You'll also get an early look while I'm testing, changing things, and figuring out what deserves to stay.</p>
               <ul class="perks">
-                <li class="perk"><span class="perk-mark" aria-hidden="true">—</span><span>Full access to every feature, free — before anyone else pays for it</span></li>
-                <li class="perk"><span class="perk-mark" aria-hidden="true">—</span><span>First look at what gets built next, before it ships</span></li>
-                <li class="perk"><span class="perk-mark" aria-hidden="true">—</span><span>A private founding member channel — the room where soffyn gets built in real time</span></li>
-                <li class="perk"><span class="perk-mark" aria-hidden="true">—</span><span>A founding member badge — because you were here first</span></li>
+                <li class="perk"><span class="perk-mark" aria-hidden="true">—</span><span>Full access, free</span></li>
+                <li class="perk"><span class="perk-mark" aria-hidden="true">—</span><span>Early beta opportunities</span></li>
+                <li class="perk"><span class="perk-mark" aria-hidden="true">—</span><span>A voice in what gets built next</span></li>
               </ul>
             </div>
             <div class="founding-right">
               <p class="founding-num-label" data-waitlist-count hidden></p>
               <div class="founding-form-wrap">
-                <form action="thank-you.html" method="POST" name="founding" data-netlify="true">
-                  <div class="form-wrap">
-                    <div class="form-row">
-                      <input type="email" name="EMAIL" placeholder="your email address" aria-label="Email address" autocomplete="email" required>
-                      <button type="submit" class="form-btn">I want in</button>
-                    </div>
-                    <p class="form-note">Founding Members get full access — free, forever.</p>
-                    <input type="hidden" name="form-name" value="founding">
+                <form name="waitlist" method="POST" data-netlify="true" action="thank-you.html">
+                  <div class="signup-wrapper">
+                    <input type="text" name="FNAME" placeholder="your first name" aria-label="First name" />
+                    <input type="email" name="EMAIL" placeholder="your@email.com" aria-label="Email address" autocomplete="email" required />
+                    <label class="gdpr-label" for="consent">
+                      <input type="checkbox" name="consent" id="consent" value="yes" required />
+                      <span>
+                        I'd like to receive launch updates and early access info from soffyn. We'll only contact you about soffyn. You can unsubscribe at any time. By signing up, you agree to our
+                        <a href="/terms.html">Terms of Use</a> and
+                        <a href="/privacy.html">Privacy Policy</a>.
+                      </span>
+                    </label>
+                    <p class="gdpr-note">I'll send you a welcome email. Then occasional updates as we get closer to September. When the doors open, you're first through them.</p>
+                    <button type="submit">Join soffyn</button>
+                    <input type="hidden" name="form-name" value="waitlist" />
                   </div>
                 </form>
               </div>
@@ -475,7 +430,7 @@
 
             <div class="accordion-item" role="listitem">
               <button class="accordion-trigger" aria-expanded="false" aria-controls="hfaq-3">
-                <span class="accordion-question">Is soffyn only for Black women?</span>
+                <span class="accordion-question">What does Founding Member mean?</span>
                 <span class="accordion-icon" aria-hidden="true">
                   <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M2 4L6 8L10 4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -484,14 +439,14 @@
               </button>
               <div class="accordion-body" id="hfaq-3" role="region">
                 <div class="accordion-body-inner">
-                  <p>soffyn is built specifically for neurodivergent Black women — this community is centered, not an afterthought. But you don't have to be Black or a woman to find a home here. If you've been looking for a wellness space that doesn't feel like it was built for someone else's brain, you're welcome.</p>
+                  <p>Founding Members are people who join before soffyn launches in September 2026. You get everything in soffyn Set — free, permanently. Not a trial. There's no cap. There's a deadline. After launch, the door is closed for good.</p>
                 </div>
               </div>
             </div>
 
             <div class="accordion-item" role="listitem">
               <button class="accordion-trigger" aria-expanded="false" aria-controls="hfaq-4">
-                <span class="accordion-question">Is soffyn free?</span>
+                <span class="accordion-question">When does soffyn launch?</span>
                 <span class="accordion-icon" aria-hidden="true">
                   <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M2 4L6 8L10 4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -500,29 +455,23 @@
               </button>
               <div class="accordion-body" id="hfaq-4" role="region">
                 <div class="accordion-body-inner">
-                  <p>Free to start, always. Seen, soffyn's core tier, is free — always, for everyone. If you join the waitlist before launch, you're a Founding Member and you get full Set-level access free, forever. After launch, Set is $8.99/month or $64.99/year.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="accordion-item" role="listitem">
-              <button class="accordion-trigger" aria-expanded="false" aria-controls="hfaq-5">
-                <span class="accordion-question">When does soffyn launch?</span>
-                <span class="accordion-icon" aria-hidden="true">
-                  <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M2 4L6 8L10 4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </span>
-              </button>
-              <div class="accordion-body" id="hfaq-5" role="region">
-                <div class="accordion-body-inner">
-                  <p>soffyn is launching September 2026. Join the waitlist to get early access when we open the doors.</p>
+                  <p>soffyn is launching September 2026. Join before then to get early access when we open the doors.</p>
                 </div>
               </div>
             </div>
 
           </div>
-          <p class="homepage-faq-more"><a href="/faq.html">See all FAQs &rarr;</a></p>
+          <p class="homepage-faq-more"><a href="/faq.html">Read all FAQs &rarr;</a></p>
+        </div>
+      </section>
+
+      <!-- ── Final CTA ──────────────────────────────────────── -->
+      <section id="footer-cta">
+        <div class="footer-cta-inner">
+          <h2>You don't have to earn a softer place to land.</h2>
+          <p>Come as you are. Leave when you need to. Come back when you're ready.</p>
+          <a href="#waitlist" class="btn-primary">Join soffyn</a>
+          <p class="footer-cta-italic">No streaks. No shame.</p>
         </div>
       </section>
 

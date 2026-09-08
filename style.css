@@ -532,7 +532,8 @@ nav#nav.is-open .nav-toggle-bar:nth-child(3) {
 #representation {
   background: var(--surface);
 }
-#founding-members {
+#founding-members,
+.founding-section {
   background: var(--surface);
 }
 #homepage-faq {
@@ -802,6 +803,11 @@ body.dark #hero::before {
   opacity: 0.7;
 }
 
+/* Brand line sitting between the subheadline and the CTAs */
+#hero .footer-cta-italic {
+  margin-bottom: 28px;
+}
+
 .hero-image-wrap {
   border-radius: 2px;
   overflow: hidden;
@@ -881,6 +887,14 @@ body.dark #hero::before {
   padding-top: 8px;
 }
 
+/* Short-line copy blocks — recognition, product intro */
+.copy-lines p {
+  margin-bottom: 20px;
+}
+.copy-lines p:last-child {
+  margin-bottom: 0;
+}
+
 .photo-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -908,6 +922,18 @@ body.dark #hero::before {
   max-width: var(--max-w);
   margin: 0 auto;
   padding: 0 48px;
+}
+#feature-carousel h2 {
+  font-size: clamp(2rem, 3vw, 3rem);
+  margin-bottom: 24px;
+}
+.fc-intro {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--muted);
+  line-height: 1.75;
+  font-weight: 400;
+  max-width: 640px;
 }
 .fc-nav {
   display: flex;
@@ -1180,7 +1206,7 @@ body.dark #hero::before {
 }
 
 /* ── Waitlist ────────────────────────────────────────────── */
-#waitlist {
+.waitlist-section {
   padding: var(--section-pad-v) 24px;
   text-align: center;
 }
@@ -1189,14 +1215,14 @@ body.dark #hero::before {
   margin: 0 auto;
 }
 
-#waitlist h2 {
+.waitlist-section h2 {
   font-family: "Fraunces", serif;
   font-size: clamp(2rem, 3vw, 3rem);
   font-weight: 400;
   margin-bottom: 32px;
 }
 
-#waitlist h1 {
+.waitlist-section h1 {
   font-family: "Fraunces", serif;
   font-size: clamp(2rem, 3vw, 3.5rem);
   font-weight: 400;
@@ -1432,6 +1458,9 @@ body.dark #hero::before {
   margin: 24px 0 16px;
   line-height: 1.4;
   font-weight: 400;
+}
+.about-cta {
+  margin-top: 24px;
 }
 .about-community {
   font-family: var(--font-body);
@@ -2769,7 +2798,8 @@ body.dark #footer-cta > .footer-cta-inner > p {
   color: var(--muted);
 }
 
-body.dark #founding-members {
+body.dark #founding-members,
+body.dark .founding-section {
   background: var(--bg);
 }
 body.dark .founding-intro {
@@ -3093,6 +3123,10 @@ body.dark .contact-email-note {
   #hero h1 {
     font-size: clamp(1.6rem, 5vw, 2.4rem);
     line-height: 1.2;
+  }
+  /* keeps the headline from dropping a single orphaned word */
+  .hero-h1-line {
+    text-wrap: balance;
   }
 
   .representation-inner {
