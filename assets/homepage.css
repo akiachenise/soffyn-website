@@ -1,0 +1,48 @@
+/* Homepage-only layout; shared pages keep their existing styles. */
+.homepage #hero { padding-top: 72px; gap: 56px; }
+.homepage #hero::before { display: none; }
+.homepage h1, .homepage h2, .homepage h3 { font-style: italic; font-weight: 400; }
+.homepage #hero h1 { font-size: clamp(2rem, 3.5vw, 3.25rem); line-height: 1.2; }
+.homepage .hero-subheadline { font-family: var(--font-body); font-style: normal; color: var(--muted-2); font-size: 1rem; line-height: 1.75; margin-bottom: 20px; }
+.homepage .hero-founding-note { opacity: 1; color: var(--muted-2); line-height: 1.65; max-width: 42ch; }
+.homepage .home-chorus { margin-bottom: 24px; font-size: 1rem; }
+.homepage .hero-image-wrap .site-img-wrap { height: 100%; }
+.home-container { max-width: 1120px; margin: auto; padding: 64px 40px; }
+.home-product { border-top: 1px solid var(--rule); }
+.homepage .home-product h2 { max-width: 22ch; font-size: clamp(1.8rem, 3vw, 2.5rem); }
+.home-intro { max-width: 65ch; color: var(--muted-2); line-height: 1.75; margin: 24px 0 40px; }
+.home-feature-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 36px 40px; }
+.home-feature { border-top: 1px solid var(--rule); padding-top: 24px; }
+.home-feature .section-label { margin-bottom: 12px; }
+.home-feature h3 { font-size: 1.45rem; line-height: 1.35; margin-bottom: 12px; }
+.home-feature > p:last-child { color: var(--muted-2); line-height: 1.75; font-size: .95rem; }
+.home-return { font-family: Fraunces, serif; font-style: italic; font-size: 1.5rem; margin-top: 40px; }
+.homepage .founding-inner { padding-top: 64px; padding-bottom: 64px; }
+.homepage .founding-grid { gap: 48px; }
+.homepage #waitlist h2 { font-size: clamp(1.8rem, 3vw, 2.5rem); margin-bottom: 24px; }
+.homepage .founding-intro { color: var(--muted-2); font-size: 1rem; }
+.homepage .founding-form-wrap { margin: 0; }
+.homepage .signup-wrapper { align-items: stretch; }
+.homepage .signup-wrapper input[type="text"], .homepage .signup-wrapper input[type="email"] { max-width: none; font-size: 1rem; }
+.homepage .field-label { font-size: .9rem; color: var(--text); }
+.homepage .field-label span { color: var(--muted-2); }
+.homepage .gdpr-label { max-width: none; color: var(--muted-2); }
+.homepage .gdpr-label a { text-decoration: underline; }
+.homepage .signup-wrapper input:focus-visible { outline: 2px solid var(--amethyst-ink); outline-offset: 3px; }
+.homepage .btn-primary, .homepage .nav-cta, .homepage .signup-wrapper button[type="submit"] { background: var(--amethyst); color: white; }
+.homepage #homepage-faq { padding: 64px 0; }
+.home-question { border-bottom: 1px solid var(--rule); }
+.home-question summary { padding: 22px 0; cursor: pointer; font-size: 1rem; color: var(--text); }
+.home-question p { padding: 0 0 22px; color: var(--muted-2); line-height: 1.75; }
+@media (max-width: 900px) {
+  .home-feature-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 768px) {
+  .homepage #hero { padding: 48px 24px; }
+  .home-container { padding: 48px 24px; }
+  .home-feature-grid { grid-template-columns: 1fr; gap: 24px; }
+  .home-intro { margin-bottom: 28px; }
+  .homepage .founding-inner { padding: 48px 24px; }
+  .homepage .founding-grid { grid-template-columns: 1fr; gap: 28px; }
+  .homepage #homepage-faq { padding: 48px 0; }
+}
