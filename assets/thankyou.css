@@ -1,0 +1,17 @@
+/* Thank-you page presentation only. */
+.thankyou nav#nav { justify-content: space-between; }
+.thankyou .thankyou-page { min-height: calc(100svh - 60px); width: 100%; max-width: 1440px; margin: 0 auto; }
+.thankyou .thankyou-content { padding: 64px clamp(24px, 5vw, 72px); }
+.thankyou .hero-eyebrow { align-self: flex-start; }
+.thankyou .thankyou-content h1 { font-style: italic; line-height: 1.15; }
+.thankyou .thankyou-content .hero-subheadline { font-style: normal; color: var(--muted-2); }
+.thankyou .thankyou-content .thankyou-sig { font-family: "Fraunces", serif; font-style: italic; color: var(--text); }
+.thankyou .thankyou-content .btn-primary { align-self: flex-start; text-align: center; }
+.thankyou .thankyou-visual { position: relative; }
+.thankyou .thankyou-visual .site-img-wrap { position: absolute; inset: 0; height: 100%; }
+.thankyou .thankyou-visual img { display: block; }
+@media (max-width: 800px) {
+  .thankyou .thankyou-page { min-height: auto; }
+  .thankyou .thankyou-content { padding: 56px 24px 64px; }
+  .thankyou footer > div { padding: 32px 24px !important; }
+}
