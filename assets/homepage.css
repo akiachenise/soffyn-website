@@ -47,3 +47,9 @@
   .homepage .founding-grid { grid-template-columns: 1fr; gap: 28px; }
   .homepage #homepage-faq { padding: 48px 0; }
 }
+
+/* Match the waitlist container width and responsive side padding. */
+.homepage .homepage-faq-inner { max-width: 1080px; padding-inline: 2.5rem; }
+@media (max-width: 800px) {
+  .homepage .homepage-faq-inner { padding-inline: 24px; }
+}
