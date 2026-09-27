@@ -5,7 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About | soffyn — Wellness App for Neurodivergent Black Women</title>
-    <meta name="description" content="soffyn was built by Akia — a neurodivergent Black woman, developer, and accessibility specialist who couldn't find a wellness app built for a brain like hers. So she built it." />
+    <meta name="description" content="Meet Akia, the neurodivergent Black woman, software engineer, and accessibility specialist building soffyn, a wellness app for neurodivergent Black women." />
     <meta name="author" content="Developed By Akia, LLC" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://soffyn.com/about" />
@@ -16,7 +16,7 @@
     <meta property="og:url" content="https://soffyn.com/about" />
     <meta property="og:site_name" content="soffyn" />
     <meta property="og:title" content="About soffyn" />
-    <meta property="og:description" content="soffyn was built by Akia — a neurodivergent Black woman who couldn't find a wellness app built for a brain like hers. So she built it." />
+    <meta property="og:description" content="Meet Akia, the neurodivergent Black woman, software engineer, and accessibility specialist building soffyn, a wellness app for neurodivergent Black women." />
     <meta property="og:image" content="https://soffyn.com/assets/soffyn-og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -26,12 +26,13 @@
     <!-- Twitter / X Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="About soffyn" />
-    <meta name="twitter:description" content="soffyn was built by Akia — a neurodivergent Black woman who couldn't find a wellness app built for a brain like hers. So she built it." />
+    <meta name="twitter:description" content="Meet Akia, the neurodivergent Black woman, software engineer, and accessibility specialist building soffyn, a wellness app for neurodivergent Black women." />
     <meta name="twitter:image" content="https://soffyn.com/assets/soffyn-og-image.png" />
     <meta name="twitter:image:alt" content="soffyn — A wellness app for neurodivergent Black women." />
 
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/assets/about.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -40,7 +41,7 @@
     />
   </head>
 
-  <body>
+  <body class="about-page">
     <a class="skip-link" href="#main">Skip to main content</a>
 
     <!-- ── Global nav ──────────────────────────────────────── -->
@@ -72,43 +73,30 @@
         <a href="/waitlist.html" class="mobile-link primary" role="menuitem">Join the waitlist</a>
       </div>
     </nav>
-    <div class="announce-bar" role="complementary" aria-label="Waitlist announcement">
-      <span class="announce-full">The Founding Member offer closes at launch. Full access — free forever.</span>
-      <span class="announce-short">Founding Members — free forever.</span>
-      <a href="/waitlist.html" class="announce-bar-link">Find my space →</a>
-    </div>
 
     <main id="main">
 
-      <!-- ── Hero ───────────────────────────────────────────── -->
-      <section class="utility-hero">
-        <span class="utility-hero-eyebrow">About soffyn</span>
-        <h1>I built the app I <em>couldn't</em> find.</h1>
-        <p>Built by a neurodivergent Black woman who needed it and couldn't find it anywhere else.</p>
+      <section class="utility-hero" aria-labelledby="about-title">
+        <h1 id="about-title">I'm building the app I couldn't find.</h1>
       </section>
 
-      <!-- ── Founder section ────────────────────────────────── -->
-      <section id="about">
+      <section id="about" aria-labelledby="founder-title">
         <div class="about-inner">
           <div class="about-photo">
             <div class="site-img-wrap"><img src="/assets/soffyn-akia.jpg" alt="Akia, founder of soffyn" loading="eager" /></div>
           </div>
           <div class="about-text">
-            <p class="section-label">About soffyn</p>
-            <h2>The app I needed didn't exist. So I'm building it.</h2>
-            <p>I built this because I needed it and it didn't exist.</p>
-
-            <p>I'm a neurodivergent Black woman, software engineer, and accessibility specialist. I've tried almost every app. They were either too cookie cutter, too demanding, or just too much for my brain. I'm a forgetful girl. Out of sight, out of mind. Streaks don't work for me. My hopes and dreams have a habit of becoming hoarded thoughts in the notes app.</p>
-
-            <p>And no app understood the specific exhaustion of spending all day masking — at work, in every room — and coming home to something that asked me to perform even more.</p>
-
-            <p>I needed something that meets me in the middle. A space that's gentle, rewarding, and completely okay if I don't show up every single day.</p>
-
-            <p class="about-highlight">Always there when you need it, and still there when you come back from a long while away.</p>
-
-            <p>That's soffyn. I built it for me. And I built it for you.</p>
-
-            <p class="about-community">The women who asked for soffyn before it existed also asked for a place to find each other. That room is coming. Join the waitlist and be first in it.</p>
+            <h2 id="founder-title">I'm Akia.</h2>
+            <p>I'm a neurodivergent Black woman, software engineer, and accessibility specialist.</p>
+            <p>The wellness apps I tried felt too generic, too demanding, or just too much for my brain. I'm a forgetful girl. Out of sight, out of mind. Streaks don't work for me. My hopes and dreams have a habit of becoming hoarded thoughts in the notes app.</p>
+            <p>After spending all day masking — at work, in every room — I didn't want to come home to something that asked me to perform even more.</p>
+            <p>I needed a space that meets me in the middle. Somewhere I could put a thought down, check in with myself, and come back after time away without feeling behind.</p>
+            <p>That's why I'm building soffyn for neurodivergent Black women. My own experience is the starting point, and my work in software engineering and accessibility shapes how I'm building it.</p>
+            <p class="about-highlight">Still here when you come back.</p>
+            <div class="about-cta">
+              <p>soffyn is in development. Join the waitlist for updates as I build it and news about opportunities to try it.</p>
+              <a href="/waitlist.html" class="btn-primary">Find my space →</a>
+            </div>
           </div>
         </div>
       </section>

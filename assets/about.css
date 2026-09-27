@@ -1,0 +1,11 @@
+/* About-page presentation only. */
+.about-page .utility-hero { max-width: var(--max-w); padding: 64px 48px 32px; }
+.about-page .utility-hero h1, .about-page .about-text h2 { font-style: italic; line-height: 1.2; }
+.about-page #about { padding: 24px 0 64px; }
+.about-page .about-text p { color: var(--muted-2); }
+.about-page .about-text .about-highlight { font-family: "Fraunces", serif; font-size: 1.5rem; color: var(--text); }
+.about-page .about-cta { border-top: 1px solid var(--rule); padding-top: 24px; }
+@media (max-width: 800px) {
+  .about-page .utility-hero { padding: 48px 24px 24px; }
+  .about-page #about { padding: 16px 0 48px; }
+}
