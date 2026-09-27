@@ -30,6 +30,7 @@
 .homepage .gdpr-label a { text-decoration: underline; }
 .homepage .signup-wrapper input:focus-visible { outline: 2px solid var(--amethyst-ink); outline-offset: 3px; }
 .homepage .btn-primary, .homepage .nav-cta, .homepage .signup-wrapper button[type="submit"] { background: var(--amethyst); color: white; }
+.homepage .signup-wrapper button[type="submit"] { border-radius: 14px; }
 .homepage #homepage-faq { padding: 64px 0; }
 .home-question { border-bottom: 1px solid var(--rule); }
 .home-question summary { padding: 22px 0; cursor: pointer; font-size: 1rem; color: var(--text); }
