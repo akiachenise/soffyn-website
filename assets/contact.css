@@ -1,0 +1,20 @@
+/* Contact form presentation only. */
+form[name="contact"] { max-width: 600px; margin: 0 auto; }
+form[name="contact"] .signup-wrapper { align-items: stretch; }
+form[name="contact"] .signup-wrapper input[type="text"],
+form[name="contact"] .signup-wrapper input[type="email"] { max-width: none; }
+form[name="contact"] textarea {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 220px;
+  padding: 16px 20px;
+  resize: vertical;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+form[name="contact"] textarea:focus-visible { outline: 2px solid var(--amethyst-ink); outline-offset: 2px; }
