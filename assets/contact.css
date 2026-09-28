@@ -18,3 +18,5 @@ form[name="contact"] textarea {
   line-height: 1.6;
 }
 form[name="contact"] textarea:focus-visible { outline: 2px solid var(--amethyst-ink); outline-offset: 2px; }
+
+form[name="contact"] .signup-wrapper button[type="submit"] { border-radius: 14px; }
