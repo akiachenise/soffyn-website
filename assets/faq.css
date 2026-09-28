@@ -1,0 +1,8 @@
+/* FAQ page only. Existing accordion behavior is retained. */
+.faq-page .utility-hero { max-width: var(--max-w); padding: 64px 48px 40px; }
+.faq-page .utility-hero h1, .faq-page .faq-support h2 { font-style: italic; }
+.faq-page .faq-support-inner > p { margin-top: 20px; color: var(--muted-2); }
+.faq-page .faq-support-inner > p a { text-decoration: underline; }
+@media (max-width: 800px) {
+  .faq-page .utility-hero { padding: 48px 24px 32px; }
+}
