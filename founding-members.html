@@ -5,7 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Founding Members | soffyn</title>
-    <meta name="description" content="Join soffyn before launch and your membership is free — forever. No trial. No card. I built this for you. Come in early." />
+    <meta name="description" content="Join the soffyn waitlist before launch to become a Founding Member and receive Set, the paid membership, free forever when the app launches." />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://soffyn.com/founding-members" />
 
@@ -14,7 +14,7 @@
     <meta property="og:url" content="https://soffyn.com/founding-members" />
     <meta property="og:site_name" content="soffyn" />
     <meta property="og:title" content="Founding Members | soffyn" />
-    <meta property="og:description" content="Join soffyn before launch and your membership is free — forever. No trial. No card. I built this for you. Come in early." />
+    <meta property="og:description" content="Join the soffyn waitlist before launch to become a Founding Member and receive Set, the paid membership, free forever when the app launches." />
     <meta property="og:image" content="https://soffyn.com/assets/soffyn-og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -24,13 +24,14 @@
     <!-- Twitter / X Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Founding Members | soffyn" />
-    <meta name="twitter:description" content="Join soffyn before launch and your membership is free — forever. No trial. No card. I built this for you. Come in early." />
+    <meta name="twitter:description" content="Join the soffyn waitlist before launch to become a Founding Member and receive Set, the paid membership, free forever when the app launches." />
     <meta name="twitter:image" content="https://soffyn.com/assets/soffyn-og-image.png" />
     <meta name="twitter:image:alt" content="soffyn — A wellness app for neurodivergent Black women." />
 
     <script src="script.js" defer></script>
     <script type="module" src="/assets/waitlist-count.js"></script>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/assets/founding-members.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -38,7 +39,7 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body class="founding-page">
     <a class="skip-link" href="#main">Skip to main content</a>
 
     <!-- ── Global nav ──────────────────────────────────────── -->
@@ -70,156 +71,41 @@
         <a href="/waitlist.html" class="mobile-link primary" role="menuitem">Join the waitlist</a>
       </div>
     </nav>
-    <div class="announce-bar" role="complementary" aria-label="Waitlist announcement">
-      <span class="announce-full">The Founding Member offer closes at launch. Full access — free forever.</span>
-      <span class="announce-short">Founding Members — free forever.</span>
-      <a href="/waitlist.html" class="announce-bar-link">Find my space →</a>
-    </div>
 
     <main id="main">
-
-      <!-- ── Hero — 2-col: text left / image right ──────────── -->
-      <section id="hero">
+      <section id="hero" aria-labelledby="founding-title">
         <div class="hero-text">
-          <span class="hero-eyebrow">Limited &mdash; closes at launch</span>
-          <h1>You found this early. That matters.</h1>
-          <p class="hero-subheadline">soffyn isn't out yet. The women who show up before it is become Founding Members — and they shape what it becomes. Your access is free. Forever.</p>
-          <p class="founding-num-label" data-waitlist-count hidden></p>
-          <div class="hero-cta-group">
-            <a href="/waitlist.html" class="btn-primary">Find my space</a>
-          </div>
+          <h1 id="founding-title">Become a Founding Member.<br />Set is yours, free forever.</h1>
+          <p class="hero-subheadline">Join the soffyn waitlist before launch and receive Set, soffyn’s paid membership, free forever when the app launches.</p>
+          <div class="hero-cta-group"><a href="/waitlist.html" class="btn-primary">Find my space →</a></div>
+          <p class="fm-note">soffyn is in development. A launch date hasn’t been announced yet.</p>
         </div>
         <div class="hero-image-wrap">
           <div class="site-img-wrap"><img src="/assets/soffyn-fm-hero.png" alt="A Black woman standing by a window, calm and knowing" loading="eager" /></div>
         </div>
       </section>
 
-      <!-- ── This is for you ───────────────────────────────── -->
-      <section class="fm-for-you">
-        <div class="representation-inner">
-          <div class="representation-copy">
-            <div>
-              <p class="section-label">This is for you</p>
-              <h2>You're tired of tools designed for people who work completely differently from you.</h2>
-            </div>
-            <div>
-              <p class="representation-sub">You've downloaded the apps, bought the journals, set the reminders — and you're still ending up at 11pm with your feelings in a notes app or whatever browser tab was still open, because nothing else felt safe.</p>
-              <p class="representation-sub">You know what it's like to walk into a wellness space and realize pretty quickly it wasn't built for a brain like yours.</p>
-              <p class="representation-sub">You spend all day holding it together — at work, in every room — and you come home to apps that ask you to perform even more. Log this. Maintain that. Don't break the streak.</p>
-              <p class="representation-sub">I was tired of it too. I built soffyn because I couldn't find it — and because I knew I wasn't the only one looking.</p>
-              <p class="representation-sub">If any of that sounds familiar, you're exactly who this was built for. Joining before launch means something to me: you said yes when there was nothing to say yes to yet. I won't forget that.</p>
-            </div>
+      <section class="fm-section" aria-labelledby="membership-title">
+        <div class="fm-content">
+          <h2 id="membership-title">What your membership includes</h2>
+          <p class="fm-intro">Set is the paid membership in soffyn, a wellness app for neurodivergent Black women. Founding Members receive Set-level access permanently.</p>
+          <div class="fm-benefits">
+            <div><h3>A place for your everyday thoughts</h3><p>soffyn is being built with journaling, affirmations, mood check-ins, flexible goals, and a focus timer.</p></div>
+            <div><h3>The depth of Set</h3><p>Set adds depth and format flexibility to the core experience. Your Founding Member access includes those paid membership features.</p></div>
+            <div><h3>No membership bill</h3><p>Your Set membership stays free. It isn’t a trial or a first-year discount.</p></div>
           </div>
+          <p class="fm-note">Seen, soffyn’s free membership, will also be available.</p>
         </div>
       </section>
 
-      <!-- ── What it means — 2-col + photo row ──────────────── -->
-      <section class="fm-meaning">
-        <div class="representation-inner">
-          <div class="representation-copy">
-            <div class="representation-copy-left">
-              <p class="section-label">What it means</p>
-              <h2>You're part of what this becomes.</h2>
-            </div>
-            <div>
-              <p class="representation-sub">
-                I built soffyn by listening to real women tell me what every other wellness app got wrong. Founding Members are the next part of that. You'll use v1 before anyone else, tell me what's working and what isn't, and shape what comes after. I'm one person building this — what you tell me goes directly into what gets built next.
-              </p>
-            </div>
-          </div>
-
-          <div class="photo-row">
-            <div class="photo-row-item">
-              <div class="site-img-wrap"><img src="/assets/soffyn-fm-1.png" alt="A Black woman sitting quietly with a mug" loading="lazy" /></div>
-            </div>
-            <div class="photo-row-item">
-              <div class="site-img-wrap"><img src="/assets/soffyn-fm-2.png" alt="A Black woman laughing freely" loading="lazy" /></div>
-            </div>
-            <div class="photo-row-item">
-              <div class="site-img-wrap"><img src="/assets/soffyn-fm-3.png" alt="A Black woman in quiet reflection" loading="lazy" /></div>
-            </div>
+      <section class="fm-section" aria-labelledby="joining-title">
+        <div class="fm-content fm-split">
+          <h2 id="joining-title">What happens when you join</h2>
+          <div><p>I’ll send you a welcome email and occasional updates as I build soffyn, including news about opportunities to try it.</p><p>If you choose to share feedback, it comes directly to me. Testing and feedback are optional—you don’t have to participate to receive your Founding Member membership.</p>
+            <a href="/waitlist.html" class="btn-primary">Find my space →</a>
           </div>
         </div>
       </section>
-
-      <!-- ── Feature showcase — alternating rows ─────────────── -->
-      <section id="fm-features">
-        <div class="features-header">
-          <p class="section-label">Your full access</p>
-          <h2>The full thing. Yours from day one.</h2>
-        </div>
-
-        <!-- 1. Full affirmations library — text left, image right -->
-        <div class="feature-alt-row">
-          <div class="feature-alt-text">
-            <p class="section-label">Full affirmations library</p>
-            <h3>Every affirmation, as the <em>library grows.</em></h3>
-            <p>
-              The free tier gives you one affirmation a day. As a Founding Member you get the full library — every category, every mood, everything that gets added after launch. All of it, always.
-            </p>
-          </div>
-          <div class="feature-alt-image" aria-hidden="true"></div>
-        </div>
-
-        <!-- 2. Audio & photo journaling — image left, text right -->
-        <div class="feature-alt-row feature-alt-row--flip">
-          <div class="feature-alt-text">
-            <p class="section-label">Audio &amp; photo journaling</p>
-            <h3>However the thought <em>comes out.</em></h3>
-            <p>
-              Some thoughts don't come in words. Founding Members get audio and photo journaling because a voice memo at 11pm counts just as much as three paragraphs in a notebook.
-            </p>
-          </div>
-          <div class="feature-alt-image" aria-hidden="true"></div>
-        </div>
-
-        <!-- 3. Unlimited history — text left, image right -->
-        <div class="feature-alt-row">
-          <div class="feature-alt-text">
-            <p class="section-label">Unlimited journal history</p>
-            <h3>Your story doesn't have <em>an expiration date.</em></h3>
-            <p>
-              The free tier keeps 90 days. Founding Members keep everything. Every entry, every check-in, every moment you put into words — yours, with no expiration date.
-            </p>
-          </div>
-          <div class="feature-alt-image" aria-hidden="true"></div>
-        </div>
-
-        <!-- 4. Full goal tracking — image left, text right -->
-        <div class="feature-alt-row feature-alt-row--flip">
-          <div class="feature-alt-text">
-            <p class="section-label">Full goal tracking</p>
-            <h3>Get your dreams out of <em>the notes app.</em></h3>
-            <p>
-              Your goals deserve more than a list you never look at. soffyn holds them for you — and never makes you feel bad for coming back after a long time away.
-            </p>
-          </div>
-          <div class="feature-alt-image" aria-hidden="true"></div>
-        </div>
-
-      </section>
-
-      <!-- ── Pricing ─────────────────────────────────────────── -->
-      <section class="fm-pricing">
-        <div class="fm-pricing-inner">
-          <p class="fm-pricing-p">Founding Members get everything in soffyn Set — free, permanently.</p>
-          <p class="fm-pricing-p">After launch, Set is $8.99 a month.</p>
-        </div>
-      </section>
-
-
-      <!-- ── From Akia — teal-bordered quote block ───────────── -->
-      <!--
-      <section class="fm-letter">
-        <div class="fm-letter-inner">
-          <p class="section-label">From Akia</p>
-          <blockquote class="fm-quote">
-            <p>"Founding Members aren't just early users. You're the people who said yes when there was nothing to say yes to yet. I don't take that lightly. Free forever isn't a marketing line — it's a commitment. You believed in this. soffyn will always remember that."</p>
-            <footer>&mdash; Akia, founder &amp; developer</footer>
-          </blockquote>
-        </div>
-      </section>
-      -->
 
     </main>
 
