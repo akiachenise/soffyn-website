@@ -28,6 +28,7 @@
     <meta name="twitter:image:alt" content="soffyn — A wellness app for neurodivergent Black women." />
 
     <script src="script.js" defer></script>
+    <script src="/assets/contact-form.js" defer></script>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -95,6 +96,7 @@
               <input type="email" name="email" placeholder="your@email.com" aria-label="Email address" required />
               <textarea name="message" placeholder="what's on your mind?" aria-label="Message" rows="5" required></textarea>
               <button type="submit">Send message</button>
+              <p id="contact-status" role="status" aria-live="polite" aria-atomic="true"></p>
             </div>
           </form>
 
