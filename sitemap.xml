@@ -27,27 +27,6 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- Blog -->
-  <url>
-    <loc>https://soffyn.com/blog/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://soffyn.com/blog/adhd-burnout-black-women/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://soffyn.com/blog/goals-without-guilt-streaks-adhd/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://soffyn.com/blog/neurodivergent-self-care-guide/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
 
   <url>
     <loc>https://soffyn.com/contact</loc>

@@ -1,3 +1,4 @@
-/blog/adhd-burnout-black-women.html        /blog/adhd-burnout-black-women/        301
-/blog/goals-without-guilt-streaks-adhd.html /blog/goals-without-guilt-streaks-adhd/ 301
-/blog/neurodivergent-self-care-guide.html   /blog/neurodivergent-self-care-guide/   301
+# Blog temporarily unpublished. Force redirects over preserved article files.
+/blog       /  302!
+/blog.html  /  302!
+/blog/*     /  302!
