@@ -173,7 +173,7 @@ function initFaqNav() {
         const section = document.querySelector(target);
         if (section) {
           const navHeight = document.querySelector('nav#nav')?.offsetHeight || 72;
-          const barHeight = document.querySelector('.announce-bar')?.offsetHeight || 38;
+          const barHeight = document.querySelector('.announce-bar')?.offsetHeight || 0;
           const top = section.getBoundingClientRect().top + window.scrollY - navHeight - barHeight - 24;
           window.scrollTo({ top, behavior: 'smooth' });
         }
