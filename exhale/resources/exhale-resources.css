@@ -1,0 +1,419 @@
+/* Exhale. wellness resource page. Scoped styles, loaded after soffyn's existing style.css. */
+.exhale-resources-page .exhale-main {
+  padding: 5rem 1.25rem 5.5rem;
+  background: #f4f0f8;
+  color: #241a2e;
+}
+.exhale-resources-page .exhale-inner {
+  width: min(100%, 1060px);
+  margin: 0 auto;
+}
+.exhale-resources-page .exhale-hero {
+  max-width: 770px;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+}
+.exhale-resources-page .exhale-name {
+  display: block;
+  margin: 0 0 0.9rem;
+  color: #241a2e;
+  font:
+    italic 400 clamp(3.25rem, 8vw, 5.8rem)/1.05 "Fraunces",
+    Georgia,
+    serif;
+}
+.exhale-resources-page .exhale-eyebrow {
+  margin: 0 0 0.55rem;
+  color: #7a3e9d;
+  font:
+    500 0.76rem/1.5 "Public Sans",
+    Arial,
+    sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+.exhale-resources-page .exhale-hero h1 {
+  color: #241a2e;
+  margin: 0 0 0.9rem;
+  font:
+    400 clamp(2rem, 4vw, 3rem)/1.18 "Fraunces",
+    Georgia,
+    serif;
+}
+.exhale-resources-page .exhale-intro {
+  color: #574a66;
+  max-width: 650px;
+  margin: 0 auto;
+  font:
+    400 1.08rem/1.7 "Public Sans",
+    Arial,
+    sans-serif;
+}
+.exhale-resources-page .exhale-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem 1.5rem;
+  margin-top: 1.5rem;
+}
+.exhale-resources-page .exhale-print-button {
+  cursor: pointer;
+  padding: 0.8rem 1.15rem;
+  border: 2px solid #7a3e9d;
+  border-radius: 3px;
+  background: #7a3e9d;
+  color: #fff;
+  font:
+    500 0.95rem/1.25 "Public Sans",
+    Arial,
+    sans-serif;
+}
+.exhale-resources-page .exhale-print-button:hover {
+  background: #5e277e;
+}
+.exhale-resources-page .exhale-back-link {
+  color: #7a3e9d;
+  font:
+    500 0.96rem/1.4 "Public Sans",
+    Arial,
+    sans-serif;
+  text-underline-offset: 0.18em;
+}
+.exhale-resources-page .exhale-main :is(a, button):focus-visible {
+  outline: 3px solid #241a2e;
+  outline-offset: 4px;
+}
+.exhale-resources-page .exhale-urgent {
+  border-left: 4px solid #7a3e9d;
+  padding: 1rem 1.2rem;
+  background: #eae2f0;
+  border-radius: 3px;
+  margin: 2rem 0;
+}
+.exhale-resources-page .exhale-urgent p {
+  margin: 0;
+  color: #241a2e;
+  font:
+    400 0.99rem/1.7 "Public Sans",
+    Arial,
+    sans-serif;
+}
+.exhale-resources-page .exhale-urgent a {
+  color: #7a3e9d;
+  font-weight: 500;
+  text-underline-offset: 0.18em;
+}
+.exhale-resources-page .exhale-jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0 0 3rem;
+  padding: 0;
+  border: none;
+  position: static;
+  background: transparent;
+  box-shadow: none;
+}
+.exhale-resources-page .exhale-jump a {
+  display: inline-flex;
+  padding: 0.55rem 0.72rem;
+  border: 1px solid rgba(36, 26, 46, 0.25);
+  border-radius: 3px;
+  color: #574a66;
+  background: transparent;
+  font:
+    500 0.84rem/1.5 "Public Sans",
+    Arial,
+    sans-serif;
+  text-decoration: none;
+}
+.exhale-resources-page .exhale-jump a:hover {
+  border-color: #7a3e9d;
+  color: #7a3e9d;
+}
+.exhale-resources-page .exhale-category {
+  margin: 0 0 3.2rem;
+  scroll-margin-top: 6rem;
+}
+.exhale-resources-page .exhale-category h2 {
+  margin: 0 0 1.3rem;
+  padding-bottom: 0.65rem;
+  color: #241a2e;
+  border-bottom: 1px solid rgba(36, 26, 46, 0.18);
+  font:
+    400 clamp(1.55rem, 3vw, 2.05rem)/1.25 "Fraunces",
+    Georgia,
+    serif;
+}
+.exhale-resources-page .exhale-resource-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+.exhale-resources-page .exhale-resource-card {
+  padding: 1.35rem;
+  border: 1px solid rgba(36, 26, 46, 0.15);
+  border-radius: 3px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+}
+.exhale-resources-page .exhale-resource-type {
+  color: #574a66;
+  font:
+    500 0.74rem/1.6 "Public Sans",
+    Arial,
+    sans-serif;
+  margin: 0 0 0.4rem;
+}
+.exhale-resources-page .exhale-resource-card h3 {
+  margin: 0 0 0.65rem;
+  color: #241a2e;
+  font:
+    400 1.45rem/1.24 "Fraunces",
+    Georgia,
+    serif;
+}
+.exhale-resources-page .exhale-resource-card > p:not(.exhale-resource-type) {
+  color: #574a66;
+  font:
+    400 0.93rem/1.65 "Public Sans",
+    Arial,
+    sans-serif;
+  margin: 0 0 0.7rem;
+}
+.exhale-resources-page .exhale-resource-card > p.exhale-resource-note {
+  font-size: 0.83rem;
+  color: #574a66;
+}
+.exhale-resources-page .exhale-resource-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem 1rem;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 0.6rem;
+}
+.exhale-resources-page .exhale-resource-actions a {
+  color: #7a3e9d;
+  font:
+    500 0.88rem/1.5 "Public Sans",
+    Arial,
+    sans-serif;
+  text-underline-offset: 0.19em;
+  overflow-wrap: anywhere;
+}
+.exhale-resources-page .exhale-disclaimer {
+  margin: 0.55rem 0;
+  color: #574a66;
+  max-width: 900px;
+  font:
+    400 0.84rem/1.7 "Public Sans",
+    Arial,
+    sans-serif;
+}
+.exhale-resources-page .exhale-not-clinical {
+  margin-bottom: 0;
+}
+/* Existing site's body.dark toggler stays authoritative for the global theme. */
+body.exhale-resources-page.dark .exhale-main {
+  background: #241a2e;
+  color: #f4f0f8;
+}
+body.exhale-resources-page.dark .exhale-name,
+body.exhale-resources-page.dark .exhale-hero h1,
+body.exhale-resources-page.dark .exhale-category h2 {
+  color: #f4f0f8;
+}
+body.exhale-resources-page.dark .exhale-intro,
+body.exhale-resources-page.dark .exhale-disclaimer {
+  color: #eae2f0;
+}
+body.exhale-resources-page.dark .exhale-eyebrow,
+body.exhale-resources-page.dark .exhale-back-link {
+  color: #c4a0dc;
+}
+body.exhale-resources-page.dark .exhale-urgent {
+  background: #35283e;
+  border-left-color: #c4a0dc;
+}
+body.exhale-resources-page.dark .exhale-urgent p {
+  color: #f4f0f8;
+}
+body.exhale-resources-page.dark .exhale-urgent a {
+  color: #c4a0dc;
+}
+body.exhale-resources-page.dark .exhale-jump a {
+  border-color: rgba(244, 240, 248, 0.35);
+  color: #eae2f0;
+}
+body.exhale-resources-page.dark .exhale-jump a:hover {
+  border-color: #c4a0dc;
+  color: #c4a0dc;
+}
+body.exhale-resources-page.dark .exhale-category h2 {
+  border-bottom-color: rgba(244, 240, 248, 0.25);
+}
+body.exhale-resources-page.dark .exhale-resource-card {
+  background: #35283e;
+  border-color: rgba(244, 240, 248, 0.22);
+}
+body.exhale-resources-page.dark .exhale-resource-card :is(h3, p) {
+  color: #f4f0f8;
+}
+body.exhale-resources-page.dark .exhale-resource-card .exhale-resource-type,
+body.exhale-resources-page.dark .exhale-resource-card > p.exhale-resource-note {
+  color: #eae2f0;
+}
+body.exhale-resources-page.dark .exhale-resource-actions a {
+  color: #c4a0dc;
+}
+body.exhale-resources-page.dark .exhale-main :is(a, button):focus-visible {
+  outline-color: #f4f0f8;
+}
+@media (max-width: 760px) {
+  .exhale-resources-page .exhale-main {
+    padding: 3.2rem 1rem 4rem;
+  }
+  .exhale-resources-page .exhale-resource-grid {
+    grid-template-columns: 1fr;
+  }
+  .exhale-resources-page .exhale-jump {
+    gap: 0.45rem;
+  }
+  .exhale-resources-page .exhale-jump a {
+    font-size: 0.78rem;
+  }
+  .exhale-resources-page .exhale-resource-card {
+    padding: 1.1rem;
+  }
+}
+@media print {
+  body.exhale-resources-page {
+    display: block;
+    padding: 0;
+  }
+  body.exhale-resources-page::after,
+  .exhale-resources-page .skip-link {
+    display: none;
+  }
+  .exhale-resources-page .exhale-category h2 {
+    break-after: avoid;
+  }
+  .exhale-resources-page .exhale-resource-actions {
+    display: block;
+  }
+  .exhale-resources-page .exhale-contact-link {
+    display: block;
+  }
+  body.exhale-resources-page .exhale-urgent a,
+  body.exhale-resources-page .exhale-eyebrow {
+    color: #111 !important;
+  }
+  @page {
+    size: letter;
+    margin: 0.55in;
+  }
+  html,
+  body,
+  body.exhale-resources-page {
+    background: #fff !important;
+    color: #111 !important;
+    font-size: 10pt !important;
+  }
+  body.exhale-resources-page #nav,
+  body.exhale-resources-page footer,
+  body.exhale-resources-page .exhale-hero-actions,
+  body.exhale-resources-page .exhale-jump {
+    display: none !important;
+  }
+  .exhale-resources-page .exhale-main {
+    padding: 0 !important;
+    background: #fff !important;
+    color: #111 !important;
+  }
+  .exhale-resources-page .exhale-inner {
+    width: 100% !important;
+  }
+  .exhale-resources-page .exhale-hero {
+    text-align: left !important;
+    margin: 0 0 0.16in !important;
+  }
+  .exhale-resources-page .exhale-name {
+    font-size: 34pt !important;
+    color: #111 !important;
+    margin-bottom: 0.1in !important;
+  }
+  .exhale-resources-page .exhale-eyebrow {
+    font-size: 9pt !important;
+  }
+  .exhale-resources-page .exhale-hero h1 {
+    font-size: 21pt !important;
+    margin: 0.08in 0 !important;
+    color: #111 !important;
+  }
+  .exhale-resources-page .exhale-intro {
+    font-size: 10pt !important;
+    color: #222 !important;
+    margin: 0 !important;
+  }
+  .exhale-resources-page .exhale-urgent {
+    background: #fff !important;
+    color: #111 !important;
+    border: 1px solid #999 !important;
+    border-left: 4px solid #7a3e9d !important;
+    padding: 0.1in !important;
+    break-inside: avoid;
+  }
+  .exhale-resources-page .exhale-urgent p {
+    color: #111 !important;
+  }
+  .exhale-resources-page .exhale-category {
+    margin-bottom: 0.25in !important;
+  }
+  .exhale-resources-page .exhale-category h2 {
+    font-size: 16pt !important;
+    color: #111 !important;
+    border-bottom: 1px solid #999 !important;
+  }
+  .exhale-resources-page .exhale-resource-grid {
+    display: block !important;
+  }
+  .exhale-resources-page .exhale-resource-card {
+    display: block !important;
+    padding: 0.12in 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: #fff !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .exhale-resources-page .exhale-resource-card h3 {
+    font-size: 12pt !important;
+    color: #111 !important;
+    margin-bottom: 3pt !important;
+  }
+  .exhale-resources-page .exhale-resource-card p,
+  .exhale-resources-page .exhale-resource-card .exhale-resource-type {
+    font-size: 9pt !important;
+    line-height: 1.4 !important;
+    color: #222 !important;
+    margin: 2pt 0 !important;
+  }
+  .exhale-resources-page .exhale-resource-actions {
+    padding-top: 0 !important;
+  }
+  .exhale-resources-page .exhale-resource-actions a,
+  .exhale-resources-page .exhale-disclaimer {
+    font-size: 9pt !important;
+    color: #111 !important;
+  }
+  .exhale-resources-page .exhale-resource-link::after {
+    content: " (" attr(href) ")";
+    font-size: 7.5pt;
+    overflow-wrap: anywhere;
+  }
+}
