@@ -1582,6 +1582,15 @@ footer {
   flex-direction: column;
   gap: 10px;
 }
+.footer-social-groups {
+  display: grid;
+  align-content: start;
+  gap: 24px;
+}
+.footer-social-groups .footer-col-heading {
+  text-transform: none;
+  letter-spacing: normal;
+}
 .footer-social-links {
   list-style: none;
   display: flex;
@@ -3208,6 +3217,10 @@ body.dark .contact-email-note {
     grid-template-columns: 1fr 1fr;
     gap: 32px;
     padding: 0 24px;
+  }
+  .footer-social-groups {
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .footer-bottom {
     padding: 24px 24px 0;
