@@ -39,10 +39,8 @@
 .exhale-resources-page .exhale-hero h1 {
   color: #241a2e;
   margin: 0 0 0.9rem;
-  font:
-    400 clamp(2rem, 4vw, 3rem)/1.18 "Fraunces",
-    Georgia,
-    serif;
+  font: italic 400 clamp(2rem, 3.5vw, 3.25rem)/1.2 "Fraunces", serif;
+  letter-spacing: -0.01em;
 }
 .exhale-resources-page .exhale-intro {
   color: #574a66;
