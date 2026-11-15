@@ -1610,7 +1610,14 @@ footer {
   color: var(--muted-2);
 }
 .footer-social-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   color: var(--muted);
+}
+.footer-social-icon {
+  flex: none;
+  fill: currentColor;
 }
 .footer-col-links a:hover,
 .footer-social-links a:hover {
