@@ -76,14 +76,6 @@
 .exhale-resources-page .exhale-print-button:hover {
   background: #5e277e;
 }
-.exhale-resources-page .exhale-back-link {
-  color: #7a3e9d;
-  font:
-    500 0.96rem/1.4 "Public Sans",
-    Arial,
-    sans-serif;
-  text-underline-offset: 0.18em;
-}
 .exhale-resources-page .exhale-main :is(a, button):focus-visible {
   outline: 3px solid #241a2e;
   outline-offset: 4px;
@@ -235,8 +227,7 @@ body.exhale-resources-page.dark .exhale-intro,
 body.exhale-resources-page.dark .exhale-disclaimer {
   color: #eae2f0;
 }
-body.exhale-resources-page.dark .exhale-eyebrow,
-body.exhale-resources-page.dark .exhale-back-link {
+body.exhale-resources-page.dark .exhale-eyebrow {
   color: #c4a0dc;
 }
 body.exhale-resources-page.dark .exhale-urgent {
