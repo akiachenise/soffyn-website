@@ -13,14 +13,18 @@
   margin: 0 auto 2.5rem;
   text-align: center;
 }
-.exhale-resources-page .exhale-name {
-  display: block;
-  margin: 0 0 0.9rem;
-  color: #241a2e;
-  font:
-    italic 400 clamp(3.25rem, 8vw, 5.8rem)/1.05 "Fraunces",
-    Georgia,
-    serif;
+.exhale-resources-page .exhale-wordmark {
+  width: clamp(10rem, 20vw, 16rem);
+  height: auto;
+  margin: 0 auto 0.9rem;
+}
+@media screen {
+  body.exhale-resources-page.dark .exhale-wordmark {
+    background: #f4f0f8;
+    border-radius: 3px;
+    padding: 0.5rem 0.75rem;
+    box-sizing: content-box;
+  }
 }
 .exhale-resources-page .exhale-eyebrow {
   margin: 0 0 0.55rem;
@@ -223,7 +227,6 @@ body.exhale-resources-page.dark .exhale-main {
   background: #241a2e;
   color: #f4f0f8;
 }
-body.exhale-resources-page.dark .exhale-name,
 body.exhale-resources-page.dark .exhale-hero h1,
 body.exhale-resources-page.dark .exhale-category h2 {
   color: #f4f0f8;
@@ -342,10 +345,9 @@ body.exhale-resources-page.dark .exhale-main :is(a, button):focus-visible {
     text-align: left !important;
     margin: 0 0 0.16in !important;
   }
-  .exhale-resources-page .exhale-name {
-    font-size: 34pt !important;
-    color: #111 !important;
-    margin-bottom: 0.1in !important;
+  .exhale-resources-page .exhale-wordmark {
+    width: 1.6in;
+    margin: 0 0 0.1in;
   }
   .exhale-resources-page .exhale-eyebrow {
     font-size: 9pt !important;
